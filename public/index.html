@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>OoT Lockout Bingo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="/css/srl.css">
+        <link rel="stylesheet" type="text/css" href="/css/lockout.css">
+        <link rel="stylesheet" type="text/css" href="/css/jquery.gritter.css">
+    </head>
+    <body id="bingoPage">
+        <form id="get-board" action="/get-board">
+          <label for="seed">Seed:</label>
+          <input id="seed" name="seed" type="text" />
+          <label for="nametag">Name/Team:</label>
+          <input id="nametag" name="nametag" type="text" />
+          <label for="color">Color:</label>
+          <select id="color" name="color">
+            <option value="lockout-blue">blue</option>
+            <option value="lockout-red">red</option>
+            <option value="lockout-green">green</option>
+            <option value="lockout-orange">orange</option>
+          </select>
+          <input type="submit" value="Load" />
+        </form>
+
+        <div id="board"></div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/jquery.gritter.min.js"></script>
+        <script src="/js/lockout.js"></script>
+    </body>
+</html>

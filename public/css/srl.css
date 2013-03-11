@@ -1,0 +1,5110 @@
+.gold {
+  color: #f7e279;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #8d8145;
+}
+.silver {
+  color: #bec7d2;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #6d7278;
+}
+.bronze {
+  color: #e09456;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #805531;
+}
+.red {
+  color: #fa5050;
+}
+.green {
+  color: #52d64f;
+}
+.grey {
+  color: #808080;
+}
+.sans {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 0.88em;
+}
+.serif {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+}
+.small {
+  font-size: 75%;
+}
+html,
+body {
+  background: #111111;
+  color: #bec7d2;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 0.88em;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  line-height: 15px;
+}
+.always_scrollbar {
+  overflow-y: scroll;
+}
+.container {
+  width: 976px;
+  margin: 0 auto;
+  padding: 8px 0 16px 16px;
+  overflow: auto;
+}
+.container2 {
+  width: 100%;
+  min-width: 992px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+header {
+  background: url("http://c15111086.r86.cf2.rackcdn.com/texture_bar2.jpg") top center;
+  border-bottom: 1px #424242 dotted;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  padding-top: 8px;
+}
+footer {
+  background: url("http://c15111086.r86.cf2.rackcdn.com/texture_bar_footer2.jpg") top center;
+  border-top: 1px #424242 dotted;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  color: #808080;
+  font-size: 85%;
+  line-height: 85%;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  margin-top: -29px;
+  /* negative height minus border */
+
+  height: 28px;
+  clear: both;
+}
+footer .left {
+  margin-left: 8px;
+}
+footer .right {
+  margin-right: 8px;
+}
+footer .container {
+  padding: 8px 0;
+}
+#wrap {
+  min-height: 100%;
+}
+#main {
+  padding-bottom: 28px;
+}
+#logo {
+  background: url("http://c15111086.r86.cf2.rackcdn.com/srl_350px.png") no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 350px;
+  height: 50px;
+  margin-bottom: 13px;
+  float: left;
+}
+#logo span {
+  display: none;
+}
+#headerright {
+  display: block;
+  overflow: hidden;
+  height: 50px;
+  margin-bottom: 13px;
+  width: 594px;
+  margin-right: 16px;
+  float: right;
+  text-align: center;
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  line-height: 18px;
+  color: #70e36e;
+}
+#headerright span {
+  color: #5d97ff;
+}
+#headerright a {
+  display: block;
+  padding-top: 10px;
+}
+#headerright a:hover {
+  color: #b4ffae;
+}
+#headerright a:hover span {
+  color: #78e0ff;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  clear: both;
+}
+nav ul li {
+  list-style-type: none;
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+nav ul li a {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  padding: 4px 0;
+  margin: 0 16px 0 0;
+}
+nav ul li a:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+nav ul li a:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+::selection {
+  background: rgba(0, 0, 0, 0.6);
+  color: #f7e279;
+}
+strong {
+  color: #f7e279;
+  font-weight: 700;
+}
+h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  color: #e09456;
+  margin: 8px 0 0;
+  padding: 8px 0;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+h1 img {
+  position: absolute;
+  margin: 0 8px;
+}
+h1 a {
+  text-decoration: underline;
+}
+h2 {
+  display: block;
+  margin: 0 0 8px;
+  color: #f7e279;
+  font-weight: 700;
+  clear: both;
+  font-size: 100%;
+}
+h4 {
+  display: block;
+  margin: 8px 0;
+  color: #f7e279;
+  font-weight: 700;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+}
+p {
+  margin: 0px;
+  padding: 0 0 8px;
+}
+ul {
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+  margin-top: 2px;
+}
+ul li {
+  list-style-type: square;
+  list-style-position: inside;
+  padding-bottom: 10px;
+}
+.noselect {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  padding: 0;
+}
+td {
+  border: 0;
+  padding: 0;
+}
+th {
+  background-color: #c01614;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c01614), to(#a01211));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c01614, #a01211);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c01614, #a01211);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c01614, #a01211);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c01614, #a01211);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c01614, #a01211);
+  color: #f7e279;
+  text-shadow: 1px 1px 3px #111111;
+  font-weight: 700;
+}
+#skypedetectionswf {
+  position: absolute;
+  overflow: hidden;
+  top: -999px;
+}
+.note {
+  color: #808080;
+  font-size: 85%;
+}
+.rounded_top {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+.rounded_bottom {
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+}
+.rounded_topleft {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+.rounded_topright {
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+.rounded_bottomleft {
+  border-radius: 0 0 0 5px;
+  -moz-border-radius: 0 0 0 5px;
+  -webkit-border-radius: 0 0 0 5px;
+}
+.rounded_bottomright {
+  border-radius: 0 0 5px 0;
+  -moz-border-radius: 0 0 5px 0;
+  -webkit-border-radius: 0 0 5px 0;
+}
+.textshadow {
+  text-shadow: 1px 1px 3px #111111;
+}
+.boxshadow {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.insetboxshadow {
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+}
+.insetboxshadow2 {
+  box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.3);
+}
+.noboxshadow {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+}
+.liteboxshadow {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: 700;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  text-align: center;
+}
+.smallbuttonstyle {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.smallbuttonstyle:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+.smallbuttonstyle:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+.smallbutton {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-decoration: none;
+}
+.smallbutton:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+.smallbutton:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+#racefeed {
+  width: 472px;
+  margin-right: 16px;
+}
+#twitterSide {
+  width: 228px;
+  margin-right: 16px;
+  float: right;
+}
+#twitter {
+  color: #6adbfc;
+  padding-left: 33px;
+}
+#twitter a {
+  text-decoration: none;
+}
+#twitterbird {
+  position: absolute;
+  margin-left: -33px;
+  width: 26px;
+  height: 18px;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/twitter.png');
+}
+#twitter a:hover #twitterbird {
+  background-position: 0 -18px;
+}
+#twitter_update_list {
+  text-indent: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+#twitter_update_list a {
+  float: right;
+  color: #808080;
+  text-align: right;
+}
+#twitter_update_list a:hover {
+  color: #6adbfc;
+}
+#twitter_update_list span {
+  display: block;
+}
+#twitter_update_list span a {
+  display: inline;
+  float: none;
+  color: #6adbfc;
+}
+#twitter_update_list span a:hover {
+  color: #ffffff;
+}
+#twitter_update_list li {
+  display: block;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+#randomchamp {
+  text-align: center;
+  margin-top: 32px;
+}
+#randomchamp a {
+  font-weight: 700;
+}
+#liveRaces {
+  width: 716px;
+  margin-right: 16px;
+}
+.racebar {
+  display: block;
+  width: 700px;
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  margin-bottom: 8px;
+  padding: 4px 8px 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.racebar.lit {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+}
+.racebar.lit:hover {
+  background-color: #ad0807;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#ad0807), to(#8b0706));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #ad0807, #8b0706);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #ad0807, #8b0706);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #ad0807, #8b0706);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #ad0807, #8b0706);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #ad0807, #8b0706);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #c10908 #0b0100 #0b0100 #b70907;
+}
+.racebar:hover {
+  background-color: #c01614;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c01614), to(#a01211));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c01614, #a01211);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c01614, #a01211);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c01614, #a01211);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c01614, #a01211);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c01614, #a01211);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #d21816 #280504 #280504 #c91715;
+  color: inherit;
+}
+.racebar:active {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #010000 #010000 #860605;
+  color: inherit;
+}
+.racebar .right {
+  text-align: right;
+}
+.racebar .left {
+  width: 472px;
+  margin-right: 16px;
+}
+.racebar div {
+  padding-top: 1px;
+}
+.racebar strong {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+}
+.race_img {
+  padding-top: 0px;
+  float: left;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  margin-right: 8px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+  background: #000000 no-repeat;
+  background-size: 86px 64px;
+  background-position: 0 -3px;
+}
+/*
+.streamsize(@size) {
+    width: 100% / @size;
+    .left;
+    margin-bottom:@gutter / 2;
+
+    object {
+        width: 100%;
+        height: 200px;
+    }
+
+    .stream_namebar {
+        .rounded_top;
+        .textshadow;
+        padding: 2px @gutter/2 1px;
+        .box(@darkred / 2);
+        .bold;
+        strong { .serif; }
+    }
+}
+
+.stream_big { .streamsize(2); }
+.stream_small { .streamsize(3); font-size:@smaller; }
+.stream_group { display:none; }
+
+//old shit
+@jtv_bar: 29px;
+.streamsize(@size) {
+    width: (@column * @size) - (@gutter);
+    .left;
+    margin-right: @gutter;
+    &:nth-child(3n-1) { margin-right: 0; }
+    margin-bottom:@gutter / 2;
+
+    object {
+        width: (@column * @size) - @gutter;
+        height: (9/16) * ((@column * @size) - @gutter) + @jtv_bar;
+    }
+
+    .stream_namebar {
+        .rounded_top;
+        .textshadow;
+        width: (@column * @size) - (@gutter * 2) - 1;
+        padding: 2px @gutter/2 1px;
+        .box(@darkred / 2);
+        .bold;
+        strong { .serif; }
+    }
+}
+
+.stream_big { .streamsize(3); }
+.stream_small { .streamsize(2); font-size:@smaller; }
+.stream_group { display:none; }
+.stream_racebar {
+    width: (@column * 6) - (@gutter * 2);
+    .box(@grey);
+    .rounded;
+    .boxshadow;
+    overflow:auto;
+    margin-bottom: @gutter/2;
+    padding: (@gutter/4) (@gutter/2) (@gutter/4);
+    .bold;
+
+    &.lit {
+        .box(@darkred);
+        &:hover { .box(lighten(@darkred,10%); }
+    }
+
+    &:hover {
+        cursor:pointer;
+        .box(@darkred);
+    }
+
+    .race_img {
+        padding-top:0px;
+        .left;
+        .rounded;
+        height:40px;
+        width:80px;
+        margin-right: @gutter/2;
+        background-size: 200%;
+        background-position: 35% 50%;
+        .boxshadow;
+    }
+
+    .right { text-align:right; }
+    div { padding-top:1px; }
+    strong { .serif }
+} */
+#faq {
+  width: 716px;
+  margin-right: 16px;
+  float: left;
+}
+#faq a {
+  text-decoration: underline;
+}
+#faqNav {
+  width: 228px;
+  margin-right: 16px;
+  margin-top: 27px;
+  float: right;
+}
+#faqNav a {
+  display: block;
+}
+#backToTopButton {
+  display: block;
+  position: fixed;
+  bottom: 50.4px;
+  width: 228px;
+  margin-right: 16px;
+  text-align: right;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #111111;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#111111), to(#000000));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #111111, #000000);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #111111, #000000);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #111111, #000000);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #111111, #000000);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #111111, #000000);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #1b1b1b #000000 #000000 #161616;
+  padding: 3px 10px;
+  font-weight: 700;
+}
+#backToTopButton:hover {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+}
+#backToTopButton:active {
+  background-color: #3e0303;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3e0303), to(#1c0101));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3e0303, #1c0101);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3e0303, #1c0101);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3e0303, #1c0101);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3e0303, #1c0101);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3e0303, #1c0101);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #520403 #000000 #000000 #480303;
+}
+code {
+  background-color: #111111;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#111111), to(#000000));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #111111, #000000);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #111111, #000000);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #111111, #000000);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #111111, #000000);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #111111, #000000);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #1b1b1b #000000 #000000 #161616;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 1px 5px;
+  font-family: 'Cuprum', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #ced7e2;
+}
+.monospace {
+  font-family: 'Cuprum', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #ced7e2;
+}
+.irc {
+  display: block;
+  background: #000000;
+  padding: 2px 10px;
+  font-family: 'Cuprum', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #ced7e2;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#commandlist h1 img {
+  position: relative;
+}
+#commandlist h1 img:hover {
+  box-shadow: 0 0 8px #3c70df;
+  -moz-box-shadow: 0 0 8px #3c70df;
+  -webkit-box-shadow: 0 0 8px #3c70df;
+}
+#commandlist h2 {
+  font-family: 'Cuprum', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.31em;
+  border-bottom: 1px dotted #424242;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+#commandlist img {
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+#glossary {
+  width: 716px;
+  margin-right: 16px;
+  float: left;
+}
+#glossary a {
+  text-decoration: underline;
+}
+#glossary h1 {
+  margin-left: 244px;
+}
+#glossary table td:first-child {
+  width: 228px;
+  margin-right: 16px;
+  text-align: right;
+  font-weight: 700;
+  padding-right: 16px;
+}
+#glossary table td {
+  padding-bottom: 8px;
+  vertical-align: top;
+}
+#glossary .term {
+  width: 228px;
+  margin-right: 16px;
+}
+.cuprum {
+  font-family: 'Cuprum', sans-serif;
+  letter-spacing: 1px;
+}
+#faqHead {
+  margin-top: 16px;
+}
+#faqHead a {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: #296b28;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#296b28), to(#1f511e));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #296b28, #1f511e);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #296b28, #1f511e);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #296b28, #1f511e);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #296b28, #1f511e);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #296b28, #1f511e);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #2f7a2d #000000 #000000 #2c722a;
+  width: 227px;
+  margin-right: 16px;
+  float: left;
+  padding: 5px 0;
+  color: #b6dec7;
+}
+#faqHead a:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+#faqHead a:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+#faqHead a:hover {
+  background-color: #3ea13b;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3ea13b), to(#348632));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3ea13b, #348632);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3ea13b, #348632);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3ea13b, #348632);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3ea13b, #348632);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3ea13b, #348632);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #43af41 #0e260e #0e260e #40a83e;
+}
+#faqHead a:active {
+  background-color: #296b28;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#296b28), to(#1f511e));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #296b28, #1f511e);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #296b28, #1f511e);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #296b28, #1f511e);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #296b28, #1f511e);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #296b28, #1f511e);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #2f7a2d #050e05 #050e05 #2c722a;
+}
+#stats col {
+  width: 122px;
+}
+.icons {
+  margin-right: 4px;
+}
+.icons:hover {
+  cursor: pointer;
+}
+.avatar {
+  width: 104px;
+  height: 104px;
+  display: inline-block;
+  border: solid 1px #000000;
+  overflow: hidden;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  margin-bottom: 8px;
+}
+#profile_name {
+  width: 106px;
+  margin-right: 16px;
+  float: left;
+}
+#profile_gamelist {
+  width: 350px;
+  margin-right: 16px;
+  float: left;
+}
+#profile_gamelist table {
+  width: 100%;
+}
+#profile_gamelist td:nth-child(2) {
+  text-align: right;
+}
+#profile_gamelist tr:hover {
+  background: #1448b3;
+  color: #ffffff;
+  cursor: pointer;
+}
+#profile_races {
+  width: 472px;
+  margin-right: 16px;
+  float: left;
+  margin-bottom: 16px;
+  min-height: 1000px;
+}
+#awards figure {
+  text-align: center;
+  margin: 0;
+  width: 106px -1px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  margin-bottom: 16px;
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  height: 64px;
+  cursor: default;
+}
+#awards figure figcaption {
+  position: relative;
+  bottom: 4px;
+  text-align: center;
+  font-size: 85%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #111111;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#111111), to(#000000));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #111111, #000000);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #111111, #000000);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #111111, #000000);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #111111, #000000);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #111111, #000000);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #1b1b1b #000000 #000000 #161616;
+  margin: 1px 2px 2px 1px;
+  font-weight: 700;
+}
+#awards .special_sticker {
+  background-color: #1040a0;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1040a0), to(#0d3380));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1040a0, #0d3380);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1040a0, #0d3380);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1040a0, #0d3380);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1040a0, #0d3380);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1040a0, #0d3380);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #1247b3 #010307 #010307 #1144a9;
+}
+#changeStats {
+  list-style-position: outside;
+}
+#changeStats li {
+  padding: 0 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #808080;
+}
+#changeStats li:nth-child(1) {
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+#changeStats li:nth-child(2) {
+  color: #f7e279;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #8d8145;
+}
+#changeStats li:nth-child(3) {
+  color: #bec7d2;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #6d7278;
+}
+#changeStats li:nth-child(4) {
+  color: #e09456;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #805531;
+}
+#changeStats li:hover {
+  background: #1448b3;
+  color: #ffffff;
+  cursor: pointer;
+}
+#buttonCollection .live {
+  font-weight: 700;
+  position: relative;
+  bottom: 7px;
+  font-size: 85%;
+  color: #fa5050;
+}
+.raceResults {
+  margin-bottom: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/greybg.jpg');
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.raceResults tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.12);
+}
+.raceResults th:first-child {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+.raceResults th:last-child {
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+.raceResults td {
+  padding-bottom: 1px;
+}
+.raceResults td:nth-child(1) {
+  padding-left: 8px;
+}
+.raceFeedRating {
+  color: #808080;
+  text-align: right;
+  width: 20px;
+  padding: 0;
+  font-size: 85%;
+  font-style: italic;
+}
+.raceFeedArrow {
+  text-align: center;
+  width: 10px;
+  padding-right: 7px;
+  padding-left: 10px;
+  font-style: normal;
+}
+.raceResults td:nth-child(1) {
+  min-width: 30.5px;
+  color: #808080;
+}
+.raceResults td:nth-child(2) {
+  min-width: 137.25px;
+}
+.raceResults td:nth-child(3) {
+  min-width: 61px;
+}
+.raceResults td:nth-child(4) {
+  min-width: 69.71428571428571px;
+}
+.raceFeedRatingChange {
+  text-align: right;
+  width: 15px;
+  padding: 0 8px 0 16px;
+  font-size: 85%;
+  font-style: italic;
+}
+span.raceMessage {
+  position: relative;
+  z-index: 24;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background: #282828;
+  color: #a0adbd;
+  font-size: 85%;
+}
+span.raceMessage:hover {
+  z-index: 25;
+  background-color: #1448b3;
+  color: #ffffff;
+  cursor: default;
+}
+span.raceMessage span {
+  display: none;
+}
+span.raceMessage:hover span {
+  display: block;
+  font-weight: normal;
+  position: absolute;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  top: -6px;
+  left: 15px;
+  width: 192px;
+  border: 1px solid #1448b3;
+  background-color: #111111;
+  box-shadow: inset #1448b3 0 0 6px, #000000 2px 2px 10px, #1448b3 0 0 2px;
+  padding: 6px;
+  color: #bec7d2;
+  text-align: center;
+  margin-bottom: -20px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.playersListRank {
+  width: 32px;
+}
+.playersListRating {
+  width: 55px;
+}
+/*
+.roverall { .ratingcolors (#faffff, #59595b); }
+.r2200 { .ratingcolors (#faffff, #59595b); }
+.r2100 { .ratingcolors (#b8c5ff, #532743); }
+.r2000 { .ratingcolors (#3eb9ff, #1e1856); }
+.r1900 { .ratingcolors (#40d844, #091719); }
+.r1800 { .ratingcolors (#ff2b2b, #1f0000); }
+.r1700 { .ratingcolors (#FC702F, #321111); }
+.r1600 { .ratingcolors (#fab131, #392018); }
+.r1500 { .ratingcolors (#ddd440, #2c222f); }
+.r1400 { .ratingcolors (#ff9783, #1f2445); }
+.r1300 { .ratingcolors (#dda8cf, #1a283b); }
+.r1200 { .ratingcolors (#6eb5df, #172231); }
+.r1100 { .ratingcolors (#99d7a7, #181d27); }
+.r1000 { .ratingcolors (#92a98a, #18211f); }
+.r900  { .ratingcolors (#95939b, #1f1c1c); }
+.r800  { .ratingcolors (#95937b, #211c17); }
+.r700  { .ratingcolors (#957370, #161311); }
+.r600  { .ratingcolors (#894040, #101010); }
+.r500  { .ratingcolors (#892020, #0A0A0A); }
+.r400  { .ratingcolors (#5e2b65, #070707); }
+.r300  { .ratingcolors (#502065, #040404); }
+.r200  { .ratingcolors (#401065, #020202); }
+.r100  { .ratingcolors (#200065, #000000); }
+*/
+.r1 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #efe3eb solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #453b40;
+}
+.r1 tr {
+  color: #efe3eb;
+}
+.r1 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+.r2 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #ff9ff0 solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #40264b;
+}
+.r2 tr {
+  color: #ff9ff0;
+}
+.r2 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+.r3 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #57c2ff solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #232c46;
+}
+.r3 tr {
+  color: #57c2ff;
+}
+.r3 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+.r4 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #68df98 solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #223025;
+}
+.r4 tr {
+  color: #68df98;
+}
+.r4 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+.r5 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #e4c17c solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #282422;
+}
+.r5 tr {
+  color: #e4c17c;
+}
+.r5 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+.r6 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #b4b9bf solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #1d2028;
+}
+.r6 tr {
+  color: #b4b9bf;
+}
+.r6 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+.r7 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #d6a59a solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #2b1713;
+}
+.r7 tr {
+  color: #d6a59a;
+}
+.r7 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+.r8 {
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-left: 4px #808080 solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #1b1b1b;
+}
+.r8 tr {
+  color: #808080;
+}
+.r8 tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.085);
+}
+#unranked {
+  text-align: center;
+}
+#unranked:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+.rwhite {
+  color: #efe3eb;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #898286;
+}
+.rpurple {
+  color: #ff9ff0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #925b89;
+}
+.rblue {
+  color: #57c2ff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #326f92;
+}
+.rgreen {
+  color: #68df98;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #3b7f57;
+}
+.rgold {
+  color: #e4c17c;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #826e47;
+}
+.rsilver {
+  color: #b4b9bf;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #676a6d;
+}
+.rbronze {
+  color: #d6a59a;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #7a5e58;
+}
+.rgrey {
+  color: #808080;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 0 0 1px #494949;
+}
+.club {
+  margin-bottom: 4px;
+}
+.club td {
+  padding: 0 0 0 8px;
+}
+.club td:last-child {
+  padding-right: 8px;
+}
+.rankArrow {
+  margin: 0 1px 1px 0;
+}
+#channel_info {
+  float: right;
+  width: 228px;
+  margin-right: 16px;
+}
+#channel_info a {
+  text-decoration: underline;
+}
+#mibbit_embed {
+  width: 716px;
+  margin-right: 16px;
+  border: 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  margin-top: 16px;
+  height: 550px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.cosmo {
+  color: #58d95e;
+  font-weight: 700;
+}
+.puchiedarcy {
+  color: #fd6f6f;
+  font-weight: 700;
+}
+.jiano {
+  color: #5cb3f0;
+  font-weight: 700;
+}
+.bmn {
+  color: #a190ff;
+  font-weight: 700;
+}
+.sluip {
+  color: #d9ca69;
+  font-weight: 700;
+}
+.izu {
+  color: #69d9bb;
+  font-weight: 700;
+}
+#about_left {
+  float: left;
+  margin-left: 244px;
+  padding-top: 30px;
+}
+.developers {
+  width: 106px;
+  margin-right: 16px;
+  float: left;
+  text-align: right;
+}
+.roles {
+  width: 228px;
+  margin-right: 16px;
+  float: left;
+}
+#about_right {
+  float: right;
+  margin-right: 244px;
+  padding-top: 30px;
+}
+#aboutSRL {
+  width: 594px;
+  margin-right: 16px;
+  float: right;
+}
+#sotn-inventory {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  margin: 32px 0;
+}
+#sotn-desc {
+  margin-top: 32px;
+  width: 350px;
+  margin-right: 16px;
+  color: #808080;
+  font-style: italic;
+}
+#oot-restriction {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  margin: 32px 0;
+}
+#oot-desc {
+  margin-top: 32px;
+  width: 350px;
+  margin-right: 16px;
+  color: #808080;
+  font-style: italic;
+}
+#tools a {
+  text-decoration: underline;
+}
+#tools .newcard {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-decoration: none;
+}
+#tools .newcard:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+#tools .newcard:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+#tools .newcard:nth-child(2n) {
+  margin-right: 0;
+}
+#tools_left {
+  width: 472px;
+  margin-right: 16px;
+  float: left;
+}
+#tools_right {
+  width: 472px;
+  margin-right: 16px;
+  float: right;
+}
+#bingo_desc {
+  width: 228px;
+  margin-right: 16px;
+}
+#bingo_list {
+  width: 228px;
+  margin-right: 16px;
+  float: right;
+  margin-right: 0;
+}
+#bingo_list .oot:hover {
+  background-color: #c72027;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c72027), to(#a81b21));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c72027, #a81b21);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c72027, #a81b21);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c72027, #a81b21);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c72027, #a81b21);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c72027, #a81b21);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #d9232a #36090b #36090b #d02129;
+}
+#bingo_list .oot:active {
+  background-color: #85151a;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#85151a), to(#661014));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #85151a, #661014);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #85151a, #661014);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #85151a, #661014);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #85151a, #661014);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #85151a, #661014);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #96181d #170404 #170404 #8d171c;
+}
+#bingo_list .mm:hover {
+  background-color: #8b3eb2;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#8b3eb2), to(#763598));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #8b3eb2, #763598);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #8b3eb2, #763598);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #8b3eb2, #763598);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #8b3eb2, #763598);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #8b3eb2, #763598);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #9646bf #2a1335 #2a1335 #9141ba;
+}
+#bingo_list .mm:active {
+  background-color: #5d2977;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#5d2977), to(#48205c));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #5d2977, #48205c);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #5d2977, #48205c);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #5d2977, #48205c);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #5d2977, #48205c);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #5d2977, #48205c);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #682f86 #130818 #130818 #632c7e;
+}
+#bingo_list .sm:hover {
+  background-color: #f88010;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#f88010), to(#de6e06));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #f88010, #de6e06);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #f88010, #de6e06);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #f88010, #de6e06);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #f88010, #de6e06);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #f88010, #de6e06);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #f98b24 #5d2e03 #5d2e03 #f8851a;
+}
+#bingo_list .sm:active {
+  background-color: #a5550b;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#a5550b), to(#844409));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #a5550b, #844409);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #a5550b, #844409);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #a5550b, #844409);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #a5550b, #844409);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #a5550b, #844409);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #b85f0c #2e1803 #2e1803 #af5a0b;
+}
+#bingo_list .sotn:hover {
+  background-color: #b99b8f;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#b99b8f), to(#ab8779));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #b99b8f, #ab8779);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #b99b8f, #ab8779);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #b99b8f, #ab8779);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #b99b8f, #ab8779);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #b99b8f, #ab8779);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #c1a69c #62483d #62483d #bda195;
+}
+#bingo_list .sotn:active {
+  background-color: #7b675f;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7b675f), to(#675650));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7b675f, #675650);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7b675f, #675650);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7b675f, #675650);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7b675f, #675650);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7b675f, #675650);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #877168 #332b28 #332b28 #816c64;
+}
+#bingo_list .sm64:hover {
+  background-color: #e72c2c;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#e72c2c), to(#d71818));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #e72c2c, #d71818);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #e72c2c, #d71818);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #e72c2c, #d71818);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #e72c2c, #d71818);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #e72c2c, #d71818);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #e93e3e #600b0b #600b0b #e83535;
+}
+#bingo_list .sm64:active {
+  background-color: #9a1d1d;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#9a1d1d), to(#7c1818));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #9a1d1d, #7c1818);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #9a1d1d, #7c1818);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #9a1d1d, #7c1818);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #9a1d1d, #7c1818);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #9a1d1d, #7c1818);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #ab2121 #2f0909 #2f0909 #a31f1f;
+}
+#bingo_list .smw:hover {
+  background-color: #48d024;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#48d024), to(#3db21f));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #48d024, #3db21f);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #48d024, #3db21f);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #48d024, #3db21f);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #48d024, #3db21f);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #48d024, #3db21f);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #52db2e #16410b #16410b #4bd926;
+}
+#bingo_list .smw:active {
+  background-color: #308b18;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#308b18), to(#256c13));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #308b18, #256c13);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #308b18, #256c13);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #308b18, #256c13);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #308b18, #256c13);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #308b18, #256c13);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #369c1b #0a1e05 #0a1e05 #33931a;
+}
+#bingo_list .pokemonrb:hover {
+  background-color: #7387c2;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7387c2), to(#5a72b7));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7387c2, #5a72b7);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7387c2, #5a72b7);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7387c2, #5a72b7);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7387c2, #5a72b7);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7387c2, #5a72b7);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #8193c8 #2b3962 #2b3962 #7a8dc5;
+}
+#bingo_list .pokemonrb:active {
+  background-color: #4d5a81;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#4d5a81), to(#3f4a6b));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #4d5a81, #3f4a6b);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #4d5a81, #3f4a6b);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #4d5a81, #3f4a6b);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #4d5a81, #3f4a6b);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #4d5a81, #3f4a6b);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #54638e #1d2231 #1d2231 #505e88;
+}
+#bingo_list .pokemoncrystal:hover {
+  background-color: #9acfd7;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#9acfd7), to(#80c3cd));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #9acfd7, #80c3cd);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #9acfd7, #80c3cd);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #9acfd7, #80c3cd);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #9acfd7, #80c3cd);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #9acfd7, #80c3cd);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #a9d6dd #398490 #398490 #a1d2da;
+}
+#bingo_list .pokemoncrystal:active {
+  background-color: #678a8f;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#678a8f), to(#58767b));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #678a8f, #58767b);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #678a8f, #58767b);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #678a8f, #58767b);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #678a8f, #58767b);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #678a8f, #58767b);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #719499 #314245 #314245 #6b9095;
+}
+#gamelist {
+  display: none;
+}
+#gamelist .very_popular {
+  display: block;
+  display: block;
+  width: 700px;
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  margin-bottom: 8px;
+  padding: 4px 8px 4px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 455px;
+  margin-right: 16px;
+  margin-bottom: 1px;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  cursor: pointer;
+}
+#gamelist .very_popular.lit {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+}
+#gamelist .very_popular.lit:hover {
+  background-color: #ad0807;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#ad0807), to(#8b0706));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #ad0807, #8b0706);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #ad0807, #8b0706);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #ad0807, #8b0706);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #ad0807, #8b0706);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #ad0807, #8b0706);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #c10908 #0b0100 #0b0100 #b70907;
+}
+#gamelist .very_popular:hover {
+  background-color: #c01614;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c01614), to(#a01211));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c01614, #a01211);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c01614, #a01211);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c01614, #a01211);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c01614, #a01211);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c01614, #a01211);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #d21816 #280504 #280504 #c91715;
+  color: inherit;
+}
+#gamelist .very_popular:active {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #010000 #010000 #860605;
+  color: inherit;
+}
+#gamelist .very_popular .right {
+  text-align: right;
+}
+#gamelist .very_popular .left {
+  width: 472px;
+  margin-right: 16px;
+}
+#gamelist .very_popular div {
+  padding-top: 1px;
+}
+#gamelist .very_popular strong {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+}
+#gamelist .very_popular:nth-child(2) {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+#gamelist .very_popular:nth-child(2) .gamerank {
+  color: #f7e279;
+}
+#gamelist .very_popular:nth-child(3) .gamerank {
+  color: #bec7d2;
+}
+#gamelist .very_popular:nth-child(4) .gamerank {
+  color: #e09456;
+}
+#gamelist .very_popular:last-child {
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+}
+#gamelist .very_popular:hover {
+  background-color: #c01614;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c01614), to(#a01211));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c01614, #a01211);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c01614, #a01211);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c01614, #a01211);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c01614, #a01211);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c01614, #a01211);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #d21816 #280504 #280504 #c91715;
+}
+#gamelist .very_popular:hover .popBar {
+  background: #c01614;
+}
+#gamelist .very_popular:active {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #010000 #010000 #860605;
+}
+#gamelist .very_popular:active .popBar {
+  background: #7c0605;
+}
+#gamelist .very_popular strong {
+  color: #bec7d2;
+}
+#gamelist .very_popular .popBar {
+  display: block;
+  float: left;
+  margin-top: 7px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background: #424242;
+  height: 7px;
+}
+#gamelist h1 {
+  clear: both;
+}
+#gamelist .popularity {
+  float: left;
+  width: 472px;
+  margin-right: 16px;
+}
+#gamelist .alphabetical {
+  float: left;
+  width: 472px;
+  margin-right: 16px;
+}
+#gamelist #alphalist {
+  height: 486px;
+  overflow-y: scroll;
+  margin-top: 8px;
+  border-top: 2px #424242 solid;
+  border-bottom: 2px #424242 solid;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#gamelist .gamerank {
+  float: right;
+  color: #808080;
+}
+#gamelist .letterpicker {
+  letter-spacing: 3px;
+  width: 100%;
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  text-align: center;
+}
+#gamelist .letterpicker a {
+  padding-left: 3px;
+  padding-top: 3px;
+}
+#gamelist .letterpicker a:hover {
+  color: #f7e279;
+  background: #7c0605;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#gamepage #playerslist {
+  width: 228px;
+  margin-right: 16px;
+  float: left;
+}
+#gamepage #playerslist table tr td:nth-child(1) {
+  width: 30px;
+}
+#gamepage #playerslist table tr td:nth-child(3) {
+  text-align: right;
+  width: 50px;
+}
+#gamepage #rightside {
+  overflow: visible;
+  float: right;
+  width: 228px;
+  margin-right: 16px;
+}
+#gamepage #rightside img {
+  width: 228px;
+  margin-right: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#gamepage #rightside object {
+  width: 228px;
+  margin-right: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-right: 0;
+}
+#gamepage #rightside a {
+  text-decoration: underline;
+}
+#gamepage #rightside table {
+  margin-bottom: 16px;
+}
+#gamepage #rightside table a {
+  text-decoration: none;
+}
+#gamepage #rightside th {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  color: #ffffff;
+}
+#gamepage #centercolumn {
+  float: left;
+  width: 472px;
+  margin-right: 16px;
+}
+#gamepage #rules {
+  width: 472px;
+  margin-right: 16px;
+  float: left;
+  margin-bottom: 16px;
+}
+#gamepage #rules a {
+  text-decoration: underline;
+}
+#gamepage #side_popgoals .raceResults th {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+#megaman_bossorder {
+  margin-top: 16px;
+  float: right;
+  background: url('http://c15111086.r86.cf2.rackcdn.com/bossorder_bg.gif');
+  width: 472px;
+  margin-right: 16px;
+  height: 462px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#megaman_bossorder #imageholder {
+  padding-top: 56px;
+  padding-left: 64px;
+}
+#megaman_bossorder #imageholder img {
+  margin: 0 38px 38px 0;
+}
+#leaderboardcontainer {
+  width: 716px;
+  margin-right: 16px;
+  margin-left: 122px;
+  min-height: 1000px;
+}
+#siteleaderboard {
+  margin-bottom: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/greybg.jpg');
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  color: #808080;
+}
+#siteleaderboard tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.12);
+}
+#siteleaderboard th:first-child {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+#siteleaderboard th:last-child {
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+#siteleaderboard td {
+  padding-bottom: 1px;
+}
+#siteleaderboard td:nth-child(1) {
+  padding-left: 8px;
+}
+#siteleaderboard th {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #111111;
+  font-weight: 700;
+}
+#siteleaderboard tr td {
+  text-align: center;
+  padding: 2px 0 1px 0;
+}
+#siteleaderboard tr:nth-child(2) {
+  color: #f7e279;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #8d8145;
+}
+#siteleaderboard tr:nth-child(3) {
+  color: #bec7d2;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #6d7278;
+}
+#siteleaderboard tr:nth-child(4) {
+  color: #e09456;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #805531;
+}
+.lbButton {
+  color: #bec7d2;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #6d7278;
+}
+.lbButton:hover {
+  cursor: pointer;
+  color: #f7e279;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #8d8145;
+}
+.litColumn {
+  box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.3);
+}
+#leaderboard #playerslist {
+  width: 228px;
+  margin-right: 16px;
+  float: left;
+}
+#leaderboard #playerslist table tr td:nth-child(1) {
+  width: 30px;
+}
+#leaderboard #playerslist table tr td:nth-child(3) {
+  text-align: right;
+  width: 50px;
+}
+#leaderboard #rightside {
+  float: right;
+  width: 228px;
+  margin-right: 16px;
+}
+#leaderboard #rightside a {
+  text-decoration: underline;
+}
+#leaderboard #rightside table {
+  margin-bottom: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/greybg.jpg');
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#leaderboard #rightside table tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.12);
+}
+#leaderboard #rightside table th:first-child {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+#leaderboard #rightside table th:last-child {
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+#leaderboard #rightside table td {
+  padding-bottom: 1px;
+}
+#leaderboard #rightside table td:nth-child(1) {
+  padding-left: 8px;
+}
+#leaderboard #rightside table a {
+  text-decoration: none;
+}
+#leaderboard #rightside table td:nth-child(1) {
+  width: 40.666666666666664px;
+  color: #808080;
+}
+#leaderboard #rightside table td:nth-child(3) {
+  text-align: right;
+  padding-right: 8px;
+}
+#leaderboard #rightside table .smaller {
+  font-size: 85%;
+}
+#leaderboard #rightside .randomchampion a {
+  color: #f7e279;
+  text-decoration: none;
+}
+#leaderboard #rightside .randomchampion a:hover {
+  color: #ffffff;
+}
+#leaderboard #middle {
+  float: left;
+  width: 472px;
+  margin-right: 16px;
+}
+#leaderboard #middle table {
+  margin-bottom: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/greybg.jpg');
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#leaderboard #middle table tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.12);
+}
+#leaderboard #middle table th:first-child {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+#leaderboard #middle table th:last-child {
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+#leaderboard #middle table td {
+  padding-bottom: 1px;
+}
+#leaderboard #middle table td:nth-child(1) {
+  padding-left: 8px;
+}
+#leaderboard #middle table a {
+  text-decoration: none;
+}
+#leaderboard #middle table td:nth-child(1) {
+  width: 40.666666666666664px;
+  color: #808080;
+}
+#leaderboard #middle table td:nth-child(3) {
+  text-align: right;
+  padding-right: 8px;
+}
+#leaderboard #middle table td:nth-child(4) {
+  width: 228px;
+  margin-right: 16px;
+  text-align: right;
+  padding: 0 8px;
+}
+#leaderboard #middle #highestratings {
+  clear: both;
+}
+#leaderboard #middle #populartables table {
+  width: 228px;
+  margin-right: 16px;
+  float: left;
+}
+#leaderboard #middle #populartables h1 {
+  clear: both;
+}
+#leaderboard #middle #populartables .gamepic {
+  float: right;
+  width: 228px;
+  margin-right: 16px;
+  margin: 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  max-height: 171px;
+}
+#error404 {
+  width: 960px;
+  margin-right: 16px;
+  text-align: center;
+  margin-top: 122px;
+}
+#error404 h1 {
+  color: #fa5050;
+}
+#buttonholder {
+  width: 100%;
+}
+#bingoPage #results {
+  float: left;
+  width: 594px;
+  margin-right: 16px;
+  text-align: right;
+}
+#bingoPage .newcard {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  padding: 4px 0;
+}
+#bingoPage .newcard:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+#bingoPage .newcard:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+#bingoPage .newcard:last-child {
+  margin-right: 0;
+}
+#bingoPage #bingo {
+  margin-top: 16px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+#bingoPage #bingo .rowcol {
+  background: #000811;
+  font-size: 75%;
+  color: #3c70df;
+  font-weight: 700;
+  border: 1px #0a245a solid;
+}
+#bingoPage #bingo .rowcol:hover {
+  color: #ffffff;
+  background: #1448b3;
+}
+#bingoPage #bingo tr:first-child td,
+#bingoPage #bingo tr:last-child td {
+  height: 30px;
+  background: #000811;
+  font-size: 75%;
+  color: #3c70df;
+  font-weight: 700;
+  border: 1px #0a245a solid;
+}
+#bingoPage #bingo tr:first-child td:hover,
+#bingoPage #bingo tr:last-child td:hover {
+  color: #ffffff;
+  background: #1448b3;
+}
+#bingoPage #bingo tr td {
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  padding: 0 5px;
+  cursor: pointer;
+  width: 95px;
+  height: 90px;
+  text-align: center;
+  border: 1px #424242 solid;
+  background: #000;
+}
+#bingoPage #bingo tr td:first-child {
+  width: 35px;
+  background: #000811;
+  font-size: 75%;
+  color: #3c70df;
+  font-weight: 700;
+  border: 1px #0a245a solid;
+}
+#bingoPage #bingo tr td:first-child:hover {
+  color: #ffffff;
+  background: #1448b3;
+}
+#bingoPage #bingo tr td:hover,
+#bingoPage #bingo tr td.hover {
+  background: #001a36;
+  color: #fff;
+}
+#bingoPage #bingo tr td.greensquare {
+  background: #005511;
+}
+#bingoPage #bingo tr td.greensquare:hover,
+#bingoPage #bingo tr td.greensquare.hover {
+  background: #007722;
+}
+#bingoPage #bingo tr td.redsquare {
+  background: #550011;
+}
+#bingoPage #bingo tr td.redsquare:hover,
+#bingoPage #bingo tr td.redsquare.hover {
+  background: #770022;
+}
+#bingoPage #about_bingo {
+  float: right;
+  width: 350px;
+  margin-right: 16px;
+}
+#streamData {
+  display: none;
+}
+.featuredgame {
+  font-size: 85%;
+}
+#featuredStream {
+  width: 716px;
+  margin-right: 16px;
+}
+#featuredStream object {
+  width: 716px;
+  height: 431.75px;
+}
+#featuredStream h1 a {
+  text-decoration: none;
+}
+#featuredStream .morestreams {
+  color: #808080;
+  float: right;
+}
+#featuredStream .morestreams:hover {
+  color: #ffffff;
+}
+#featuredStreamContainer {
+  min-height: 435px;
+}
+.ls_objectContainer,
+.ls_objectContainer > div,
+.ls_objectContainer > img,
+.ls_objectContainer object {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+}
+.ls_objectContainer {
+  width: auto;
+  margin-left: 16px;
+}
+.ls_objectContainer div {
+  position: absolute;
+  overflow: hidden;
+}
+.ls_objectContainer object {
+  height: 100%;
+}
+.ls_objectContainer img {
+  padding-bottom: 29px;
+  z-index: -1000;
+}
+.liquidstream {
+  width: 100%;
+  float: left;
+  margin-bottom: 16px;
+}
+.ls_small {
+  width: 100%;
+}
+.ls_namebar {
+  margin-left: 16px;
+  overflow: hidden;
+}
+.ls_name {
+  height: 21px;
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  width: 100%;
+}
+#noStreams {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  text-align: center;
+  float: left;
+  margin-left: 16px;
+  color: #fa5050;
+  text-shadow: 1px 1px 3px #111111;
+}
+#streamBlock {
+  display: none;
+}
+#streamBlockList {
+  display: none;
+}
+.ls_padder {
+  padding: 3px 8px;
+}
+.ls_icons {
+  width: 25px;
+}
+.ls_icons a {
+  display: block;
+  width: 25px;
+  height: 21px;
+}
+.chatIcon {
+  background-position: -9px 0;
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/icon_chat.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+}
+.chatIcon:hover {
+  background-color: #c01614;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c01614), to(#a01211));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c01614, #a01211);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c01614, #a01211);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c01614, #a01211);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c01614, #a01211);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c01614, #a01211);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #d21816 #280504 #280504 #c91715;
+  cursor: pointer;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/icon_chat.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -9px -21px;
+}
+.chatIcon:active {
+  background-color: #5d0504;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#5d0504), to(#3b0302));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #5d0504, #3b0302);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #5d0504, #3b0302);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #5d0504, #3b0302);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #5d0504, #3b0302);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #5d0504, #3b0302);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #710505 #000000 #000000 #670504;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/icon_chat.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -9px -21px;
+}
+.chatIcon span {
+  display: none;
+}
+.closeStreamIcon {
+  background-position: -9px 0;
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/closeStream.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+.closeStreamIcon:hover {
+  background-color: #c01614;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c01614), to(#a01211));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c01614, #a01211);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c01614, #a01211);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c01614, #a01211);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c01614, #a01211);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c01614, #a01211);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #d21816 #280504 #280504 #c91715;
+  cursor: pointer;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/closeStream.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -9px -21px;
+}
+.closeStreamIcon:active {
+  background-color: #5d0504;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#5d0504), to(#3b0302));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #5d0504, #3b0302);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #5d0504, #3b0302);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #5d0504, #3b0302);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #5d0504, #3b0302);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #5d0504, #3b0302);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #710505 #000000 #000000 #670504;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/closeStream.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -9px -21px;
+}
+.closeStreamIcon span {
+  display: none;
+}
+.collapseIcon {
+  display: block;
+  width: 25px;
+  height: 21px;
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+  background-position: -9px 0;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/icon_collapse2.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+}
+.collapseIcon:hover {
+  background-color: #c01614;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#c01614), to(#a01211));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #c01614, #a01211);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #c01614, #a01211);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #c01614, #a01211);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #c01614, #a01211);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #c01614, #a01211);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #d21816 #280504 #280504 #c91715;
+  cursor: pointer;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/icon_collapse2.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -9px -21px;
+}
+.collapseIcon:active {
+  background-color: #5d0504;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#5d0504), to(#3b0302));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #5d0504, #3b0302);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #5d0504, #3b0302);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #5d0504, #3b0302);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #5d0504, #3b0302);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #5d0504, #3b0302);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #710505 #000000 #000000 #670504;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/icon_collapse2.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -9px -21px;
+}
+.collapseIcon span {
+  display: none;
+}
+.collapseIcon2 {
+  background-position: -51px 0;
+}
+.collapseIcon2:hover {
+  background-position: -51px -21px;
+}
+.collapseIcon2:active {
+  background-position: -51px -21px;
+}
+.showhide_streams {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-decoration: none;
+}
+.showhide_streams:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+.showhide_streams:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+.showhide_entrants {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-decoration: none;
+}
+.showhide_entrants:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+.showhide_entrants:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+.ls_column {
+  float: left;
+}
+.numperrow {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-decoration: none;
+  width: 44px;
+  float: left;
+}
+.numperrow:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+.numperrow:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+#ls_sidebar {
+  width: 244px;
+  float: right;
+}
+#ls_controls {
+  margin-top: 16px;
+}
+#ls_container {
+  width: 100%;
+  clear: both;
+}
+#ls_entrants {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  /*
+
+    span {
+        a {
+            text-decoration:none;
+            color:inherit;
+            display:block;
+            .left;
+            height:22px;
+            width:@column - 1px;
+            padding-top:5px;
+            background:lighten(@darkgrey, 4%);
+            text-align:center;
+            font-weight:bold;
+            text-shadow: 2px 2px 1px #1a1a1a;
+        }
+        a:hover {text-decoration:none; color:#fff; background:lighten(@darkgrey, 8%); }
+        a:nth-child(1) { margin-right:2px; .rounded_bottomleft; &:hover { background:#205020; color:#62ffd1; } }
+        a:nth-child(2):hover { background:#482048; color:#ffb4f4; } // green and purple, a bit random but I like it.
+    }
+
+    */
+
+}
+#ls_entrants #raceTable {
+  white-space: nowrap;
+  border-bottom: 2px #0d3077 solid;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/greybg.jpg');
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#ls_entrants #raceTable td:nth-child(3) {
+  text-align: right;
+  padding-right: 16px;
+}
+#ls_entrants #raceTable tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.12);
+}
+#ls_entrants #raceTable th:first-child {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+#ls_entrants #raceTable th:last-child {
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+#ls_entrants #raceTable td {
+  padding-bottom: 1px;
+}
+#ls_entrants #raceTable td:nth-child(1) {
+  padding-left: 8px;
+}
+#ls_entrants #raceTable tr:nth-child(1) > td:nth-child(1) {
+  margin: 0;
+  padding: 0;
+}
+#ls_entrants #raceTable #entrantsBar {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #030b1c #030b1c #154cbc;
+  font-weight: 700;
+  height: 21px;
+  line-height: 21px;
+  padding-left: 10px;
+  margin-left: 0;
+  color: #ffffff;
+}
+#ls_entrants #raceTable #popoutTd {
+  width: 35px;
+}
+#ls_entrants #raceTable #popoutHeader {
+  padding: 0;
+  margin: 0;
+}
+#ls_entrants #raceTable #popoutHeader .popoutIcon {
+  width: 35px;
+  display: block;
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #030b1c #030b1c #154cbc;
+  height: 21px;
+  float: right;
+  background-position: -4px 0;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/popOut.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+}
+#ls_entrants #raceTable #popoutHeader .popoutIcon:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  cursor: pointer;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/popOut.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -4px -21px;
+}
+#ls_entrants #raceTable #popoutHeader .popoutIcon:active {
+  background-color: #0f3686;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#0f3686), to(#0b2966));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #0f3686, #0b2966);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #0f3686, #0b2966);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #0f3686, #0b2966);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #0f3686, #0b2966);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #0f3686, #0b2966);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #113d99 #020814 #020814 #103a8f;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/popOut.png'), url('http://c15111086.r86.cf2.rackcdn.com/grunge_button.png');
+  background-position: -4px -21px;
+}
+#ls_entrants #raceTable #popoutHeader .popoutIcon span {
+  display: none;
+}
+.ls_streams {
+  margin-right: 260px;
+}
+.ls_row {
+  clear: left;
+}
+.gamepic {
+  float: left;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  margin: 16px;
+  width: 122px;
+}
+.ls_streams_big {
+  margin-right: 16px;
+}
+.ls_entrants_hide {
+  display: none;
+}
+#gameAndGoal {
+  width: 70%;
+  padding-left: 16px;
+}
+#gameAndGoal h1 > a {
+  text-decoration: none;
+}
+#gameAndGoal .race_img {
+  position: relative;
+  top: 8px;
+  height: 48px;
+}
+#hideControls {
+  float: right;
+  text-align: right;
+  padding-top: 16px;
+}
+#timer {
+  color: #52d64f;
+}
+#past_results {
+  min-height: 900px;
+  margin-left: 122px;
+  width: 472px;
+  margin-right: 16px;
+  float: left;
+}
+#globalStats {
+  width: 228px;
+  margin-right: 16px;
+  float: right;
+  margin-right: 138px;
+}
+.meteryear {
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.meteryear h5 {
+  color: #f7e279;
+  margin-bottom: 3px;
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  font-weight: 700;
+  word-spacing: 8px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 15px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.meteryear .morestats {
+  display: none;
+  background: #0b0b0b;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  padding-left: 10px;
+  margin-bottom: 1px;
+  font-size: 85%;
+  opacity: 0.85;
+}
+.meteryear .meterbg {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #151515;
+  margin-bottom: 1px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.meteryear .meterbg:hover {
+  background: #202020;
+  cursor: pointer;
+}
+.meteryear .meterbg:nth-child(2) {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+.meteryear .meterbg:nth-child(2) .meterfill {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+.meteryear .meterbg:nth-last-child(2) {
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+}
+.meteryear .meterbg:nth-last-child(2) .meterfill {
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+}
+.meteryear .meterbg .meterfill {
+  width: 100%;
+  height: 20px;
+  background: #101a4c;
+}
+.meteryear .meterbg .meterfill:hover {
+  background: #192686;
+}
+.meteryear .meterbg .meterfill .metervalue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 3px;
+  height: 20px;
+  font-weight: 700;
+  padding-left: 10px;
+  width: 100%;
+}
+.meteryear .meterbg .meterfill .metervalue:link,
+.meteryear .meterbg .meterfill .metervalue:visited {
+  text-decoration: none;
+  color: #bec7d2;
+}
+.meteryear .meterbg .meterfill .metervalue:hover,
+.meteryear .meterbg .meterfill .metervalue:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+.meteryear .meterbg .meterfill .metervalue span {
+  float: right;
+  margin-right: 20px;
+  color: #808080;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 85%;
+}
+.disabled {
+  opacity: 0.65;
+}
+.disabled span {
+  opacity: 0.25;
+}
+#pageSorter {
+  height: 40px;
+}
+#pageSorter button {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-decoration: none;
+  width: 106px;
+}
+#pageSorter button:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+#pageSorter button:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+#pageSorter button span {
+  display: block;
+  background-position: center 0;
+  min-height: 16px;
+}
+#pageSorter button:nth-child(4) {
+  margin-right: 0;
+}
+#pageSorter #first span {
+  background: url('http://c15111086.r86.cf2.rackcdn.com/arrow_first.png') top center no-repeat;
+}
+#pageSorter #prev span {
+  background: url('http://c15111086.r86.cf2.rackcdn.com/arrow_prev.png') top center no-repeat;
+}
+#pageSorter #next span {
+  background: url('http://c15111086.r86.cf2.rackcdn.com/arrow_next.png') top center no-repeat;
+}
+#pageSorter #last span {
+  background: url('http://c15111086.r86.cf2.rackcdn.com/arrow_last.png') top center no-repeat;
+}
+#pageSorter #first:hover span {
+  background-position: center -16px;
+}
+#pageSorter #prev:hover span {
+  background-position: center -16px;
+}
+#pageSorter #next:hover span {
+  background-position: center -16px;
+}
+#pageSorter #last:hover span {
+  background-position: center -16px;
+}
+.halfpage {
+  width: 472px;
+  margin-right: 16px;
+  float: left;
+}
+.racenum {
+  float: right;
+  font-size: 75%;
+  color: #bec7d2;
+  background: #000000;
+  vertical-align: top;
+}
+.bigtitle {
+  font-size: 115%;
+  background: #bec7d2;
+}
+.bigtest {
+  font-size: 3em;
+  float: left;
+}
+.testrace tr:nth-child(2) {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.65);
+  border-top: 1px solid #570404;
+}
+.testrace th {
+  height: 22px;
+  padding: 0;
+  margin: 0;
+}
+.testrace th:first-child {
+  font-size: 120%;
+  text-align: left;
+  padding-left: 8px;
+}
+.testrace th:last-child {
+  color: #bec7d2;
+  padding-top: 1px;
+  padding-right: 8px;
+  padding-left: 4px;
+  text-align: right;
+}
+.testrace td {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.testrace .datetime {
+  color: #808080;
+  font-size: 85%;
+  color: #e06a69;
+  text-align: right;
+  padding-right: 8px;
+}
+.testrace .raceGoal {
+  color: #bec7d2;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #6d7278;
+  overflow-wrap: break-word;
+}
+.unranked {
+  text-align: center;
+  color: #808080;
+  font-size: 85%;
+  font-style: italic;
+}
+#ajaxstage {
+  margin: 20px auto;
+}
+#ajaxspin {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  border-width: 2px;
+  border-style: dotted;
+  border-color: #212121 #865934 #858b93 #c6b561;
+  border-radius: 40px;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(180deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+#ajaxloading {
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 85%;
+  color: #808080;
+  text-align: center;
+  -webkit-animation: bounce 1.5s linear infinite;
+  -moz-animation: bounce 1.5s linear infinite;
+}
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    opacity: 0.4;
+  }
+}
+@-moz-keyframes bounce {
+  from {
+    -moz-transform: rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    -moz-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -moz-transform: rotate(0deg);
+    opacity: 0.6;
+  }
+}
+#featured .featuredstreamcontainer {
+  width: 594px;
+  margin-right: 16px;
+  float: left;
+  margin-bottom: 8px;
+}
+#featured .featuredstream {
+  margin-top: 4px;
+}
+#featured .featuredstream object {
+  width: 100%;
+  height: 364px;
+}
+#featured .featuredchat {
+  width: 350px;
+  margin-right: 16px;
+  margin-top: 16px;
+  float: right;
+}
+#featured .featuredchat iframe {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  height: 400px;
+}
+#featured .biggerFeaturedStream {
+  width: 960px;
+  margin-right: 16px;
+}
+#featured .biggerFeaturedStream object {
+  width: 960px;
+  height: 569px;
+}
+.twitchstreamer {
+  display: block;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  width: 472px;
+  float: left;
+  min-height: 65px;
+  padding: 0;
+  margin-top: 8px;
+}
+.twitchstreamer:nth-child(2n - 1) {
+  margin-right: 16px;
+}
+.twitchstreamer .ava {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: solid 1px #000000;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  float: left;
+  margin: 8px;
+  width: 70px;
+  height: 70px;
+}
+.twitchstreamer .streamerinfo {
+  padding-top: 10px;
+}
+.twitchstreamer .name {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.21em;
+  color: #f7e279;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #8d8145;
+  margin-right: 16px;
+}
+.twitchstreamer .description {
+  display: block;
+  margin-top: 8px;
+  padding-right: 5px;
+  color: #e09456;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #805531;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.twitchstreamer:hover {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #030b1c #030b1c #154cbc;
+}
+.twitchstreamer:hover .name {
+  color: #ffffac;
+}
+.twitchstreamer:hover .description {
+  color: #91c5ff;
+}
+.twitchstreamer:active {
+  background-color: #0a245a;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#0a245a), to(#061739));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #0a245a, #061739);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #0a245a, #061739);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #0a245a, #061739);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #0a245a, #061739);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #0a245a, #061739);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #0c2b6c #000000 #000000 #0b2863;
+}
+#left_titletext {
+  display: block;
+  float: left;
+  padding-top: 8px;
+}
+#featuredtitle a {
+  text-decoration: none;
+  color: #f7e279;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6), 0 0 1px #8d8145;
+}
+#featuredtitle a:hover {
+  color: #ffffff;
+}
+#featuredtitle .closechat {
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png");
+  background-color: #424242;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#424242), to(#303030));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #424242, #303030);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #424242, #303030);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #424242, #303030);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #424242, #303030);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #424242, #303030);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4c4c4c #000000 #000000 #474747;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  color: #bec7d2;
+  margin: 0;
+  float: left;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 105px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-decoration: none;
+  float: right;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 0.88em;
+  margin: 0;
+  font-weight: 700;
+}
+#featuredtitle .closechat:hover {
+  background-color: #3c70df;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#3c70df), to(#235cd4));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #3c70df, #235cd4);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #3c70df, #235cd4);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #3c70df, #235cd4);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #3c70df, #235cd4);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #3c70df, #235cd4);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #4e7de2 #102a63 #102a63 #4576e0;
+  color: #ffffff;
+}
+#featuredtitle .closechat:active {
+  background-color: #1448b3;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#1448b3), to(#103b93));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #1448b3, #103b93);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #1448b3, #103b93);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #1448b3, #103b93);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #1448b3, #103b93);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #1448b3, #103b93);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  /*position:relative; top:1px;*/
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #164fc5 #071a40 #071a40 #154cbc;
+  color: #ffffff;
+}
+.watching {
+  background-color: #7c0605;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7c0605), to(#5a0404));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7c0605, #5a0404);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7c0605, #5a0404);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7c0605, #5a0404);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7c0605, #5a0404);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7c0605, #5a0404);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #900706 #000000 #000000 #860605;
+}
+.watching .name {
+  color: #ffffac;
+}
+.watching .description {
+  color: #ffc789;
+}
+#individual_race_result {
+  float: right;
+  width: 716px;
+  margin-right: 16px;
+}
+#lbright {
+  width: 228px;
+  margin-right: 16px;
+  float: right;
+}
+#lbright .lbpic {
+  width: 228px;
+  margin-right: 16px;
+  margin: 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  max-height: 171px;
+}
+#lbleft {
+  width: 716px;
+  margin-right: 16px;
+  float: left;
+}
+#catInfo a {
+  text-decoration: underline;
+  color: #3c70df;
+}
+#catInfo a:hover {
+  color: #ffffff;
+}
+#recordLeaderboard {
+  margin-bottom: 16px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-image: url('http://c15111086.r86.cf2.rackcdn.com/greybg.jpg');
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#recordLeaderboard tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.12);
+}
+#recordLeaderboard th {
+  background-color: #8b70b7;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#8b70b7), to(#7858ab));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #8b70b7, #7858ab);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #8b70b7, #7858ab);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #8b70b7, #7858ab);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #8b70b7, #7858ab);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #8b70b7, #7858ab);
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  color: #ffffff;
+}
+#recordLeaderboard td:nth-child(n+4) {
+  font-size: 100%;
+}
+#recordLeaderboard td {
+  line-height: 20px;
+  height: 20px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  font-size: 110%;
+}
+#recordLeaderboard td img {
+  vertical-align: middle;
+  margin: 0px 5px;
+}
+#recordLeaderboard td:nth-child(1) {
+  padding-left: 8px;
+  color: #808080;
+}
+#recordLeaderboard td:nth-child(2) {
+  text-align: left;
+}
+#recordLeaderboard .lbDivide {
+  font-size: 85%;
+  text-align: center;
+}
+#recordLeaderboard .lbCategory {
+  font-size: 120%;
+  padding: 4px;
+}
+#recordLeaderboard tr:nth-child(2) {
+  background-color: #46385c;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#46385c), to(#352a45));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #46385c, #352a45);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #46385c, #352a45);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #46385c, #352a45);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #46385c, #352a45);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #46385c, #352a45);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.65);
+  border-top: 1px solid #614e80;
+  font-weight: 700;
+}
+#recordLeaderboard tr:nth-child(2) td {
+  text-align: center;
+  color: #d1a8ff;
+  font-size: 90%;
+}
+#categorySelect a {
+  display: block;
+  width: 100%;
+  font-size: 90%;
+  text-shadow: 1px 1px 3px #111111;
+  text-align: center;
+  background-color: #473f54;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#473f54), to(#363040));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #473f54, #363040);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #473f54, #363040);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #473f54, #363040);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #473f54, #363040);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #473f54, #363040);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #514860 #000000 #000000 #4c445a;
+  margin-bottom: 1px;
+  color: #d1a8ff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+#categorySelect a:nth-child(1) {
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+#categorySelect a:last-child {
+  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+}
+#categorySelect a span {
+  font-size: 115%;
+  display: block;
+  font-weight: 700;
+  padding-bottom: 5px;
+  color: #ffffff;
+}
+#categorySelect a:hover {
+  color: #ecbeff;
+  background-color: #635083;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#635083), to(#52426d));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #635083, #52426d);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #635083, #52426d);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #635083, #52426d);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #635083, #52426d);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #635083, #52426d);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #6d588f #14101a #14101a #685489;
+}
+#categorySelect a:active {
+  color: #b592ee;
+  background-color: #2e253d;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#2e253d), to(#1e1827));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #2e253d, #1e1827);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #2e253d, #1e1827);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #2e253d, #1e1827);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #2e253d, #1e1827);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #2e253d, #1e1827);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #382d4a #000000 #000000 #332943;
+}
+#categorySelect .lbHighlighted {
+  background-color: #8b70b7;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#8b70b7), to(#7858ab));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #8b70b7, #7858ab);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #8b70b7, #7858ab);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #8b70b7, #7858ab);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #8b70b7, #7858ab);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #8b70b7, #7858ab);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #967ebe #3a2a54 #3a2a54 #9177ba;
+  color: #ffe0ff;
+}
+#categorySelect .lbHighlighted:hover {
+  color: #ffffff;
+  background-color: #997bc9;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#997bc9), to(#8562bf));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #997bc9, #8562bf);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #997bc9, #8562bf);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #997bc9, #8562bf);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #997bc9, #8562bf);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #997bc9, #8562bf);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #a48acf #462d6f #462d6f #9f82cc;
+}
+#categorySelect .lbHighlighted:active {
+  color: #ecbeff;
+  background-color: #7d65a5;
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-gradient(linear, left top, left bottom, from(#7d65a5), to(#6c5591));
+  /* Saf4+, Chrome */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -webkit-linear-gradient(top, #7d65a5, #6c5591);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -moz-linear-gradient(top, #7d65a5, #6c5591);
+  /* FF3.6 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -ms-linear-gradient(top, #7d65a5, #6c5591);
+  /* IE10 */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), -o-linear-gradient(top, #7d65a5, #6c5591);
+  /* Opera 11.10+ */
+
+  background-image: url("http://c15111086.r86.cf2.rackcdn.com/grunge_button.png"), linear-gradient(to bottom, #7d65a5, #6c5591);
+  border-width: 1px 0px 1px 1px;
+  border-style: solid;
+  border-color: #8872ac #2e243d #2e243d #836ba8;
+}
