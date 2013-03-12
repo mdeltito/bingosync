@@ -18,6 +18,7 @@ $(function(){
     window._nametag    = $('#nametag').val();
     window._color      = $('#color').val();
 
+    // sanity checks
     if(!_bingo_seed) {
       alert('you must enter a seed number');
       return;
@@ -30,10 +31,16 @@ $(function(){
 
     // join the bingo
     socket.emit('join bingo', _bingo_seed, _nametag, _color);
+    return;
   });
 
+  // square clickin'
   $(document).on('click', '#bingo td', function(e){
-    var square = $(this).attr('id');
-    socket.emit('update square', _bingo_seed, _nametag, square);
+    if($(this).hasClass('popout')) return;
+
+    var square_id = $(this).attr('id');
+    if(square_id) {
+      socket.emit('update square', _bingo_seed, _nametag, square_id);
+    }
   });
 });

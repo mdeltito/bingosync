@@ -8,11 +8,14 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
+var _SRL_BINGO_URL = "http://speedrunslive.com/tools/oot-bingo/?seed=";
+
+// the css is already ripped from SRL and compiled,
+// so we don't need to load it again
 Browser.loadCSS = false;
 
 // store each board's HTML
 var boards = {};
-var _SRL_BINGO_URL = "http://speedrunslive.com/tools/oot-bingo/?seed=";
 
 // log it all
 io.set("log level", 1);
@@ -22,13 +25,11 @@ app.configure(function(){
   app.use(express.static('public'));
 });
 
-server.listen(80);
+server.listen(1481);
 
 io.sockets.on('connection', function (socket) {
-  console.log('client connected');
-
   socket.on('join bingo', function (seed, nametag, color) {
-    console.log(nametag + ' joined');
+    console.log(nametag + ' joined seed ' + seed);
     // join the bingo
     socket.join(seed);
 
@@ -52,8 +53,15 @@ io.sockets.on('connection', function (socket) {
     var $table     = $(table_html);
     var $square    = $table.find('#' + square);
     var color      = boards[seed].users[nametag].color;
+    var classes    = $square[0].className.split(/\s+/);
 
-    $square.toggleClass(color);
+    // if the square was previously selected by the user,
+    // or is not already locked
+    if(_.contains(classes, color) || !$square.hasClass('locked')) {
+      $square.toggleClass(color);
+      $square.toggleClass('locked');
+    }
+
     boards[seed].table = $table[0].outerHTML;
     reload_board(seed);
   });
@@ -68,14 +76,13 @@ function reload_board(seed) {
     browser.visit(bingo_url, function(){
       var table = browser.query("#bingo").outerHTML;
       boards[seed].table = table;
-      boards[seed].slots =
 
       console.log('board with seed ' + seed + ' loaded');
       reload_board(seed);
     });
   }
   else {
-    console.log('updating all clients for board with seed ' + seed);
+    console.log('updating ' + seed);
     io.sockets.in(seed).emit('reload board', boards[seed].table);
   }
 }

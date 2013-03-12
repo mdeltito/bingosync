@@ -10,3 +10,5 @@
 #bingoPage #board #bingo tr td.lockout-orange {
   background: orange;
 }
+
+#board { width: 800px;}
