@@ -9,5 +9,9 @@
     "jquery": "1.8.3",
     "socket.io": "0.9.13",
     "zombie": "1.4.1"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.2.x"
   }
 }
