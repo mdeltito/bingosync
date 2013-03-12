@@ -22,7 +22,7 @@ app.configure(function(){
   app.use(express.static('public'));
 });
 
-server.listen(1481);
+server.listen(80);
 
 io.sockets.on('connection', function (socket) {
   console.log('client connected');
