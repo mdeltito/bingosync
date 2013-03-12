@@ -33,7 +33,6 @@ $(function(){
   });
 
   $(document).on('click', '#bingo td', function(e){
-    console.log('clicked');
     var square = $(this).attr('id');
     socket.emit('update square', _bingo_seed, _nametag, square);
   });

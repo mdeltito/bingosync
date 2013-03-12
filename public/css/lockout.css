@@ -1,0 +1,12 @@
+#bingoPage #board #bingo tr td.lockout-blue {
+  background: blue;
+}
+#bingoPage #board #bingo tr td.lockout-red {
+  background: red;
+}
+#bingoPage #board #bingo tr td.lockout-green {
+  background: green;
+}
+#bingoPage #board #bingo tr td.lockout-orange {
+  background: orange;
+}

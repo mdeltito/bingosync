@@ -1,5 +1,5 @@
 {
-  "name": "lockout-bord",
+  "name": "lockout-board",
   "description": "Distributed board display for OoT Lockout Bingo",
   "version": "0.0.1",
   "private": true,

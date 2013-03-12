@@ -8,8 +8,10 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
+Browser.loadCSS = false;
+
 // store each board's HTML
-var boards = [];
+var boards = {};
 var _SRL_BINGO_URL = "http://speedrunslive.com/tools/oot-bingo/?seed=";
 
 // log it all
@@ -35,23 +37,25 @@ io.sockets.on('connection', function (socket) {
 
     // store the details of this user
     if(!boards[seed]) {
-      boards[seed] = {users: []};
+      boards[seed] = {users: {}};
     }
 
-    console.log(boards);
-
-    boards[seed].users.push({nametag: nametag, color: color});
+    boards[seed].users[nametag] = {color: color};
+    console.log(boards[seed].users);
 
     // trigger a refresh of the board for all clients
     reload_board(seed);
   });
 
   socket.on('update square', function (seed, nametag, square) {
-    var table   = boards[seed].table;
-    var color   = _.findWhere(boards[seed].users, {nametag: nametag}).color;
-    var $square = $(table).find(square);
+    var table_html = boards[seed].table;
+    var $table     = $(table_html);
+    var $square    = $table.find('#' + square);
+    var color      = boards[seed].users[nametag].color;
+
     $square.toggleClass(color);
-    reload_board();
+    boards[seed].table = $table[0].outerHTML;
+    reload_board(seed);
   });
 });
 
@@ -64,6 +68,8 @@ function reload_board(seed) {
     browser.visit(bingo_url, function(){
       var table = browser.query("#bingo").outerHTML;
       boards[seed].table = table;
+      boards[seed].slots =
+
       console.log('board with seed ' + seed + ' loaded');
       reload_board(seed);
     });
