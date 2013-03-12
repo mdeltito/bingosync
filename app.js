@@ -25,7 +25,8 @@ app.configure(function(){
   app.use(express.static('public'));
 });
 
-server.listen(1481);
+var port = process.env.PORT || 1418;
+server.listen(port);
 
 io.sockets.on('connection', function (socket) {
   socket.on('join bingo', function (seed, nametag, color) {
