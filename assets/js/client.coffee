@@ -1,5 +1,6 @@
 socket = io.connect '/'
 window.bingo = bingo =
+  loaded: false
   users: []
   session: null
   client: null
@@ -43,7 +44,13 @@ socket.on 'user joined', (user)->
 ###
 socket.on 'update session', (data)->
   $('#join').button('reset')
-  $('#board').html(data.board)
+
+  if !bingo.loaded
+    $('#board').hide().html(data.board).fadeIn()
+    bingo.loaded = true
+  else
+    $('#board').html(data.board)
+
   bingo.session = data.session if data.session
   bingo.client = data.client if data.client
   bingo.board.trigger 'update'
