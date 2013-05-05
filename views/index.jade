@@ -1,0 +1,28 @@
+extends layout
+
+block nav
+  div#color.btn-group.pull-right(data-toggle="buttons-radio")
+    button.btn.btn-danger(value="red") red
+    button.btn.btn-success(value="green") green
+    button.btn.btn-primary.active(value="blueDark") blue
+    button.btn.btn-info(value="blue") teal
+    button.btn.btn-warning(value="yellow") yellow
+block sidebar
+  form#join-session
+    fieldset.well
+      input#nickname.input-block-level(name='nickname', type='text', placeholder="Nickname")
+      input#session_name.input-block-level(name='session_name', type='text', placeholder="Session name")
+      input#password.input-block-level(name='password', type='password', placeholder="Password")
+      input#seed.input-block-level(name='seed', type='text', placeholder='Bingo seed')
+      .form-actions
+        button.btn.btn-primary.btn-block(type='submit') Join
+  div
+    ul#user-list.nav.nav-list
+    //- select#color(name='color')
+    //-   option(value='lockout-blue') blue
+    //-   option(value='lockout-red') red
+    //-   option(value='lockout-green') green
+    //-   option(value='lockout-orange') orange
+
+block content
+  #board
