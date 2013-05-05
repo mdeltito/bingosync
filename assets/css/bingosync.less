@@ -1,19 +1,84 @@
-.badge {
-  &.blue      { background-color: #049cdb; }
-  &.blueDark  { background-color: #0064cd; }
-  &.green     { background-color: #46a546; }
-  &.red       { background-color: #9d261d; }
-  &.yellow    { background-color: #ffc40d; }
-  &.orange    { background-color: #f89406; }
-  &.purple    { background-color: #7a43b6; }
-  &.pink      { background-color: #c3325f; }
-}
-
 #board,
 #board table {
   width: 100%;
 }
 
 .btn-group {
-  .active { background: #444; }
+  .active {
+    background: #444;
+  }
 }
+
+// #bingo .rowcol {
+//   background: #000811;
+//   font-size: 75%;
+//   color: #3c70df;
+//   font-weight: 700;
+//   border: 1px #0a245a solid;
+// }
+// #bingo .rowcol:hover {
+//   color: #ffffff;
+//   background: #1448b3;
+// }
+#bingo tr:first-child td,
+#bingo tr:last-child td {
+  height: 30px;
+  background: #000811;
+  font-size: 75%;
+  color: #3c70df;
+  font-weight: 700;
+  border: 1px #0a245a solid;
+}
+// #bingo tr:first-child td:hover,
+// #bingo tr:last-child td:hover {
+//   color: #ffffff;
+//   background: #1448b3;
+// }
+table {
+
+}
+
+
+td {
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.6);
+  padding: 0 5px;
+  cursor: pointer;
+  width: 95px;
+  height: 90px;
+  text-align: center;
+  border: 1px #424242 solid;
+  background: #000;
+}
+#bingo tr td:first-child {
+  width: 35px;
+  background: #000811;
+  font-size: 75%;
+  color: #3c70df;
+  font-weight: 700;
+  border: 1px #0a245a solid;
+}
+// #bingo tr td:first-child:hover {
+//   color: #ffffff;
+//   background: #1448b3;
+// }
+// #bingo tr td:hover,
+// #bingo tr td.hover {
+//   background: #001a36;
+//   color: #fff;
+// }
+// #bingo tr td.greensquare {
+//   background: #005511;
+// }
+// #bingo tr td.greensquare:hover,
+// #bingo tr td.greensquare.hover {
+//   background: #007722;
+// }
+// #bingo tr td.redsquare {
+//   background: #550011;
+// }
+// #bingo tr td.redsquare:hover,
+// #bingo tr td.redsquare.hover {
+//   background: #770022;
+// }

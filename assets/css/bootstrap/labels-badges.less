@@ -52,20 +52,23 @@ a {
 .label,
 .badge {
   // Important (red)
-  &-important         { background-color: @errorText; }
-  &-important[href]   { background-color: darken(@errorText, 10%); }
+  &-important, &-red               { background-color: @errorText; }
+  &-important[href], &-red[href]   { background-color: darken(@errorText, 10%); }
   // Warnings (orange)
-  &-warning           { background-color: @orange; }
-  &-warning[href]     { background-color: darken(@orange, 10%); }
+  &-warning, &-orange           { background-color: @orange; }
+  &-warning[href], &-orange[href]     { background-color: darken(@orange, 10%); }
   // Success (green)
-  &-success           { background-color: @successText; }
-  &-success[href]     { background-color: darken(@successText, 10%); }
+  &-success, &-green           { background-color: @successText; }
+  &-success[href], &-green[href]     { background-color: darken(@successText, 10%); }
+  // Primary (blue)
+  &-primary, &-blue           { background-color: @btnPrimaryBackground; }
+  &-primary[href], &-blue[href]     { background-color: darken(@btnPrimaryBackground, 10%); }
   // Info (turquoise)
-  &-info              { background-color: @infoText; }
-  &-info[href]        { background-color: darken(@infoText, 10%); }
+  &-info, &-teal              { background-color: @infoText; }
+  &-info[href], &-teal[href]        { background-color: darken(@infoText, 10%); }
   // Inverse (black)
-  &-inverse           { background-color: @grayDark; }
-  &-inverse[href]     { background-color: darken(@grayDark, 10%); }
+  &-inverse, &-black           { background-color: @grayDark; }
+  &-inverse[href], &-black[href]     { background-color: darken(@grayDark, 10%); }
 }
 
 // Quick fix for labels/badges in buttons

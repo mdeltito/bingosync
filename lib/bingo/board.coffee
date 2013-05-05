@@ -20,37 +20,41 @@ module.exports = (_store)->
       query = $.param {seed: @seed}
       "#{@resource}?#{query}"
 
-    setHtml: (table, callback = ->)->
+    set: (table, callback = ->)->
       _store.set @key, table, =>
         @table = table
-        this.emit 'table loaded', table
+        @emit 'board updated', table
         callback table
 
-    # alias
+    # wrapper for `get` that calls fetch if necessary
     load: (callback = ->)->
-      @getHtml(callback)
-
-    getHtml: (callback = ->)->
-      _store.get @key, (err, replies)=>
-        if !replies
-          try
-            @browser.visit @url, =>
-              @table = @browser.query("#bingo").outerHTML
-              @setHtml(@table)
-              callback @table
-          catch e
-            this.emit 'error', e
+      @get (err, reply)=>
+        if !reply || err
+          @fetch (table)=>
+            @set(table)
+            callback table
         else
-          callback replies
+          callback reply
 
-    update: (square, color)->
-      # $square = $table.find("#" + square)
-      # classes = $square[0].className.split(/\s+/)
+    get: (callback = ->)->
+      _store.get @key, callback
 
+    fetch: (callback = ->)->
+      @browser.visit @url, =>
+        @table = @browser.query("#bingo").outerHTML
+        callback @table
+        return @table
 
-      # # if the square was previously selected by the user,
-      # # or is not already locked
-      # if _.contains(classes, color) or not $square.hasClass("locked")
-      #   $square.toggleClass color
-      #   $square.toggleClass "locked"
-      # boards[seed].table = $table[0].outerHTML
+    update: (square, color, callback = ->)->
+      @load (table)=>
+        $table = $(table)
+        $square = $table.find("#" + square)
+        classes = $square[0].className.split(/\s+/)
+        color_class = "btn-#{color}"
+
+        # if the square was previously selected by the user,
+        # or is not already locked
+        if _.contains(classes, color_class) or not $square.hasClass("locked")
+          $square.toggleClass color_class
+          $square.toggleClass "locked"
+          @set $table[0].outerHTML, callback

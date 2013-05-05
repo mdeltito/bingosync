@@ -7,6 +7,9 @@ window.bingo = bingo =
     # $('#board').find(".#{color}").length
     ''
 
+###
+  helper function for showing an error
+###
 error = (error)->
   alert = templates.alert
     title: 'Error!'
@@ -21,7 +24,11 @@ error = (error)->
 ###
 socket.on 'update userlist', (users)->
   bingo.users = users
-  $('#user-list').html templates.user_list({users: users})
+  _.each users, (user)->
+    user.points = $('#board').find(".#{user.color}").length
+
+  $('#user-list').html(templates.user_list({users: users}))
+  bingo.board.trigger 'update'
 
 ###
   When we join, broadcast to all other members of the session
@@ -35,9 +42,11 @@ socket.on 'user joined', (user)->
   replace board in the DOM on update
 ###
 socket.on 'update session', (data)->
-  $('#board').html data.board
-  bingo.session = data.session
-  bingo.client = data.client
+  $('#join').button('reset')
+  $('#board').html(data.board)
+  bingo.session = data.session if data.session
+  bingo.client = data.client if data.client
+  bingo.board.trigger 'update'
 
 ###
   report any errors in the form
@@ -51,9 +60,15 @@ socket.on 'error', (msg)->
 user_color = ->
   $('#color .active').val()
 
+###
+  on ready
+###
 $ ->
+  bingo.board = $('#board')
+
   # wire the form submission to socket.io
   $('#join-session').submit (e)=>
+    $('#join').button('loading')
     e.preventDefault()
     @bingo ?= {}
     @bingo.seed = $('#seed').val()
@@ -64,6 +79,7 @@ $ ->
 
     if !_.every @bingo
       error 'You must fill out all fields'
+      $('#join').button('reset')
       return
 
     # join the bingo
@@ -73,18 +89,24 @@ $ ->
   # user updates
   $(document).on 'click', '.navbar .btn-group button', (e)->
     if bingo.client
-      bingo.client.color = $('.navbar .btn-group .active').val()
-      socket.emit 'user update', bingo.client
+      bingo.client.color = $(this).val()
+      socket.emit 'update user', bingo.client
 
-  #square clickin
+  #square click
   $(document).on 'click', '#bingo td', (e)->
     if $(this).hasClass('popout')
       return
 
     square_id = $(this).attr('id')
-    console.log square_id
     if square_id
-      socket.emit 'update square', bingo.session, bingo.client, square_id
+      socket.emit 'record click', bingo.client, square_id
+
+  # on board update
+  bingo.board.bind 'update', (data)->
+    # update badge counts
+    _.each bingo.users, (user)->
+      count = bingo.board.find(".btn-#{user.color}").length
+      $(".badge-#{user.color}").text count
 
 templates =
   alert: _.template '' +
@@ -95,6 +117,5 @@ templates =
   user_list: _.template '' +
     '<li class="nav-header">User List</li>
     <% _.each(users, function(user){%>
-      <li><%= user.nickname %><span class="badge <%= user.color %> badge-success pull-right">&nbsp;</span></li>
+      <li><%= user.nickname %><span class="badge badge-<%= user.color %> pull-right"><%= user.points %></span></li>
     <%}); %>'
-console.log templates
