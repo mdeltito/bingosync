@@ -59,7 +59,7 @@ socket.on 'update session', (data)->
   report any errors in the form
 ###
 socket.on 'error', (msg)->
-  error(msg)
+  error(msg) if _.isString(msg)
 
 ###
   helper for getting the selected color
