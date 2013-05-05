@@ -59,6 +59,7 @@ socket.on 'update session', (data)->
   report any errors in the form
 ###
 socket.on 'error', (msg)->
+  $('#join').button('reset')
   error(msg) if _.isString(msg)
 
 ###
