@@ -10,6 +10,10 @@ block nav
 block sidebar
   form#join-session
     fieldset.well
+      //- select#type.input-block-level(name='type', type='text', placeholder="Board type")
+      //-   for item in board_types
+      //-     option #{item}
+
       input#nickname.input-block-level(name='nickname', type='text', placeholder="Nickname")
       input#session_name.input-block-level(name='session_name', type='text', placeholder="Session name")
       input#password.input-block-level(name='password', type='password', placeholder="Password")

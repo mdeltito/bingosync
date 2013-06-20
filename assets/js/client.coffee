@@ -80,6 +80,7 @@ $ ->
     e.preventDefault()
     @bingo ?= {}
     @bingo.seed = $('#seed').val()
+    @bingo.type = $('#type').val()
     @bingo.nickname = $('#nickname').val()
     @bingo.name = $('#session_name').val()
     @bingo.password = $('#password').val()

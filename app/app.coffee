@@ -1,9 +1,9 @@
-_       = require('underscore')
-$       = require('jquery')
-Browser = require('zombie')
-http    = require('http')
-express = require('express')
-app     = express()
+_        = require('underscore')
+$        = require('jquery')
+Browser  = require('zombie')
+http     = require('http')
+express  = require('express')
+app      = express()
 
 app.configure ->
   if process.env.PORT
@@ -17,7 +17,9 @@ app.configure ->
   app.use express.static('public')
   app.use require('connect-assets')()
 
+app.conf  = require('node-yaml-config')
 app.store = require('./store')(app)
+
 app.bingo =
   Board:   require('../lib/bingo/board')(app.store)
   Session: require('../lib/bingo/session')()
@@ -25,7 +27,6 @@ app.bingo =
 app.server = require('./server')(app)
 app.routes = require('./routes')(app)
 app.io     = require('./io')(app)
-
 
 app.server.listen app.get('port')
 console.info "info: HTTP server listening on port " + app.get('port')

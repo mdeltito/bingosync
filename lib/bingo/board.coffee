@@ -7,18 +7,17 @@ EventEmitter = require('events').EventEmitter
 module.exports = (_store)->
   class Board extends EventEmitter
     namespace: 'board'
-    resource: "http://speedrunslive.com/tools/oot-bingo"
     constructor: (session, callback = ->)->
       @browser = new Browser();
 
       @seed = session.seed
       @session = session
       @key = "bingo:#{@namespace}:#{@session.key}"
-      @url = @get_url()
+      @url = @get_url(session.type)
 
-    get_url: ->
+    get_url: (type)->
       query = $.param {seed: @seed}
-      "#{@resource}?#{query}"
+      "#{type}?#{query}"
 
     set: (table, callback = ->)->
       _store.set @key, table, =>
