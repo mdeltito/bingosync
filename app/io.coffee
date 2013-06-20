@@ -49,7 +49,8 @@ module.exports = (app)->
 
       # send the session board
       board.load (table)->
-        socket.emit 'update session', {session: session, client: client, board: table}
+        payload = {session: session, client: client, board: table}
+        socket.emit 'update session', payload
 
     # handle updateing squares
     socket.on "record click", (client, square) ->

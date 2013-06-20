@@ -2,11 +2,11 @@ extends layout
 
 block nav
   div#color.btn-group.pull-right(data-toggle="buttons-radio")
-    button.btn.btn-danger(value="red") red
-    button.btn.btn-success(value="green") green
-    button.btn.btn-primary.active(value="blue") blue
-    //- button.btn.btn-info(value="teal") teal
-    button.btn.btn-warning(value="orange") orange
+    button.btn.btn-red(value="red") red
+    button.btn.btn-green(value="green") green
+    button.btn.btn-blue.active(value="blue") blue
+    button.btn.btn-purple(value="purple") purple
+    button.btn.btn-orange(value="orange") orange
 block sidebar
   form#join-session
     fieldset.well
@@ -20,6 +20,11 @@ block sidebar
       input#seed.input-block-level(name='seed', type='text', placeholder='Bingo seed')
       .form-actions
         button#join.btn.btn-primary.btn-block(type='submit', data-loading-text="Joining...") Join
+
+  form#quit-session.hide
+    fieldset.well
+      button#join.btn.btn-red.btn-block(type='submit', data-loading-text="Quitting...") Disconnect
+
   div
     ul#user-list.nav.nav-list
 

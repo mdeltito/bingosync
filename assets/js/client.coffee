@@ -4,9 +4,7 @@ window.bingo = bingo =
   users: []
   session: null
   client: null
-  points: (color)->
-    # $('#board').find(".#{color}").length
-    ''
+  points: null
 
 ###
   helper function for showing an error
@@ -40,15 +38,24 @@ socket.on 'user joined', (user)->
     text: 'joined the session'
 
 ###
+  On Connect
+###
+socket.on 'connected', (sesstion)->
+  $.gritter.add
+    text: 'connected'
+
+###
   replace board in the DOM on update
 ###
 socket.on 'update session', (data)->
   $('#join').button('reset')
 
   if !bingo.loaded
+    # first load
     $('#board').hide().html(data.board).fadeIn()
     bingo.loaded = true
   else
+    # update
     $('#board').html(data.board)
 
   bingo.session = data.session if data.session
@@ -60,7 +67,7 @@ socket.on 'update session', (data)->
 ###
 socket.on 'error', (msg)->
   $('#join').button('reset')
-  error(msg) if _.isString(msg)
+  error(msg.toString()) if msg
 
 ###
   helper for getting the selected color
@@ -93,6 +100,9 @@ $ ->
 
     # join the bingo
     socket.emit 'join bingo', @bingo
+    $('#join-session').fadeOut 300, ->
+      $('#quit-session').fadeIn(300)
+
     return
 
   # user updates

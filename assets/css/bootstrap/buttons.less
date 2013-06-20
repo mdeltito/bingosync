@@ -131,12 +131,7 @@ input[type="button"] {
 // --------------------------------------------------
 
 // Provide *some* extra contrast for those who can get it
-.btn-primary.active,
-.btn-warning.active,
-.btn-danger.active,
-.btn-success.active,
-.btn-info.active,
-.btn-inverse.active {
+.btn.active {
   color: rgba(255,255,255,.75);
 }
 
@@ -164,6 +159,11 @@ input[type="button"] {
 // Inverse appears as dark gray
 .btn-inverse, .btn-black {
   .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+// Info appears as a neutral blue
+.btn-purple {
+  .buttonBackground(@btnPurpleBackground, @btnPurpleBackgroundHighlight);
 }
 
 
