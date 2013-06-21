@@ -4,7 +4,7 @@ crypto       = require('crypto')
 Browser      = require('zombie')
 EventEmitter = require('events').EventEmitter
 
-module.exports = (_store)->
+module.exports = (_store, _config_data)->
   class Board extends EventEmitter
     namespace: 'board'
     constructor: (session, callback = ->)->
@@ -16,8 +16,14 @@ module.exports = (_store)->
       @url = @get_url(session.type)
 
     get_url: (type)->
-      query = $.param {seed: @seed}
-      "#{type}?#{query}"
+      params = {seed: @seed}
+      config = _.findWhere(_config_data.types, {code: type})
+
+      if config.params
+        params = _.extend(config.params, params)
+
+      query = $.param(params)
+      "#{config.url}?#{query}"
 
     set: (table, callback = ->)->
       _store.set @key, table, =>
@@ -30,7 +36,7 @@ module.exports = (_store)->
       @get (err, reply)=>
         if !reply || err
           @fetch (table)=>
-            @set(table)
+            @set table
             callback table
         else
           callback reply

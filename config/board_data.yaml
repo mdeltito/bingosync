@@ -1,5 +1,7 @@
 default:
   types:
-    - { code: 'oot-normal', url: "http://speedrunslive.com/tools/oot-bingo", label: "OoT Normal" }
-    - { code: 'oot-short',  url: "http://speedrunslive.com/tools/oot-bingo", label: "OoT Short", params: { mode: "short" } }
-
+    - { code: 'oot-normal', url: "http://speedrunslive.com/tools/oot-bingo", label: "OoT Bingo" }
+    - { code: 'oot-short',  url: "http://speedrunslive.com/tools/oot-bingo", label: "OoT Short Bingo", params: { mode: "short" } }
+    - { code: 'oot-short-xlptv',  url: "http://bingo.xlptv.com", label: "OoT Short Bingo (xlptv edition)", params: { mode: "short" } }
+    - { code: 'mm-normal',  url: "http://speedrunslive.com/tools/mm-bingo", label: "MM Bingo" }
+    - { code: 'mm-short',  url: "http://speedrunslive.com/tools/mm-bingo", label: "MM Short Bingo", params: { mode: "short" } }

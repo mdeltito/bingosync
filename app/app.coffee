@@ -18,7 +18,6 @@ app.configure ->
   # app.use express.logger('dev')
   app.use express.static('public')
   app.use require('connect-assets')()
-  app.set
 
 app.conf  = require('node-yaml-config')
 app.store = require('./store')(app)
@@ -26,7 +25,7 @@ app.store = require('./store')(app)
 app.set 'board_data', app.conf.load(__dirname + '/../config/board_data.yaml') || {}
 
 app.bingo =
-  Board:   require('../lib/bingo/board')(app.store)
+  Board:   require('../lib/bingo/board')(app.store, app.get('board_data'))
   Session: require('../lib/bingo/session')()
 
 app.server = require('./server')(app)

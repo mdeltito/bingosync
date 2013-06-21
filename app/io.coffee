@@ -41,7 +41,7 @@ module.exports = (app)->
       # join the bingo
       socket.join session.key
       socket.emit 'connected', session
-      console.log "session attached: #{client.nickname} => #{session.key}"
+      console.log "session attached: #{client.nickname} => #{session.type} (#{session.key})"
 
       # notify everyone
       socket.broadcast.to(session.key).emit "user joined", client
