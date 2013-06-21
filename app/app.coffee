@@ -10,15 +10,20 @@ app.configure ->
     app.set 'port', process.env.PORT
   else
     app.set 'port', 1418
+
+
   app.set 'views', "#{__dirname}/../views"
   app.set 'view engine', 'jade'
 
-  app.use express.logger('dev')
+  # app.use express.logger('dev')
   app.use express.static('public')
   app.use require('connect-assets')()
+  app.set
 
 app.conf  = require('node-yaml-config')
 app.store = require('./store')(app)
+
+app.set 'board_data', app.conf.load(__dirname + '/../config/board_data.yaml') || {}
 
 app.bingo =
   Board:   require('../lib/bingo/board')(app.store)
