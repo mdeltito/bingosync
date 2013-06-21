@@ -40,7 +40,13 @@ socket.on 'user joined', (user)->
 ###
   On Connect
 ###
-socket.on 'connected', (sesstion)->
+socket.on 'connected', (session)->
+  console.log window.ga
+  window.ga? 'send', {
+    'hitType': 'pageview'
+    'title': session.type
+  }
+
   $.gritter.add
     text: 'connected'
 
