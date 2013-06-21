@@ -1,7 +1,7 @@
 {
   "name": "lockout-board",
   "description": "Synchronous board display for OoT Bingo games",
-  "version": "0.1.1",
+  "version": "0.1.2b",
   "private": true,
   "dependencies": {
     "underscore": "*",
