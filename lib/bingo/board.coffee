@@ -14,7 +14,7 @@ module.exports = (_store, _config_data)->
       @session = session
       @key = "bingo:#{@namespace}:#{@session.type}:#{@session.key}"
       @url = @get_url(session.type)
-
+      console.log @url
     get_url: (type)->
       params = {seed: @seed}
       config = _.findWhere(_config_data.types, {code: type})

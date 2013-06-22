@@ -4,6 +4,7 @@
   "version": "0.1.2b",
   "private": true,
   "dependencies": {
+    "forever": "*",
     "underscore": "*",
   	"express": "3.x",
     "connect-assets": "2.x",
