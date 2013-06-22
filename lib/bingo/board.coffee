@@ -12,7 +12,7 @@ module.exports = (_store, _config_data)->
 
       @seed = session.seed
       @session = session
-      @key = "bingo:#{@namespace}:#{@session.key}"
+      @key = "bingo:#{@namespace}:#{@session.type}:#{@session.key}"
       @url = @get_url(session.type)
 
     get_url: (type)->

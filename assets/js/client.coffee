@@ -109,7 +109,18 @@ $ ->
     $('#join-session').fadeOut 300, ->
       $('#quit-session').fadeIn(300)
 
-    return
+  # disconnect
+  $('#quit-session').submit (e)=>
+    e.preventDefault()
+    socket?.disconnect()
+    bingo.loaded = false
+    $('#user-list').html('')
+    $('#board').fadeOut ->
+      $(this).html(' ')
+      $('#quit-session').fadeOut 300, ->
+        $('#join-session').fadeIn(300)
+
+
 
   # user updates
   $(document).on 'click', '.navbar .btn-group button', (e)->
