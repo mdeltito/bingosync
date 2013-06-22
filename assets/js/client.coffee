@@ -44,6 +44,7 @@ socket.on 'connected', (session)->
   window.ga? 'send', {
     'hitType': 'pageview'
     'title': session.type
+    'page': '/login',
   }
 
   $.gritter.add
