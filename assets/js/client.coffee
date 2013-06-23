@@ -72,9 +72,8 @@ socket.on 'update session', (data)->
   report any errors in the form
 ###
 socket.on 'error', (msg)->
-  console?.log "SOCKET ERROR:", msg
   $('#join').button('reset')
-  error(msg.toString()) if msg
+  error(msg) if _.isString(msg)
 
 ###
   helper for getting the selected color

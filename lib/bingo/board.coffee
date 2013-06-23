@@ -9,12 +9,11 @@ module.exports = (_store, _config_data)->
     namespace: 'board'
     constructor: (session, callback = ->)->
       @browser = new Browser();
-
       @seed = session.seed
       @session = session
-      @key = "bingo:#{@namespace}:#{@session.type}:#{@session.key}"
+      @key = "bingo:#{@namespace}:#{@session.key}"
       @url = @get_url(session.type)
-      console.log @url
+
     get_url: (type)->
       params = {seed: @seed}
       config = _.findWhere(_config_data.types, {code: type})
@@ -23,7 +22,9 @@ module.exports = (_store, _config_data)->
         params = _.extend(config.params, params)
 
       query = $.param(params)
-      "#{config.url}?#{query}"
+      url = "#{config.url}?#{query}"
+      console.log url
+      return url
 
     set: (table, callback = ->)->
       _store.set @key, table, =>

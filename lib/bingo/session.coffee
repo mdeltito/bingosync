@@ -9,4 +9,4 @@ module.exports = ()->
       @seed     = bingo.seed
       @name     = bingo.name
       hash      = crypto.createHash('md5').update(("#{@name}:#{bingo.password}")).digest("hex")
-      @key      = "#{@namespace}:#{@seed}:#{hash}"
+      @key      = "#{@namespace}:#{@type}:#{@seed}:#{hash}"
