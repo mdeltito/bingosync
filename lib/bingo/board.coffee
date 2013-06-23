@@ -22,9 +22,7 @@ module.exports = (_store, _config_data)->
         params = _.extend(config.params, params)
 
       query = $.param(params)
-      url = "#{config.url}?#{query}"
-      console.log url
-      return url
+      "#{config.url}?#{query}"
 
     set: (table, callback = ->)->
       _store.set @key, table, =>
@@ -46,6 +44,7 @@ module.exports = (_store, _config_data)->
       _store.get @key, callback
 
     fetch: (callback = ->)->
+      console.log @url
       @browser.visit @url, =>
         @table = @browser.query("#bingo").outerHTML
         callback @table
