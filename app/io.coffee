@@ -6,8 +6,6 @@ module.exports = (app)->
   io = require('socket.io').listen app.server
   io.configure ()->
     io.set "log level", 0
-    io.set "transports", ["xhr-polling"]
-    io.set "polling duration", 10
 
   app.boards ?= {}
   app.clients ?= {}

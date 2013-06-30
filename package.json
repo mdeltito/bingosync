@@ -1,6 +1,6 @@
 {
-  "name": "lockout-board",
-  "description": "Synchronous board display for OoT Bingo games",
+  "name": "bingosync",
+  "description": "Synchronous board display for SRL Bingo games",
   "version": "0.1.2b",
   "private": true,
   "dependencies": {
@@ -10,9 +10,9 @@
     "connect-assets": "2.x",
     "less": "1.x",
     "coffee-script": "*",
-    "redis": "0.8.x",
+    "redis": "*",
     "jquery": "1.8.3",
-    "socket.io": "0.9.13",
+    "socket.io": "0.9.x",
     "zombie": "1.4.x",
     "jade": "0.x",
     "node-yaml-config": "0.0.x"

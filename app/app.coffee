@@ -9,7 +9,7 @@ app.configure ->
   if process.env.PORT
     app.set 'port', process.env.PORT
   else
-    app.set 'port', 1418
+    app.set 'port', 5000
 
 
   app.set 'views', "#{__dirname}/../views"
