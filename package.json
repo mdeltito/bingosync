@@ -3,6 +3,9 @@
   "description": "Synchronous board display for SRL Bingo games",
   "version": "0.1.2",
   "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "forever": "*",
     "underscore": "*",
