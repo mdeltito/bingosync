@@ -7,4 +7,5 @@ default:
     - { code: 'mm-short',        url: "http://speedrunslive.com/tools/mm-bingo",           label: "MM Short Bingo",                  params: { mode: "short" } }
     - { code: 'sm64',            url: "http://speedrunslive.com/tools/sm64-bingo",         label: "SM64 Bingo" }
     - { code: 'sms-nkiller',     url: "http://nkiller.webs.com/bingo/sms/newest/",         label: "SMS (nkiller)" }
+    - { code: 'pkm-rb',          url: "http://speedrunslive.com/tools/redblue-bingo",      label: "Pokémon Red/Blue" }
     - { code: 'super-metroid',   url: "http://speedrunslive.com/tools/supermetroid-bingo", label: "Super Metroid" }
