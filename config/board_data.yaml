@@ -10,4 +10,4 @@ default:
     - { code: 'pkm-rb',          url: "http://speedrunslive.com/tools/redblue-bingo",      label: "Pokémon Red/Blue" }
     - { code: 'super-metroid',   url: "http://speedrunslive.com/tools/supermetroid-bingo", label: "Super Metroid" }
     - { code: 'pikmin',          url: "http://www.mrdsreview.net/bingo/",                  label: "Pikmin" }
-    - { code: 'dk64-normal',     url: "http://www.dkspeedruns.com/DK64/Bingo/Bingo.html",  label: "DK64" }
+    #- { code: 'dk64-normal',     url: "http://www.dkspeedruns.com/DK64/Bingo/Bingo.html",  label: "DK64" }
