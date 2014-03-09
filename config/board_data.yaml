@@ -1,11 +1,13 @@
 default:
   types:
-    - { code: 'oot-normal',      url: "http://speedrunslive.com/tools/oot-bingo",          label: "OoT Bingo" }
-    - { code: 'oot-short',       url: "http://speedrunslive.com/tools/oot-bingo",          label: "OoT Short Bingo",                 params: { mode: "short" } }
-    - { code: 'oot-short-xlptv', url: "http://bingo.xlptv.com",                            label: "OoT Short Bingo (xlptv edition)", params: { mode: "short" } }
-    - { code: 'mm-normal',       url: "http://speedrunslive.com/tools/mm-bingo",           label: "MM Bingo" }
-    - { code: 'mm-short',        url: "http://speedrunslive.com/tools/mm-bingo",           label: "MM Short Bingo",                  params: { mode: "short" } }
-    - { code: 'sm64',            url: "http://speedrunslive.com/tools/sm64-bingo",         label: "SM64 Bingo" }
+    - { code: 'oot-normal',      url: "http://speedrunslive.com/tools/oot-bingo",          label: "OoT" }
+    - { code: 'oot-short',       url: "http://speedrunslive.com/tools/oot-bingo",          label: "OoT Short",                 params: { mode: "short" } }
+    - { code: 'oot-short-xlptv', url: "http://bingo.xlptv.com",                            label: "OoT Short (xlptv edition)", params: { mode: "short" } }
+    - { code: 'mm-normal',       url: "http://speedrunslive.com/tools/mm-bingo",           label: "Majora's Mask" }
+    - { code: 'mm-short',        url: "http://speedrunslive.com/tools/mm-bingo",           label: "Majora's Mask Short",       params: { mode: "short" } }
+    - { code: 'sm64',            url: "http://speedrunslive.com/tools/sm64-bingo",         label: "SM64" }
     - { code: 'sms-nkiller',     url: "http://nkiller.webs.com/bingo/sms/newest/",         label: "SMS (nkiller)" }
     - { code: 'pkm-rb',          url: "http://speedrunslive.com/tools/redblue-bingo",      label: "Pokémon Red/Blue" }
     - { code: 'super-metroid',   url: "http://speedrunslive.com/tools/supermetroid-bingo", label: "Super Metroid" }
+    - { code: 'pikmin',          url: "http://www.mrdsreview.net/bingo/",                  label: "Pikmin" }
+    - { code: 'dk64-normal',     url: "http://www.dkspeedruns.com/DK64/Bingo/Bingo.html",  label: "DK64" }
