@@ -1,0 +1,17 @@
+{
+  "name": "bingosync",
+  "version": "0.1.2",
+  "authors": [
+    "Michael J. Del Tito <mdeltito@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "bingosync.twitchtools.tv",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
