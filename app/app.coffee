@@ -13,8 +13,8 @@ app.configure ->
 
   app.set 'views', "#{__dirname}/../views"
   app.set 'view engine', 'jade'
+  app.use express.logger('dev')
   app.use express.static('public')
-  app.use require('connect-assets')()
 
 app.conf  = require('node-yaml-config')
 app.store = require('./store')(app)

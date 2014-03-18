@@ -7594,3 +7594,32 @@ button.close {
     display: none !important;
   }
 }
+/* line 9, ../../assets/styles/_board.scss */
+.btn-red {
+  background-color: #e74c3c;
+}
+
+/* line 10, ../../assets/styles/_board.scss */
+.btn-green {
+  background-color: #00bc8c;
+}
+
+/* line 11, ../../assets/styles/_board.scss */
+.btn-blue {
+  background-color: #3498db;
+}
+
+/* line 12, ../../assets/styles/_board.scss */
+.btn-purple {
+  background-color: #ad009f;
+}
+
+/* line 13, ../../assets/styles/_board.scss */
+.btn-orange {
+  background-color: #f39c12;
+}
+
+/* line 16, ../../assets/styles/_board.scss */
+.navbar .btn-group .active {
+  background: #303030;
+}

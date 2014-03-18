@@ -18,6 +18,19 @@ error = (message)->
   $(alert).hide().prependTo('#main').fadeIn('fast')
 
 ###
+  helper for getting the selected color
+###
+user_color = ->
+  $('input[name=color]').val()
+
+###
+  helper for disconnecting from a session
+###
+bingo_disconnect = ->
+  socket?.disconnect()
+  bingo.loaded = false
+
+###
   When a user joins, the full list of clients is
   also emitted to all members of the session
 ###
@@ -75,11 +88,6 @@ socket.on 'error', (msg)->
   $('#join').button('reset')
   error(msg) if _.isString(msg)
 
-###
-  helper for getting the selected color
-###
-user_color = ->
-  $('#color .active').val()
 
 ###
   on ready
@@ -111,15 +119,12 @@ $ ->
   # disconnect
   $('#quit-session').submit (e)=>
     e.preventDefault()
-    socket?.disconnect()
-    bingo.loaded = false
+    bingo_disconnect()
     $('#user-list').html('')
     $('#board').fadeOut ->
       $(this).html(' ')
       $('#quit-session').fadeOut 300, ->
         $('#join-session').fadeIn(300)
-
-
 
   # user updates
   $(document).on 'click', '.navbar .btn-group button', (e)->

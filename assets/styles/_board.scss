@@ -1,0 +1,19 @@
+// bingo colors
+$bingo-red:             $brand-danger;
+$bingo-green:           $brand-success;
+$bingo-blue:            $brand-info;
+$bingo-purple:          #AD009F;
+$bingo-orange:          $brand-warning;
+
+// extra button colors
+.btn-red    { background-color: $bingo-red; }
+.btn-green  { background-color: $bingo-green; }
+.btn-blue   { background-color: $bingo-blue; }
+.btn-purple { background-color: $bingo-purple; }
+.btn-orange { background-color: $bingo-orange; }
+
+.navbar .btn-group {
+  .active {
+    background: $gray-dark;
+  }
+}

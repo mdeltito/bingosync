@@ -16509,7 +16509,7 @@ return jQuery;
 	
 })(jQuery);
 ;(function() {
-  var bingo, error, socket, templates, user_color;
+  var bingo, bingo_disconnect, error, socket, templates, user_color;
 
   socket = io.connect('/');
 
@@ -16534,6 +16534,27 @@ return jQuery;
       type: 'error'
     });
     return $(alert).hide().prependTo('#main').fadeIn('fast');
+  };
+
+
+  /*
+    helper for getting the selected color
+   */
+
+  user_color = function() {
+    return $('input[name=color]').val();
+  };
+
+
+  /*
+    helper for disconnecting from a session
+   */
+
+  bingo_disconnect = function() {
+    if (socket != null) {
+      socket.disconnect();
+    }
+    return bingo.loaded = false;
   };
 
 
@@ -16619,15 +16640,6 @@ return jQuery;
 
 
   /*
-    helper for getting the selected color
-   */
-
-  user_color = function() {
-    return $('#color .active').val();
-  };
-
-
-  /*
     on ready
    */
 
@@ -16659,10 +16671,7 @@ return jQuery;
     $('#quit-session').submit((function(_this) {
       return function(e) {
         e.preventDefault();
-        if (socket != null) {
-          socket.disconnect();
-        }
-        bingo.loaded = false;
+        bingo_disconnect();
         $('#user-list').html('');
         return $('#board').fadeOut(function() {
           $(this).html(' ');
