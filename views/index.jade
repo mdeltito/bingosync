@@ -1,23 +1,29 @@
 extends layout
 
 block nav
-  div#color.btn-group.pull-right(data-toggle="buttons-radio")
-    button.btn.btn-red(value="red") red
-    button.btn.btn-green(value="green") green
-    button.btn.btn-blue.active(value="blue") blue
-    button.btn.btn-purple(value="purple") purple
-    button.btn.btn-orange(value="orange") orange
+  div#color.btn-group(data-toggle="buttons-radio")
+    button.btn.btn-red(type="button", value="red") red
+    button.btn.btn-green(type="button", value="green") green
+    button.btn.btn-blue.active(type="button", value="blue") blue
+    button.btn.btn-purple(type="button", value="purple") purple
+    button.btn.btn-orange(type="button", value="orange") orange
+
 block sidebar
   form#join-session
     fieldset.well
-      select#type.input-block-level(name='type', placeholder="Board type")
-        for option in board_types
-          option(value=option.code) #{option.label}
+      .form-group
+        select#type.form-control(name='type', placeholder="Board type")
+          for option in board_types
+            option(value=option.code) #{option.label}
 
-      input#nickname.input-block-level(name='nickname', type='text', placeholder="Nickname")
-      input#session_name.input-block-level(name='session_name', type='text', placeholder="Session name")
-      input#password.input-block-level(name='password', type='password', placeholder="Password")
-      input#seed.input-block-level(name='seed', type='text', placeholder='Bingo seed')
+      .form-group
+        input#nickname.form-control(name='nickname', type='text', placeholder="Nickname")
+      .form-group
+        input#session_name.form-control(name='session_name', type='text', placeholder="Session name")
+      .form-group
+        input#password.form-control(name='password', type='password', placeholder="Password")
+      .form-group
+        input#seed.form-control(name='seed', type='text', placeholder='Bingo seed')
       .form-actions
         button#join.btn.btn-primary.btn-block(type='submit', data-loading-text="Joining...") Join
 

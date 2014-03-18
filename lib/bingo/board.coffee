@@ -1,4 +1,4 @@
-_            = require('underscore')
+_            = require('lodash')
 $            = require('jquery')
 crypto       = require('crypto')
 Browser      = require('zombie')

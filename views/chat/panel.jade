@@ -1,0 +1,87 @@
+.row
+  .col-md-5
+    .panel.panel-primary
+      .panel-heading
+        span.glyphicon.glyphicon-comment
+        | Chat
+        .btn-group.pull-right
+          button.btn.btn-default.btn-xs.dropdown-toggle(type='button', data-toggle='dropdown')
+            span.glyphicon.glyphicon-chevron-down
+          ul.dropdown-menu.slidedown
+            li
+              a(href='http://www.jquery2dotnet.com')
+                span.glyphicon.glyphicon-refresh
+                | Refresh
+            li
+              a(href='http://www.jquery2dotnet.com')
+                span.glyphicon.glyphicon-ok-sign
+                | Available
+            li
+              a(href='http://www.jquery2dotnet.com')
+                span.glyphicon.glyphicon-remove
+                | Busy
+            li
+              a(href='http://www.jquery2dotnet.com')
+                span.glyphicon.glyphicon-time
+                | Away
+            li.divider
+            li
+              a(href='http://www.jquery2dotnet.com')
+                span.glyphicon.glyphicon-off
+                | Sign Out
+      .panel-body
+        ul.chat
+          li.left.clearfix
+            span.chat-img.pull-left
+              img.img-circle(src='http://placehold.it/50/55C1E7/fff&text=U', alt='User Avatar')
+            .chat-body.clearfix
+              .header
+                strong.primary-font Jack Sparrow
+                small.pull-right.text-muted
+                  span.glyphicon.glyphicon-time
+                  | 12 mins ago
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                | dolor, quis ullamcorper ligula sodales.
+          li.right.clearfix
+            span.chat-img.pull-right
+              img.img-circle(src='http://placehold.it/50/FA6F57/fff&text=ME', alt='User Avatar')
+            .chat-body.clearfix
+              .header
+                small.text-muted
+                  span.glyphicon.glyphicon-time
+                  | 13 mins ago
+                strong.pull-right.primary-font Bhaumik Patel
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                | dolor, quis ullamcorper ligula sodales.
+          li.left.clearfix
+              span.chat-img.pull-left
+                img.img-circle(src='http://placehold.it/50/55C1E7/fff&text=U', alt='User Avatar')
+              .chat-body.clearfix
+                .header
+                  strong.primary-font Jack Sparrow
+                  small.pull-right.text-muted
+                    span.glyphicon.glyphicon-time
+                    | 14 mins ago
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                  | dolor, quis ullamcorper ligula sodales.
+            li.right.clearfix
+              span.chat-img.pull-right
+                img.img-circle(src='http://placehold.it/50/FA6F57/fff&text=ME', alt='User Avatar')
+              .chat-body.clearfix
+                .header
+                  small.text-muted
+                    span.glyphicon.glyphicon-time
+                    | 15 mins ago
+                  strong.pull-right.primary-font Bhaumik Patel
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                  | dolor, quis ullamcorper ligula sodales.
+        .panel-footer
+          .input-group
+            input#btn-input.form-control.input-sm(type='text', placeholder='Type your message here...')
+            span.input-group-btn
+              button#btn-chat.btn.btn-warning.btn-sm
+                | Send

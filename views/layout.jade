@@ -2,10 +2,7 @@ doctype 5
 html(lang="en")
   head
     title= "BINGOSYNC"
-    link(rel="stylesheet", type="text/css", href="/css/bootstrap.css")
-    link(rel="stylesheet", type="text/css", href="/css/darkstrap.css")
-    link(rel="stylesheet", type="text/css", href="/css/jquery.gritter.css")
-    !=css('bingosync')
+    link(rel="stylesheet", type="text/css", href="/styles/bingosync.min.css")
     script.
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -14,25 +11,22 @@ html(lang="en")
           ga('create', 'UA-42111658-2', 'twitchtools.tv');
           ga('send', 'pageview');
   body
-    div.navbar
-      div.navbar-inner
-        div.container
-          a(href='#').brand.pull-left
-            | BINGOSYNC&nbsp;
-            span.label.label-success v1.2
-          block nav
+
+    nav(role="navigation").navbar.navbar-default
+      .navbar-header
+        a(href="#" ).navbar-brand
+          | BINGOSYNC&nbsp;
+          span.label.label-success v1.2
+        block nav
+
     div#main.container-fluid
-      div.row-fluid
-        .span9
+      div.row
+        .col-md-9
           block content
-        .span3
+        .col-md-3
           block sidebar
     div.footer
       block footer
 
-    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js")
-    script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
     script(type="text/javascript", src="/socket.io/socket.io.js")
-    script(type="text/javascript", src="/js/jquery.gritter.min.js")
-    script(type="text/javascript", src="/js/bootstrap.min.js")
-    !=js('client')
+    script(type="text/javascript", src="/scripts/bingosync.min.js")

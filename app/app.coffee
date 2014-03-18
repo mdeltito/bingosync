@@ -1,4 +1,4 @@
-_        = require('underscore')
+_        = require('lodash')
 $        = require('jquery')
 Browser  = require('zombie')
 http     = require('http')
@@ -11,11 +11,8 @@ app.configure ->
   else
     app.set 'port', 5000
 
-
   app.set 'views', "#{__dirname}/../views"
   app.set 'view engine', 'jade'
-
-  # app.use express.logger('dev')
   app.use express.static('public')
   app.use require('connect-assets')()
 
