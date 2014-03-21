@@ -16,14 +16,15 @@ html(lang="en")
       .navbar-header
         a(href="#" ).navbar-brand
           | BINGOSYNC&nbsp;
-          span.label.label-success v1.2
+          span.label.label-success v
+            =package.version
       block nav
 
     div#main.container-fluid
       div.row
-        .col-md-9
+        #bingo-container.col-md-8.col-lg-9
           block content
-        .col-md-3
+        #sidebar.col-md-4.col-lg-3
           block sidebar
     div.footer
       block footer

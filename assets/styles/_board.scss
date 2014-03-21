@@ -12,8 +12,58 @@ $bingo-orange:          $brand-warning;
 .btn-purple { background-color: $bingo-purple; }
 .btn-orange { background-color: $bingo-orange; }
 
+// extra badge colors
+.badge-red    { background-color: $bingo-red; }
+.badge-green  { background-color: $bingo-green; }
+.badge-blue   { background-color: $bingo-blue; }
+.badge-purple { background-color: $bingo-purple; }
+.badge-orange { background-color: $bingo-orange; }
+
 .navbar .btn-group {
   .active {
     background: $gray-dark;
   }
+
+  .btn {
+    &, &:hover { margin: 0; }
+    border: 0;
+  }
+}
+
+.form-control {
+  background-color: #efefef;
+}
+
+#board,
+#board table {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#bingo tr:first-child td,
+#bingo tr:last-child td {
+  display: none;
+}
+
+td {
+  padding: 0 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 1px #424242 solid;
+  background: rgba(10, 10, 10, 0.5);
+  color: #fff;
+}
+
+td.locked {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#bingo tr td:first-child {
+  display: none;
 }

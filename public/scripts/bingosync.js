@@ -16002,6 +16002,153 @@ return jQuery;
 
 }(jQuery);
 ;/* ========================================================================
+ * Bootstrap: dropdown.js v3.1.1
+ * http://getbootstrap.com/javascript/#dropdowns
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // DROPDOWN CLASS DEFINITION
+  // =========================
+
+  var backdrop = '.dropdown-backdrop'
+  var toggle   = '[data-toggle=dropdown]'
+  var Dropdown = function (element) {
+    $(element).on('click.bs.dropdown', this.toggle)
+  }
+
+  Dropdown.prototype.toggle = function (e) {
+    var $this = $(this)
+
+    if ($this.is('.disabled, :disabled')) return
+
+    var $parent  = getParent($this)
+    var isActive = $parent.hasClass('open')
+
+    clearMenus()
+
+    if (!isActive) {
+      if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+        // if mobile we use a backdrop because click events don't delegate
+        $('<div class="dropdown-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
+      }
+
+      var relatedTarget = { relatedTarget: this }
+      $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
+
+      if (e.isDefaultPrevented()) return
+
+      $parent
+        .toggleClass('open')
+        .trigger('shown.bs.dropdown', relatedTarget)
+
+      $this.focus()
+    }
+
+    return false
+  }
+
+  Dropdown.prototype.keydown = function (e) {
+    if (!/(38|40|27)/.test(e.keyCode)) return
+
+    var $this = $(this)
+
+    e.preventDefault()
+    e.stopPropagation()
+
+    if ($this.is('.disabled, :disabled')) return
+
+    var $parent  = getParent($this)
+    var isActive = $parent.hasClass('open')
+
+    if (!isActive || (isActive && e.keyCode == 27)) {
+      if (e.which == 27) $parent.find(toggle).focus()
+      return $this.click()
+    }
+
+    var desc = ' li:not(.divider):visible a'
+    var $items = $parent.find('[role=menu]' + desc + ', [role=listbox]' + desc)
+
+    if (!$items.length) return
+
+    var index = $items.index($items.filter(':focus'))
+
+    if (e.keyCode == 38 && index > 0)                 index--                        // up
+    if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
+    if (!~index)                                      index = 0
+
+    $items.eq(index).focus()
+  }
+
+  function clearMenus(e) {
+    $(backdrop).remove()
+    $(toggle).each(function () {
+      var $parent = getParent($(this))
+      var relatedTarget = { relatedTarget: this }
+      if (!$parent.hasClass('open')) return
+      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+      if (e.isDefaultPrevented()) return
+      $parent.removeClass('open').trigger('hidden.bs.dropdown', relatedTarget)
+    })
+  }
+
+  function getParent($this) {
+    var selector = $this.attr('data-target')
+
+    if (!selector) {
+      selector = $this.attr('href')
+      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+    }
+
+    var $parent = selector && $(selector)
+
+    return $parent && $parent.length ? $parent : $this.parent()
+  }
+
+
+  // DROPDOWN PLUGIN DEFINITION
+  // ==========================
+
+  var old = $.fn.dropdown
+
+  $.fn.dropdown = function (option) {
+    return this.each(function () {
+      var $this = $(this)
+      var data  = $this.data('bs.dropdown')
+
+      if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
+      if (typeof option == 'string') data[option].call($this)
+    })
+  }
+
+  $.fn.dropdown.Constructor = Dropdown
+
+
+  // DROPDOWN NO CONFLICT
+  // ====================
+
+  $.fn.dropdown.noConflict = function () {
+    $.fn.dropdown = old
+    return this
+  }
+
+
+  // APPLY TO STANDARD DROPDOWN ELEMENTS
+  // ===================================
+
+  $(document)
+    .on('click.bs.dropdown.data-api', clearMenus)
+    .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+    .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+    .on('keydown.bs.dropdown.data-api', toggle + ', [role=menu], [role=listbox]', Dropdown.prototype.keydown)
+
+}(jQuery);
+;/* ========================================================================
  * Bootstrap: alert.js v3.1.1
  * http://getbootstrap.com/javascript/#alerts
  * ========================================================================
@@ -16089,427 +16236,193 @@ return jQuery;
   $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
 
 }(jQuery);
-;/*
- * Gritter for jQuery
- * http://www.boedesign.com/
- *
- * Copyright (c) 2012 Jordan Boesch
- * Dual licensed under the MIT and GPL licenses.
- *
- * Date: February 24, 2012
- * Version: 1.7.4
- */
+;/*! Bootstrap Growl - v1.0.4 - 2014-01-29
+* https://github.com/mouse0270/bootstrap-growl
+* Copyright (c) 2014 Remable Designs; Licensed MIT */
+;(function($, window, document, undefined) {
+	"use strict";
+	var bootstrap_growl_remove = [];
 
-(function($){
- 	
-	/**
-	* Set it up as an object under the jQuery namespace
-	*/
-	$.gritter = {};
-	
-	/**
-	* Set up global options that the user can over-ride
-	*/
-	$.gritter.options = {
-		position: '',
-		class_name: '', // could be set to 'gritter-light' to use white notifications
-		fade_in_speed: 'medium', // how fast notifications fade in
-		fade_out_speed: 1000, // how fast the notices fade out
-		time: 6000 // hang on the screen for...
-	}
-	
-	/**
-	* Add a gritter notification to the screen
-	* @see Gritter#add();
-	*/
-	$.gritter.add = function(params){
+	$.growl = function(content, options) {
+		var message = null,
+			title = null,
+			icon = null,
+			$growl, growlClass, css, offsetAmount;
 
-		try {
-			return Gritter.add(params || {});
-		} catch(e) {
-		
-			var err = 'Gritter Error: ' + e;
-			(typeof(console) != 'undefined' && console.error) ? 
-				console.error(err, params) : 
-				alert(err);
-				
+		if (Object.prototype.toString.call(content) == "[object Object]") {
+			message = content.message;
+			title = " "+content.title+" ";
+			icon = content.icon;
+		}else{
+			message = content;
 		}
-		
-	}
-	
-	/**
-	* Remove a gritter notification from the screen
-	* @see Gritter#removeSpecific();
-	*/
-	$.gritter.remove = function(id, params){
-		Gritter.removeSpecific(id, params || {});
-	}
-	
-	/**
-	* Remove all notifications
-	* @see Gritter#stop();
-	*/
-	$.gritter.removeAll = function(params){
-		Gritter.stop(params || {});
-	}
-	
-	/**
-	* Big fat Gritter object
-	* @constructor (not really since its object literal)
-	*/
-	var Gritter = {
-		
-		// Public - options to over-ride with $.gritter.options in "add"
-		position: '',
-		fade_in_speed: '',
-		fade_out_speed: '',
-		time: '',
-		
-		// Private - no touchy the private parts
-		_custom_timer: 0,
-		_item_count: 0,
-		_is_setup: 0,
-		_tpl_close: '<a class="gritter-close" href="#" tabindex="1">Close Notification</a>',
-		_tpl_title: '<span class="gritter-title">[[title]]</span>',
-		_tpl_item: '<div id="gritter-item-[[number]]" class="gritter-item-wrapper [[item_class]]" style="display:none" role="alert"><div class="gritter-top"></div><div class="gritter-item">[[close]][[image]]<div class="[[class_name]]">[[title]]<p>[[text]]</p></div><div style="clear:both"></div></div><div class="gritter-bottom"></div></div>',
-		_tpl_wrap: '<div id="gritter-notice-wrapper"></div>',
-		
-		/**
-		* Add a gritter notification to the screen
-		* @param {Object} params The object that contains all the options for drawing the notification
-		* @return {Integer} The specific numeric id to that gritter notification
-		*/
-		add: function(params){
-			// Handle straight text
-			if(typeof(params) == 'string'){
-				params = {text:params};
-			}
 
-			// We might have some issues if we don't have a title or text!
-			if(params.text === null){
-				throw 'You must supply "text" parameter.'; 
-			}
-			
-			// Check the options and set them once
-			if(!this._is_setup){
-				this._runSetup();
-			}
-			
-			// Basics
-			var title = params.title, 
-				text = params.text,
-				image = params.image || '',
-				sticky = params.sticky || false,
-				item_class = params.class_name || $.gritter.options.class_name,
-				position = $.gritter.options.position,
-				time_alive = params.time || '';
+		/* ===== CORRECT MISSING OPTIONS ===== */
+		options = $.extend(true, {}, $.growl.default_options, options);
 
-			this._verifyWrapper();
-			
-			this._item_count++;
-			var number = this._item_count, 
-				tmp = this._tpl_item;
-			
-			// Assign callbacks
-			$(['before_open', 'after_open', 'before_close', 'after_close']).each(function(i, val){
-				Gritter['_' + val + '_' + number] = ($.isFunction(params[val])) ? params[val] : function(){}
-			});
+		// Set the template icon to be either a span or an image depending on icon_type
+		if (options.template.icon_type === 'class') {
+			options.template.icon = '<span class="">';
+		}else{
+			options.template.icon = '<img src="" />';
+		}
 
-			// Reset
-			this._custom_timer = 0;
-			
-			// A custom fade time set
-			if(time_alive){
-				this._custom_timer = time_alive;
-			}
-			
-			var image_str = (image != '') ? '<img src="' + image + '" class="gritter-image" />' : '',
-				class_name = (image != '') ? 'gritter-with-image' : 'gritter-without-image';
-			
-			// String replacements on the template
-			if(title){
-				title = this._str_replace('[[title]]',title,this._tpl_title);
+		/* ===== BUILD GROWL CONTAINER ===== */
+		growlClass = "bootstrap-growl-" + options.position.from + "-" + options.position.align;
+		$growl = $(options.template.container); 
+		$growl.addClass(growlClass);
+
+		if (options.type) {
+			$growl.addClass("alert-" + options.type);
+		} else {
+			$growl.addClass("alert-info");
+		}
+
+		if (options.allow_dismiss) {
+			$growl.append($(options.template.dismiss));
+		}
+
+		if (icon) {
+			if (options.template.icon) {
+				if (options.template.icon_type == "class") {
+					$growl.append($(options.template.icon).addClass(icon));
+				}else{
+					$growl.append($(options.template.icon).attr('src',icon));
+				}
 			}else{
-				title = '';
+				$growl.append(icon);
 			}
-			
-			tmp = this._str_replace(
-				['[[title]]', '[[text]]', '[[close]]', '[[image]]', '[[number]]', '[[class_name]]', '[[item_class]]'],
-				[title, text, this._tpl_close, image_str, this._item_count, class_name, item_class], tmp
-			);
-
-			// If it's false, don't show another gritter message
-			if(this['_before_open_' + number]() === false){
-				return false;
-			}
-
-			$('#gritter-notice-wrapper').addClass(position).append(tmp);
-			
-			var item = $('#gritter-item-' + this._item_count);
-			
-			item.fadeIn(this.fade_in_speed, function(){
-				Gritter['_after_open_' + number]($(this));
-			});
-			
-			if(!sticky){
-				this._setFadeTimer(item, number);
-			}
-			
-			// Bind the hover/unhover states
-			$(item).bind('mouseenter mouseleave', function(event){
-				if(event.type == 'mouseenter'){
-					if(!sticky){ 
-						Gritter._restoreItemIfFading($(this), number);
-					}
-				}
-				else {
-					if(!sticky){
-						Gritter._setFadeTimer($(this), number);
-					}
-				}
-				Gritter._hoverState($(this), event.type);
-			});
-			
-			// Clicking (X) makes the perdy thing close
-			$(item).find('.gritter-close').click(function(){
-				Gritter.removeSpecific(number, {}, null, true);
-				return false;
-			});
-			
-			return number;
-		
-		},
-		
-		/**
-		* If we don't have any more gritter notifications, get rid of the wrapper using this check
-		* @private
-		* @param {Integer} unique_id The ID of the element that was just deleted, use it for a callback
-		* @param {Object} e The jQuery element that we're going to perform the remove() action on
-		* @param {Boolean} manual_close Did we close the gritter dialog with the (X) button
-		*/
-		_countRemoveWrapper: function(unique_id, e, manual_close){
-			
-			// Remove it then run the callback function
-			e.remove();
-			this['_after_close_' + unique_id](e, manual_close);
-			
-			// Check if the wrapper is empty, if it is.. remove the wrapper
-			if($('.gritter-item-wrapper').length == 0){
-				$('#gritter-notice-wrapper').remove();
-			}
-		
-		},
-		
-		/**
-		* Fade out an element after it's been on the screen for x amount of time
-		* @private
-		* @param {Object} e The jQuery element to get rid of
-		* @param {Integer} unique_id The id of the element to remove
-		* @param {Object} params An optional list of params to set fade speeds etc.
-		* @param {Boolean} unbind_events Unbind the mouseenter/mouseleave events if they click (X)
-		*/
-		_fade: function(e, unique_id, params, unbind_events){
-
-			var params = params || {},
-				fade = (typeof(params.fade) != 'undefined') ? params.fade : true,
-				fade_out_speed = params.speed || this.fade_out_speed,
-				manual_close = unbind_events;
-
-			this['_before_close_' + unique_id](e, manual_close);
-			
-			// If this is true, then we are coming from clicking the (X)
-			if(unbind_events){
-				e.unbind('mouseenter mouseleave');
-			}
-			
-			// Fade it out or remove it
-			if(fade){
-			
-				e.animate({
-					opacity: 0
-				}, fade_out_speed, function(){
-					e.animate({ height: 0 }, 300, function(){
-						Gritter._countRemoveWrapper(unique_id, e, manual_close);
-					})
-				})
-				
-			}
-			else {
-				
-				this._countRemoveWrapper(unique_id, e);
-				
-			}
-						
-		},
-		
-		/**
-		* Perform actions based on the type of bind (mouseenter, mouseleave) 
-		* @private
-		* @param {Object} e The jQuery element
-		* @param {String} type The type of action we're performing: mouseenter or mouseleave
-		*/
-		_hoverState: function(e, type){
-			
-			// Change the border styles and add the (X) close button when you hover
-			if(type == 'mouseenter'){
-				
-				e.addClass('hover');
-				
-				// Show close button
-				e.find('.gritter-close').show();
-						
-			}
-			// Remove the border styles and hide (X) close button when you mouse out
-			else {
-				
-				e.removeClass('hover');
-				
-				// Hide close button
-				e.find('.gritter-close').hide();
-				
-			}
-			
-		},
-		
-		/**
-		* Remove a specific notification based on an ID
-		* @param {Integer} unique_id The ID used to delete a specific notification
-		* @param {Object} params A set of options passed in to determine how to get rid of it
-		* @param {Object} e The jQuery element that we're "fading" then removing
-		* @param {Boolean} unbind_events If we clicked on the (X) we set this to true to unbind mouseenter/mouseleave
-		*/
-		removeSpecific: function(unique_id, params, e, unbind_events){
-			
-			if(!e){
-				var e = $('#gritter-item-' + unique_id);
-			}
-
-			// We set the fourth param to let the _fade function know to 
-			// unbind the "mouseleave" event.  Once you click (X) there's no going back!
-			this._fade(e, unique_id, params || {}, unbind_events);
-			
-		},
-		
-		/**
-		* If the item is fading out and we hover over it, restore it!
-		* @private
-		* @param {Object} e The HTML element to remove
-		* @param {Integer} unique_id The ID of the element
-		*/
-		_restoreItemIfFading: function(e, unique_id){
-			
-			clearTimeout(this['_int_id_' + unique_id]);
-			e.stop().css({ opacity: '', height: '' });
-			
-		},
-		
-		/**
-		* Setup the global options - only once
-		* @private
-		*/
-		_runSetup: function(){
-		
-			for(opt in $.gritter.options){
-				this[opt] = $.gritter.options[opt];
-			}
-			this._is_setup = 1;
-			
-		},
-		
-		/**
-		* Set the notification to fade out after a certain amount of time
-		* @private
-		* @param {Object} item The HTML element we're dealing with
-		* @param {Integer} unique_id The ID of the element
-		*/
-		_setFadeTimer: function(e, unique_id){
-			
-			var timer_str = (this._custom_timer) ? this._custom_timer : this.time;
-			this['_int_id_' + unique_id] = setTimeout(function(){ 
-				Gritter._fade(e, unique_id);
-			}, timer_str);
-		
-		},
-		
-		/**
-		* Bring everything to a halt
-		* @param {Object} params A list of callback functions to pass when all notifications are removed
-		*/  
-		stop: function(params){
-			
-			// callbacks (if passed)
-			var before_close = ($.isFunction(params.before_close)) ? params.before_close : function(){};
-			var after_close = ($.isFunction(params.after_close)) ? params.after_close : function(){};
-			
-			var wrap = $('#gritter-notice-wrapper');
-			before_close(wrap);
-			wrap.fadeOut(function(){
-				$(this).remove();
-				after_close();
-			});
-		
-		},
-		
-		/**
-		* An extremely handy PHP function ported to JS, works well for templating
-		* @private
-		* @param {String/Array} search A list of things to search for
-		* @param {String/Array} replace A list of things to replace the searches with
-		* @return {String} sa The output
-		*/  
-		_str_replace: function(search, replace, subject, count){
-		
-			var i = 0, j = 0, temp = '', repl = '', sl = 0, fl = 0,
-				f = [].concat(search),
-				r = [].concat(replace),
-				s = subject,
-				ra = r instanceof Array, sa = s instanceof Array;
-			s = [].concat(s);
-			
-			if(count){
-				this.window[count] = 0;
-			}
-		
-			for(i = 0, sl = s.length; i < sl; i++){
-				
-				if(s[i] === ''){
-					continue;
-				}
-				
-				for (j = 0, fl = f.length; j < fl; j++){
-					
-					temp = s[i] + '';
-					repl = ra ? (r[j] !== undefined ? r[j] : '') : r[0];
-					s[i] = (temp).split(f[j]).join(repl);
-					
-					if(count && s[i] !== temp){
-						this.window[count] += (temp.length-s[i].length) / f[j].length;
-					}
-					
-				}
-			}
-			
-			return sa ? s : s[0];
-			
-		},
-		
-		/**
-		* A check to make sure we have something to wrap our notices with
-		* @private
-		*/  
-		_verifyWrapper: function(){
-		  
-			if($('#gritter-notice-wrapper').length == 0){
-				$('body').append(this._tpl_wrap);
-			}
-		
 		}
-		
-	}
-	
-})(jQuery);
+
+		if (title) {
+			if (options.template.title) {
+				$growl.append($(options.template.title).html(title));
+			}else{
+				$growl.append(title);
+			}
+			$growl.append(options.template.title_divider);
+		}
+
+		if (options.template.message) {
+			$growl.append($(options.template.message).html(message));
+		}else{
+			$growl.append(message);
+		}
+
+		/* ===== DETERMINE GROWL POSITION ===== */
+		offsetAmount = options.offset;
+
+		$("."+growlClass).each(function() {
+			return offsetAmount = Math.max(offsetAmount, parseInt($(this).css(options.position.from)) + $(this).outerHeight() + options.spacing);
+		});
+
+		css = {
+			"position": (options.ele === "body" ? "fixed" : "absolute"),
+			"margin": 0,
+			"z-index": options.z_index,
+			"display": "none"
+		};
+
+		css[options.position.from] = offsetAmount + "px";
+		$growl.css(css);
+		$(options.ele).append($growl);
+
+		switch (options.position.align) {
+			case "center":
+				$growl.css({
+					"left": "50%",
+					"marginLeft": -($growl.outerWidth() / 2) + "px"
+				});
+				break;
+			case "left":
+				$growl.css("left", options.offset + "px");
+				break;
+			case "right":
+				$growl.css("right", options.offset + "px");
+				break;
+		}
+
+		/* ===== DETERMINE GROWL POSITION ===== */
+		if (options.onGrowlShow) {
+			options.onGrowlShow(event);
+		}
+
+		var fadeIn = $growl.fadeIn(options.fade_in, function(event) {
+			if (options.onGrowlShown) {
+				options.onGrowlShown(event);
+			}
+
+			/* ===== HANDEL DELAY AND PAUSE ON MOUSE OVER ===== */
+			if (options.delay > 0) {
+				if (options.pause_on_mouseover == true) {
+					$growl.on('mouseover', function() {
+						clearTimeout(bootstrap_growl_remove[$growl.index()]);
+					}).on('mouseleave', function() {
+						bootstrap_growl_remove[$growl.index()] = setTimeout(function() {
+							return $growl.alert("close");
+						}, options.delay);
+					});
+				}
+
+				bootstrap_growl_remove[$growl.index()] = setTimeout(function() {
+					return $growl.alert("close");
+				}, options.delay);
+			}
+		});
+
+		$growl.bind('close.bs.alert', function (event) {
+			if (options.onGrowlClose) {
+				options.onGrowlClose(event);
+			}
+		});
+
+		$growl.bind('closed.bs.alert', function (event) {            
+			if (options.onGrowlClosed) {
+				options.onGrowlClosed(event);
+			}
+
+			var pos = $(this).css(options.position.from);
+			$(this).nextAll('.'+growlClass).each(function() {
+				$(this).css(options.position.from , pos);
+				pos = (parseInt(pos)+(options.spacing)) + $(this).outerHeight();
+			});
+		});
+
+		return $growl;
+
+	};
+
+	$.growl.default_options = {
+		ele: "body",
+		type: "info",
+		allow_dismiss: true,
+		position: {
+			from: "top",
+			align: "right"
+		},
+		offset: 20,
+		spacing: 10,
+		z_index: 1031,
+		fade_in: 400,
+		delay: 5000,
+		pause_on_mouseover: false,
+		onGrowlShow: null,
+		onGrowlShown: null,
+		onGrowlClose: null,
+		onGrowlClosed: null,
+		template: {
+			icon_type: 'class',
+			container: '<div class="col-xs-10 col-sm-10 col-md-3 alert">',
+			dismiss: '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>',
+			title: '<strong>',
+			title_divider: '',
+			message: ''
+		}
+	};
+
+})(jQuery, window, document);
 ;(function() {
-  var bingo, bingo_disconnect, error, socket, templates, user_color;
+  var bingo, bingo_disconnect, error, show_form, socket, templates, user_color;
 
   socket = io.connect('/');
 
@@ -16523,17 +16436,43 @@ return jQuery;
 
 
   /*
+    set up default growl options
+   */
+
+  $.growl.default_options = _.extend($.growl.default_options, {
+    position: {
+      from: 'top',
+      align: 'center'
+    }
+  });
+
+
+  /*
     helper function for showing an error
    */
 
-  error = function(message) {
+  error = function(message, scope) {
     var alert;
+    if (scope == null) {
+      scope = "#sidebar";
+    }
     alert = templates.alert({
       title: 'Error!',
       message: message,
       type: 'error'
     });
-    return $(alert).hide().prependTo('#main').fadeIn('fast');
+    $('.alert', scope).remove();
+    return $(alert).hide().appendTo(scope).fadeIn('fast');
+  };
+
+
+  /*
+    toggle the forms
+   */
+
+  show_form = function(type) {
+    $('#quit-session, #join-session').addClass('hide');
+    return $("#" + type + "-session").removeClass('hide');
   };
 
 
@@ -16542,7 +16481,7 @@ return jQuery;
    */
 
   user_color = function() {
-    return $('input[name=color]').val();
+    return $('input[name=color]:checked').val();
   };
 
 
@@ -16551,6 +16490,8 @@ return jQuery;
    */
 
   bingo_disconnect = function() {
+    var _ref;
+    socket.emit('leave', bingo != null ? (_ref = bingo.client) != null ? _ref.id : void 0 : void 0);
     if (socket != null) {
       socket.disconnect();
     }
@@ -16580,9 +16521,11 @@ return jQuery;
    */
 
   socket.on('user joined', function(user) {
-    return $.gritter.add({
-      title: user.nickname,
-      text: 'joined the session'
+    return $.growl({
+      title: user.username,
+      icon: 'glyphicon glyphicon-user',
+      message: 'has joined the session',
+      type: 'info'
     });
   });
 
@@ -16599,8 +16542,12 @@ return jQuery;
         'page': '/login'
       });
     }
-    return $.gritter.add({
-      text: 'connected'
+    show_form('quit');
+    return $.growl({
+      title: 'Connected',
+      icon: 'glyphicon glyphicon-transfer'
+    }, {
+      type: 'success'
     });
   });
 
@@ -16647,8 +16594,11 @@ return jQuery;
     bingo.board = $('#board');
     $('#join-session').submit((function(_this) {
       return function(e) {
-        $('#join').button('loading');
+        if (!socket.socket.connected) {
+          socket.socket.connect();
+        }
         e.preventDefault();
+        $('#join').button('loading');
         if (_this.bingo == null) {
           _this.bingo = {};
         }
@@ -16662,10 +16612,7 @@ return jQuery;
           error('You must fill out all fields');
           return $('#join').button('reset');
         }
-        socket.emit('join bingo', _this.bingo);
-        return $('#join-session').fadeOut(300, function() {
-          return $('#quit-session').fadeIn(300);
-        });
+        return socket.emit('join bingo', _this.bingo);
       };
     })(this));
     $('#quit-session').submit((function(_this) {
@@ -16675,13 +16622,11 @@ return jQuery;
         $('#user-list').html('');
         return $('#board').fadeOut(function() {
           $(this).html(' ');
-          return $('#quit-session').fadeOut(300, function() {
-            return $('#join-session').fadeIn(300);
-          });
+          return show_form('join');
         });
       };
     })(this));
-    $(document).on('click', '.navbar .btn-group button', function(e) {
+    $(document).on('change', 'input[name=color]', function(e) {
       if (bingo.client) {
         bingo.client.color = $(this).val();
         return socket.emit('update user', bingo.client);

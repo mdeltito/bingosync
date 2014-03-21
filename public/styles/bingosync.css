@@ -7594,6 +7594,148 @@ button.close {
     display: none !important;
   }
 }
+/* the norm */
+/* line 2, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+#gritter-notice-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 301px;
+  z-index: 9999;
+}
+
+/* line 9, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+#gritter-notice-wrapper.top-left {
+  left: 20px;
+  right: auto;
+}
+
+/* line 13, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+#gritter-notice-wrapper.bottom-right {
+  top: auto;
+  left: auto;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* line 19, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+#gritter-notice-wrapper.bottom-left {
+  top: auto;
+  right: auto;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* line 25, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-item-wrapper {
+  position: relative;
+  margin: 0 0 10px 0;
+  background: url("../images/ie-spacer.gif");
+  /* ie7/8 fix */
+}
+
+/* line 30, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-top {
+  background: url(../images/gritter.png) no-repeat left -30px;
+  height: 10px;
+}
+
+/* line 34, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.hover .gritter-top {
+  background-position: right -30px;
+}
+
+/* line 37, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-bottom {
+  background: url(../images/gritter.png) no-repeat left bottom;
+  height: 8px;
+  margin: 0;
+}
+
+/* line 42, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.hover .gritter-bottom {
+  background-position: bottom right;
+}
+
+/* line 45, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-item {
+  display: block;
+  background: url(../images/gritter.png) no-repeat left -40px;
+  color: #eee;
+  padding: 2px 11px 8px 11px;
+  font-size: 11px;
+  font-family: verdana;
+}
+
+/* line 53, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.hover .gritter-item {
+  background-position: right -40px;
+}
+
+/* line 56, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-item p {
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* line 61, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-close {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  background: url(../images/gritter.png) no-repeat left top;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999em;
+}
+
+/* line 72, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-title {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 0 7px 0;
+  display: block;
+  text-shadow: 1px 1px 0 #000;
+  /* Not supported by IE :( */
+}
+
+/* line 79, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-image {
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+
+/* line 85, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-with-image,
+.gritter-without-image {
+  padding: 0;
+}
+
+/* line 88, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-with-image {
+  width: 220px;
+  float: right;
+}
+
+/* for the light (white) version of the gritter notice */
+/* line 96, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-light .gritter-item,
+.gritter-light .gritter-bottom,
+.gritter-light .gritter-top,
+.gritter-light .gritter-close {
+  background-image: url(../images/gritter-light.png);
+  color: #222;
+}
+
+/* line 100, ../../assets/lib/jquery.gritter/css/jquery.gritter.css */
+.gritter-light .gritter-title {
+  text-shadow: none;
+}
+
 /* line 9, ../../assets/styles/_board.scss */
 .btn-red {
   background-color: #e74c3c;
@@ -7620,6 +7762,83 @@ button.close {
 }
 
 /* line 16, ../../assets/styles/_board.scss */
+.badge-red {
+  background-color: #e74c3c;
+}
+
+/* line 17, ../../assets/styles/_board.scss */
+.badge-green {
+  background-color: #00bc8c;
+}
+
+/* line 18, ../../assets/styles/_board.scss */
+.badge-blue {
+  background-color: #3498db;
+}
+
+/* line 19, ../../assets/styles/_board.scss */
+.badge-purple {
+  background-color: #ad009f;
+}
+
+/* line 20, ../../assets/styles/_board.scss */
+.badge-orange {
+  background-color: #f39c12;
+}
+
+/* line 23, ../../assets/styles/_board.scss */
 .navbar .btn-group .active {
   background: #303030;
+}
+/* line 27, ../../assets/styles/_board.scss */
+.navbar .btn-group .btn {
+  border: 0;
+}
+/* line 28, ../../assets/styles/_board.scss */
+.navbar .btn-group .btn, .navbar .btn-group .btn:hover {
+  margin: 0;
+}
+
+/* line 33, ../../assets/styles/_board.scss */
+.form-control {
+  background-color: #efefef;
+}
+
+/* line 38, ../../assets/styles/_board.scss */
+#board,
+#board table {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 48, ../../assets/styles/_board.scss */
+#bingo tr:first-child td,
+#bingo tr:last-child td {
+  display: none;
+}
+
+/* line 52, ../../assets/styles/_board.scss */
+td {
+  padding: 0 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 1px #424242 solid;
+  background: rgba(10, 10, 10, 0.5);
+  color: #fff;
+}
+
+/* line 63, ../../assets/styles/_board.scss */
+td.locked {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 67, ../../assets/styles/_board.scss */
+#bingo tr td:first-child {
+  display: none;
 }

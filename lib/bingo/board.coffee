@@ -2,13 +2,14 @@ _            = require('lodash')
 $            = require('jquery')
 crypto       = require('crypto')
 Browser      = require('zombie')
+Phantom      = require('node-phantom')
+Promise      = require('bluebird')
 EventEmitter = require('events').EventEmitter
 
 module.exports = (_store, _config_data)->
   class Board extends EventEmitter
     namespace: 'board'
     constructor: (session, callback = ->)->
-      @browser = new Browser();
       @seed = session.seed
       @session = session
       @key = "bingo:#{@namespace}:#{@session.key}"
@@ -24,42 +25,57 @@ module.exports = (_store, _config_data)->
       query = $.param(params)
       "#{config.url}?#{query}"
 
-    set: (table, callback = ->)->
-      _store.set @key, table, =>
-        @table = table
-        @emit 'board updated', table
-        callback table
+    set: Promise.promisify(_store.set, _store)
+    load: Promise.promisify(_store.get, _store)
 
-    # wrapper for `get` that calls fetch if necessary
-    load: (callback = ->)->
-      @get (err, reply)=>
-        if !reply || err
-          @fetch (table)=>
-            @set table
-            callback table
-        else
-          callback reply
+    save: (table)->
+      @set(@key, table)
+        .then (status)->
+          return table
 
-    get: (callback = ->)->
-      _store.get @key, callback
+    get: ()->
+      @load @key
+        .then (reply)=>
+          if !reply
+            return @fetch().then (table)=>
+              return @save(table)
+          else
+            return reply
 
-    fetch: (callback = ->)->
-      console.log @url
-      @browser.visit @url, =>
-        @table = @browser.query("#bingo").outerHTML
-        callback @table
-        return @table
+    fetch: ()->
+      return new Promise (resolve, reject)=>
+        Phantom.create (err, ph)=>
+          return reject(err) if err
 
-    update: (square, color, callback = ->)->
-      @load (table)=>
-        $table = $(table)
-        $square = $table.find("#" + square)
-        classes = $square[0].className.split(/\s+/)
-        color_class = "btn-#{color}"
+          ph.createPage (err, page)=>
+            return reject(err) if err
 
-        # if the square was previously selected by the user,
-        # or is not already locked
-        if _.contains(classes, color_class) or not $square.hasClass("locked")
-          $square.toggleClass color_class
-          $square.toggleClass "locked"
-          @set $table[0].outerHTML, callback
+            page.open @url, (err, status)->
+              return reject(err) if err
+
+              page.evaluate ()->
+                return document.getElementById('bingo').outerHTML
+              , (err, result)->
+                reject(err) if err
+                resolve(result)
+
+    update: (square, color)->
+      @get()
+        .then (table)=>
+          $table = $(table)
+          $square = $table.find("#" + square)
+          classes = $square[0].className.split(/\s+/)
+          color_class = "btn-#{color}"
+
+          # if the square was previously selected by the user,
+          # or is not already locked
+          if _.contains(classes, color_class) or not $square.hasClass("locked")
+            $square.toggleClass color_class
+            $square.toggleClass "locked"
+            @table = $table[0].outerHTML
+            return @set(@key, @table)
+          else
+            @table = $table[0].outerHTML
+        .then ()=>
+          @emit 'board updated', @table
+          return @table

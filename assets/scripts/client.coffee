@@ -7,26 +7,43 @@ window.bingo = bingo =
   points: null
 
 ###
+  set up default growl options
+###
+$.growl.default_options = _.extend $.growl.default_options,
+  position:
+    from: 'top'
+    align: 'center'
+
+###
   helper function for showing an error
 ###
-error = (message)->
+error = (message, scope = "#sidebar")->
   alert = templates.alert
     title: 'Error!'
     message: message
     type: 'error'
 
-  $(alert).hide().prependTo('#main').fadeIn('fast')
+  $('.alert', scope).remove()
+  $(alert).hide().appendTo(scope).fadeIn('fast')
+
+###
+  toggle the forms
+###
+show_form = (type)->
+  $('#quit-session, #join-session').addClass('hide')
+  $("##{type}-session").removeClass('hide')
 
 ###
   helper for getting the selected color
 ###
 user_color = ->
-  $('input[name=color]').val()
+  $('input[name=color]:checked').val()
 
 ###
   helper for disconnecting from a session
 ###
 bingo_disconnect = ->
+  socket.emit 'leave', bingo?.client?.id
   socket?.disconnect()
   bingo.loaded = false
 
@@ -46,9 +63,11 @@ socket.on 'update userlist', (users)->
   When we join, broadcast to all other members of the session
 ###
 socket.on 'user joined', (user)->
-  $.gritter.add
-    title: user.nickname
-    text: 'joined the session'
+  $.growl
+    title: user.username
+    icon: 'glyphicon glyphicon-user'
+    message: 'has joined the session'
+    type: 'info'
 
 ###
   On Connect
@@ -60,8 +79,13 @@ socket.on 'connected', (session)->
     'page': '/login',
   }
 
-  $.gritter.add
-    text: 'connected'
+  show_form('quit')
+
+  $.growl
+    title: 'Connected'
+    icon: 'glyphicon glyphicon-transfer'
+  ,
+    type: 'success'
 
 ###
   replace board in the DOM on update
@@ -88,7 +112,6 @@ socket.on 'error', (msg)->
   $('#join').button('reset')
   error(msg) if _.isString(msg)
 
-
 ###
   on ready
 ###
@@ -97,8 +120,11 @@ $ ->
 
   # wire the form submission to socket.io
   $('#join-session').submit (e)=>
-    $('#join').button('loading')
+    if !socket.socket.connected
+      socket.socket.connect()
+
     e.preventDefault()
+    $('#join').button('loading')
     @bingo ?= {}
     @bingo.seed = $('#seed').val()
     @bingo.type = $('#type').val()
@@ -113,8 +139,6 @@ $ ->
 
     # join the bingo
     socket.emit 'join bingo', @bingo
-    $('#join-session').fadeOut 300, ->
-      $('#quit-session').fadeIn(300)
 
   # disconnect
   $('#quit-session').submit (e)=>
@@ -123,11 +147,10 @@ $ ->
     $('#user-list').html('')
     $('#board').fadeOut ->
       $(this).html(' ')
-      $('#quit-session').fadeOut 300, ->
-        $('#join-session').fadeIn(300)
+      show_form('join')
 
   # user updates
-  $(document).on 'click', '.navbar .btn-group button', (e)->
+  $(document).on 'change', 'input[name=color]', (e)->
     if bingo.client
       bingo.client.color = $(this).val()
       socket.emit 'update user', bingo.client

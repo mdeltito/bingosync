@@ -9,7 +9,7 @@ block nav
       input(type="radio", name='color', value="green")
       | green
     label.btn.btn-blue.active
-      input(type="radio", name='color', value="blue")
+      input(type="radio", name='color', value="blue" checked)
       | blue
     label.btn.btn-purple
       input(type="radio", name='color', value="purple")
@@ -22,18 +22,18 @@ block sidebar
   form#join-session
     fieldset.well
       .form-group
-        select#type.form-control(name='type', placeholder="Board type")
+        select#type.form-control.input-sm(name='type', placeholder="Board type")
           for option in board_types
             option(value=option.code) #{option.label}
 
       .form-group
-        input#nickname.form-control(name='nickname', type='text', placeholder="Nickname")
+        input#nickname.form-control.input-sm(name='nickname', type='text', placeholder="Nickname")
       .form-group
-        input#session_name.form-control(name='session_name', type='text', placeholder="Session name")
+        input#session_name.form-control.input-sm(name='session_name', type='text', placeholder="Session name")
       .form-group
-        input#password.form-control(name='password', type='password', placeholder="Password")
+        input#password.form-control.input-sm(name='password', type='password', placeholder="Password")
       .form-group
-        input#seed.form-control(name='seed', type='text', placeholder='Bingo seed')
+        input#seed.form-control.input-sm(name='seed', type='text', placeholder='Bingo seed')
       .form-actions
         button#join.btn.btn-primary.btn-block(type='submit', data-loading-text="Joining...") Join
 
@@ -48,6 +48,6 @@ block content
   #board
 
 block footer
-  ul
+  ul.hide
     li
       a(href='http://twitchtools.tv', target="_blank") twitchtools.tv

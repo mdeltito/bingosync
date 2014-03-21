@@ -16,8 +16,9 @@ module.exports = (grunt)->
           'assets/lib/lodash/dist/lodash.js'
           'assets/lib/jquery/dist/jquery.js'
           'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js'
+          'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
           'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js'
-          'assets/lib/jquery.gritter/js/jquery.gritter.js'
+          'assets/lib/bootstrap-growl/bootstrap-growl.js'
           '.tmp/scripts/**/*.js'
         ]
         dest: 'public/scripts/<%= pkg.name %>.js'
@@ -35,22 +36,25 @@ module.exports = (grunt)->
         dot: true,
         src: ['.tmp', 'public/scripts/**/*.js', 'public/styles/**/*.css']
 
+    copy:
+      fonts:
+        expand: true
+        flatten: true
+        src: ['assets/lib/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*']
+        dest: 'public/fonts/'
+        filter: 'isFile'
+
     compass:
       options:
+        config: 'config/compass.rb'
         sassDir: 'assets/styles'
         cssDir: 'public/styles'
-        generatedImagesDir: '.tmp/images/generated'
         imagesDir: 'assets/images'
         javascriptsDir: 'assets/scripts'
         fontsDir: 'assets/styles/fonts'
-        importPath: ['assets/lib/bootstrap-sass-official/vendor/assets/stylesheets']
-        httpImagesPath: '/images'
-        httpGeneratedImagesPath: '/images/generated'
-        httpFontsPath: '/styles/fonts'
         relativeAssets: false
-        assetCacheBuster: false
         debugInfo: true
-        raw: 'Sass::Script::Number.precision = 10\n'
+        bundleExec: true
       dist:
         options:
           debugInfo: false
@@ -86,7 +90,10 @@ module.exports = (grunt)->
         files: ['assets/**/*.js']
         tasks: ['concat:dist', 'uglify']
 
+    'node-inspector':
+      'web-host': 'localhost'
+
   grunt.registerTask 'scripts', ['coffee:compile', 'concat:dist', 'uglify']
-  grunt.registerTask 'styles',  ['compass', 'cssmin']
+  grunt.registerTask 'styles',  ['compass', 'copy', 'cssmin']
   grunt.registerTask 'dev',     ['concurrent:dev']
   grunt.registerTask 'default', ['clean', 'scripts', 'styles']

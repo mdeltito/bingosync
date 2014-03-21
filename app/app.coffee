@@ -5,6 +5,8 @@ http     = require('http')
 express  = require('express')
 app      = express()
 
+app.locals.package = require('../package.json')
+
 app.configure ->
   if process.env.PORT
     app.set 'port', process.env.PORT

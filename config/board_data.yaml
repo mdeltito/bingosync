@@ -1,6 +1,6 @@
 default:
   types:
-    - { code: 'oot-normal',      url: "http://speedrunslive.com/tools/oot-bingo",          label: "OoT" }
+    - { code: 'oot-normal',      url: "http://speedrunslive.com/tools/oot-bingo/",          label: "OoT" }
     - { code: 'oot-short',       url: "http://speedrunslive.com/tools/oot-bingo",          label: "OoT Short",                 params: { mode: "short" } }
     - { code: 'oot-short-xlptv', url: "http://bingo.xlptv.com",                            label: "OoT Short (xlptv edition)", params: { mode: "short" } }
     - { code: 'mm-normal',       url: "http://speedrunslive.com/tools/mm-bingo",           label: "Majora's Mask" }
