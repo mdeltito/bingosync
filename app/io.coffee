@@ -36,7 +36,6 @@ module.exports = (app)->
         session: session.key
         color: bingo.color
 
-      # app.clients[client.id] = client
       app.clients.push(client)
 
       if app.boards[session.key]?
@@ -69,6 +68,10 @@ module.exports = (app)->
 
     # handle updates to user state, such as color
     socket.on "update user", (client) ->
-      user = _.find app.clients, (c)->
+      # find client idx
+      user_idx = _.findIndex app.clients, (c)->
         c.id == client.id
-      io.sockets.in(user.session).emit "update userlist", session_clients(user.session)
+
+      # replace client with new user data
+      app.clients[user_idx] = client
+      io.sockets.in(client.session).emit "update userlist", session_clients(client.session)

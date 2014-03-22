@@ -16522,7 +16522,7 @@ return jQuery;
 
   socket.on('user joined', function(user) {
     return $.growl({
-      title: user.username,
+      title: user.nickname,
       icon: 'glyphicon glyphicon-user',
       message: 'has joined the session',
       type: 'info'

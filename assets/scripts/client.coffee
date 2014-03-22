@@ -64,7 +64,7 @@ socket.on 'update userlist', (users)->
 ###
 socket.on 'user joined', (user)->
   $.growl
-    title: user.username
+    title: user.nickname
     icon: 'glyphicon glyphicon-user'
     message: 'has joined the session'
     type: 'info'
