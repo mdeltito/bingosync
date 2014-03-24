@@ -16422,7 +16422,7 @@ return jQuery;
 
 })(jQuery, window, document);
 ;(function() {
-  var bingo, bingo_disconnect, error, show_form, socket, templates, user_color;
+  var bingo, bingo_disconnect, error, planning_click, show_form, socket, templates, user_color;
 
   socket = io.connect('/');
 
@@ -16445,58 +16445,6 @@ return jQuery;
       align: 'center'
     }
   });
-
-
-  /*
-    helper function for showing an error
-   */
-
-  error = function(message, scope) {
-    var alert;
-    if (scope == null) {
-      scope = "#sidebar";
-    }
-    alert = templates.alert({
-      title: 'Error!',
-      message: message,
-      type: 'error'
-    });
-    $('.alert', scope).remove();
-    return $(alert).hide().appendTo(scope).fadeIn('fast');
-  };
-
-
-  /*
-    toggle the forms
-   */
-
-  show_form = function(type) {
-    $('#quit-session, #join-session').addClass('hide');
-    return $("#" + type + "-session").removeClass('hide');
-  };
-
-
-  /*
-    helper for getting the selected color
-   */
-
-  user_color = function() {
-    return $('input[name=color]:checked').val();
-  };
-
-
-  /*
-    helper for disconnecting from a session
-   */
-
-  bingo_disconnect = function() {
-    var _ref;
-    socket.emit('leave', bingo != null ? (_ref = bingo.client) != null ? _ref.id : void 0 : void 0);
-    if (socket != null) {
-      socket.disconnect();
-    }
-    return bingo.loaded = false;
-  };
 
 
   /*
@@ -16637,9 +16585,14 @@ return jQuery;
       if ($(this).hasClass('popout')) {
         return;
       }
-      square_id = $(this).attr('id');
-      if (square_id) {
-        return socket.emit('record click', bingo.client, square_id);
+      if (e.ctrlKey) {
+        return planning_click.call(this, e);
+      } else {
+        square_id = $(this).attr('id');
+        if (square_id) {
+          $(this).removeClass('marked');
+          return socket.emit('record click', bingo.client, square_id);
+        }
       }
     });
     return bingo.board.bind('update', function(data) {
@@ -16654,6 +16607,66 @@ return jQuery;
   templates = {
     alert: _.template('' + '<div class="alert alert-<%= type %> alert-dismissable alert-danger"> <button type="button" class="close" data-dismiss="alert">&times;</button> <strong><%= title %></strong>&nbsp;&nbsp;<%= message %> </div>'),
     user_list: _.template('' + '<li class="nav-header">User List</li> <% _.each(users, function(user){%> <li><%= user.nickname %><span class="badge badge-<%= user.color %> pull-right"><%= user.points %></span></li> <%}); %>')
+  };
+
+
+  /*
+    helper function for showing an error
+   */
+
+  error = function(message, scope) {
+    var alert;
+    if (scope == null) {
+      scope = "#sidebar";
+    }
+    alert = templates.alert({
+      title: 'Error!',
+      message: message,
+      type: 'error'
+    });
+    $('.alert', scope).remove();
+    return $(alert).hide().appendTo(scope).fadeIn('fast');
+  };
+
+
+  /*
+    toggle the forms
+   */
+
+  show_form = function(type) {
+    $('#quit-session, #join-session').addClass('hide');
+    return $("#" + type + "-session").removeClass('hide');
+  };
+
+
+  /*
+    helper for getting the selected color
+   */
+
+  user_color = function() {
+    return $('input[name=color]:checked').val();
+  };
+
+
+  /*
+    helper for disconnecting from a session
+   */
+
+  bingo_disconnect = function() {
+    socket.emit('leave', bingo != null ? bingo.client : void 0);
+    if (socket != null) {
+      socket.disconnect();
+    }
+    return bingo.loaded = false;
+  };
+
+
+  /*
+    planning click for local markers
+   */
+
+  planning_click = function(e) {
+    return $(this).toggleClass('marked');
   };
 
 }).call(this);

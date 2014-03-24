@@ -64,6 +64,12 @@ td.locked {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
+td.marked {
+  padding: 0 2px;
+  border-width: 5px;
+  border-color: #fff;
+}
+
 #bingo tr td:first-child {
   display: none;
 }

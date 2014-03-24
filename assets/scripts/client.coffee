@@ -15,39 +15,6 @@ $.growl.default_options = _.extend $.growl.default_options,
     align: 'center'
 
 ###
-  helper function for showing an error
-###
-error = (message, scope = "#sidebar")->
-  alert = templates.alert
-    title: 'Error!'
-    message: message
-    type: 'error'
-
-  $('.alert', scope).remove()
-  $(alert).hide().appendTo(scope).fadeIn('fast')
-
-###
-  toggle the forms
-###
-show_form = (type)->
-  $('#quit-session, #join-session').addClass('hide')
-  $("##{type}-session").removeClass('hide')
-
-###
-  helper for getting the selected color
-###
-user_color = ->
-  $('input[name=color]:checked').val()
-
-###
-  helper for disconnecting from a session
-###
-bingo_disconnect = ->
-  socket.emit 'leave', bingo?.client?.id
-  socket?.disconnect()
-  bingo.loaded = false
-
-###
   When a user joins, the full list of clients is
   also emitted to all members of the session
 ###
@@ -157,12 +124,20 @@ $ ->
 
   #square click
   $(document).on 'click', '#bingo td', (e)->
+    # table header click
     if $(this).hasClass('popout')
       return
 
-    square_id = $(this).attr('id')
-    if square_id
-      socket.emit 'record click', bingo.client, square_id
+    # local planning click
+    if e.ctrlKey
+      return planning_click.call(this, e)
+    # completed square click
+    else
+      square_id = $(this).attr('id')
+      if square_id
+        $(this).removeClass('marked')
+        socket.emit 'record click', bingo.client, square_id
+
 
   # on board update
   bingo.board.bind 'update', (data)->
@@ -182,3 +157,42 @@ templates =
     <% _.each(users, function(user){%>
       <li><%= user.nickname %><span class="badge badge-<%= user.color %> pull-right"><%= user.points %></span></li>
     <%}); %>'
+
+###
+  helper function for showing an error
+###
+error = (message, scope = "#sidebar")->
+  alert = templates.alert
+    title: 'Error!'
+    message: message
+    type: 'error'
+
+  $('.alert', scope).remove()
+  $(alert).hide().appendTo(scope).fadeIn('fast')
+
+###
+  toggle the forms
+###
+show_form = (type)->
+  $('#quit-session, #join-session').addClass('hide')
+  $("##{type}-session").removeClass('hide')
+
+###
+  helper for getting the selected color
+###
+user_color = ->
+  $('input[name=color]:checked').val()
+
+###
+  helper for disconnecting from a session
+###
+bingo_disconnect = ->
+  socket.emit 'leave', bingo?.client
+  socket?.disconnect()
+  bingo.loaded = false
+
+###
+  planning click for local markers
+###
+planning_click = (e)->
+  $(this).toggleClass('marked')

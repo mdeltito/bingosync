@@ -7839,6 +7839,13 @@ td.locked {
 }
 
 /* line 67, ../../assets/styles/_board.scss */
+td.marked {
+  padding: 0 2px;
+  border-width: 5px;
+  border-color: #fff;
+}
+
+/* line 73, ../../assets/styles/_board.scss */
 #bingo tr td:first-child {
   display: none;
 }

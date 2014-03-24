@@ -15,10 +15,13 @@ module.exports = (app)->
       client.session == key
 
   io.sockets.on "connection", (socket) ->
-    socket.on "leave", (socket_id)->
-      client_index = _.findIndex app.clients, (c)->
-        c.id == socket_id
-      app.clients.splice client_index
+
+    socket.on "leave", (client)->
+      _.remove app.clients, (c)->
+        c.id == socket.id
+
+      io.sockets.in(client.session).emit "update userlist", session_clients(client.session)
+
 
     socket.on 'end', ->
        # TODO remove the client from the array,
@@ -47,11 +50,12 @@ module.exports = (app)->
       # join the bingo
       socket.join session.key
       socket.emit 'connected', session
-      console.log "session attached: #{client.nickname} => #{session.type} (#{session.key})"
+      # console.log "session attached: #{client.nickname} => #{session.type} (#{session.key})"
 
       # notify everyone
       socket.broadcast.to(session.key).emit "user joined", client
-      io.sockets.in(session.key).emit "update userlist", session_clients(session.key)
+      clients = session_clients(session.key)
+      io.sockets.in(session.key).emit "update userlist", clients
 
       # send the session board
       board.get()

@@ -72,6 +72,7 @@ module.exports = (grunt)->
         script: 'app/app.coffee'
         options:
           watch: ['lib', 'app']
+          nodeArgs: ['--nodejs', '--debug'],
 
     concurrent:
       dev:
