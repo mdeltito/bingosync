@@ -58,16 +58,17 @@ td {
   border: 1px #424242 solid;
   background: rgba(10, 10, 10, 0.5);
   color: #fff;
+  position: relative;
 }
 
 td.locked {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-td.marked {
-  padding: 0 2px;
-  border-width: 5px;
-  border-color: #fff;
+td span.glyphicon {
+  position: absolute;
+  top: 0;
+  left: 5px;
 }
 
 #bingo tr td:first-child {

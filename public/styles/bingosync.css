@@ -7831,21 +7831,22 @@ td {
   border: 1px #424242 solid;
   background: rgba(10, 10, 10, 0.5);
   color: #fff;
+  position: relative;
 }
 
-/* line 63, ../../assets/styles/_board.scss */
+/* line 64, ../../assets/styles/_board.scss */
 td.locked {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 67, ../../assets/styles/_board.scss */
-td.marked {
-  padding: 0 2px;
-  border-width: 5px;
-  border-color: #fff;
+/* line 68, ../../assets/styles/_board.scss */
+td span.glyphicon {
+  position: absolute;
+  top: 0;
+  left: 5px;
 }
 
-/* line 73, ../../assets/styles/_board.scss */
+/* line 74, ../../assets/styles/_board.scss */
 #bingo tr td:first-child {
   display: none;
 }

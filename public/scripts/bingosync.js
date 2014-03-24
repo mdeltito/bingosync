@@ -16590,7 +16590,6 @@ return jQuery;
       } else {
         square_id = $(this).attr('id');
         if (square_id) {
-          $(this).removeClass('marked');
           return socket.emit('record click', bingo.client, square_id);
         }
       }
@@ -16666,7 +16665,11 @@ return jQuery;
    */
 
   planning_click = function(e) {
-    return $(this).toggleClass('marked');
+    if (!$(this).find('.glyphicon').length) {
+      return $(this).append('<span class="glyphicon glyphicon-bookmark"></span>');
+    } else {
+      return $(this).find('.glyphicon').remove();
+    }
   };
 
 }).call(this);

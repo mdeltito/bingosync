@@ -135,7 +135,6 @@ $ ->
     else
       square_id = $(this).attr('id')
       if square_id
-        $(this).removeClass('marked')
         socket.emit 'record click', bingo.client, square_id
 
 
@@ -195,4 +194,7 @@ bingo_disconnect = ->
   planning click for local markers
 ###
 planning_click = (e)->
-  $(this).toggleClass('marked')
+  if !$(this).find('.glyphicon').length
+    $(this).append('<span class="glyphicon glyphicon-bookmark"></span>')
+  else
+    $(this).find('.glyphicon').remove()
