@@ -17,6 +17,9 @@ module.exports = (app)->
   io.sockets.on "connection", (socket) ->
 
     socket.on "leave", (client)->
+      # no client connected
+      return if !client
+
       _.remove app.clients, (c)->
         c.id == socket.id
 
@@ -50,7 +53,7 @@ module.exports = (app)->
       # join the bingo
       socket.join session.key
       socket.emit 'connected', session
-      # console.log "session attached: #{client.nickname} => #{session.type} (#{session.key})"
+      console.log "session attached: #{client.nickname} => #{session.type} (#{session.key})"
 
       # notify everyone
       socket.broadcast.to(session.key).emit "user joined", client
@@ -79,3 +82,7 @@ module.exports = (app)->
       # replace client with new user data
       app.clients[user_idx] = client
       io.sockets.in(client.session).emit "update userlist", session_clients(client.session)
+
+    # chat message broadcat
+    socket.on "chat message", (client, message) ->
+      io.sockets.in(client.session).emit 'chat message', client, message

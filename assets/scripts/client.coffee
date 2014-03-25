@@ -73,11 +73,28 @@ socket.on 'update session', (data)->
   bingo.board.trigger 'update'
 
 ###
+  chat message
+###
+socket.on 'chat message', (client, message, timestamp)->
+  item = templates.chat_message
+    user: client
+    message: message
+    time: moment().format('h:m a')
+  update_chatpane(item)
+
+###
   report any errors in the form
 ###
 socket.on 'error', (msg)->
   $('#join').button('reset')
   error(msg) if _.isString(msg)
+
+###
+  window events
+###
+window.onbeforeunload = ()->
+  bingo_disconnect()
+  return 'Your session will be closed'
 
 ###
   on ready
@@ -129,7 +146,7 @@ $ ->
       return
 
     # local planning click
-    if e.ctrlKey
+    if e.shiftKey
       return planning_click.call(this, e)
     # completed square click
     else
@@ -137,6 +154,17 @@ $ ->
       if square_id
         socket.emit 'record click', bingo.client, square_id
 
+  # chat events
+  $('#chat-send').on 'click', send_chat
+
+  $('#chat-message').keydown (e)->
+    if e.which == 13
+      send_chat()
+
+  $('.panel-heading', '#chat-widget').on 'click', toggle_chat
+
+  $('#chat-message').on 'focus', (e)->
+    $(this).closest('.panel').removeClass('panel-warning')
 
   # on board update
   bingo.board.bind 'update', (data)->
@@ -144,6 +172,9 @@ $ ->
     _.each bingo.users, (user)->
       count = bingo.board.find(".btn-#{user.color}").length
       $(".badge-#{user.color}").text count
+    # reapply local planning
+    apply_planning()
+
 
 templates =
   alert: _.template '' +
@@ -156,6 +187,16 @@ templates =
     <% _.each(users, function(user){%>
       <li><%= user.nickname %><span class="badge badge-<%= user.color %> pull-right"><%= user.points %></span></li>
     <%}); %>'
+  chat_message: _.template '' +
+    '<li class="clearfix">
+      <div class="chat-body clearfix">
+        <div class="header">
+          <strong class="primary-font"><%= user.nickname %></strong>
+          <small class="pull-right text-muted"><span class="glyphicon glyphicon-time"></span><%= time %></small>
+        </div>
+        <p><%= message %></p>
+      </div>
+    </li>'
 
 ###
   helper function for showing an error
@@ -193,8 +234,44 @@ bingo_disconnect = ->
 ###
   planning click for local markers
 ###
+planning_ids = []
 planning_click = (e)->
-  if !$(this).find('.glyphicon').length
-    $(this).append('<span class="glyphicon glyphicon-bookmark"></span>')
+  id = $(this).attr('id')
+  cur_idx = _.indexOf(planning_ids, id)
+  if cur_idx >= 0
+    planning_ids.splice cur_idx, 1
   else
-    $(this).find('.glyphicon').remove()
+    planning_ids.push id
+
+  apply_planning()
+
+apply_planning = ()->
+  $('.glyphicon-bookmark', '#board').remove()
+  _.forEach planning_ids, (id)->
+    $("##{id}").append('<span class="glyphicon glyphicon-bookmark"></span>')
+
+###
+  chat helpers
+###
+update_chatpane = (item)->
+  if chat_requires_highlight()
+    $('#chat-widget .panel').addClass('panel-warning')
+
+  $('#chat-widget .chat').append item
+  $('#chat-widget .panel-body').animate
+    scrollTop: $("#chat-widget .panel-body")[0].scrollHeight
+  , 200
+
+send_chat = (e)->
+  message = $('#chat-message').val()
+  if bingo.client && message
+    socket.emit 'chat message', bingo.client, message
+    $('#chat-message').val('')
+
+toggle_chat = (e)->
+  $('#chat-widget .panel').removeClass('panel-warning')
+  $(e.target).next('.panel-body').toggleClass 'collapsed'
+
+chat_requires_highlight = ()->
+  $('#chat-widget .panel-body').hasClass('collapsed') ||
+    (!$('#chat-send').is(':focus, :active') && !$('#chat-message').is(':focus'))

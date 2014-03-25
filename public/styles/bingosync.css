@@ -7736,75 +7736,80 @@ button.close {
   text-shadow: none;
 }
 
-/* line 9, ../../assets/styles/_board.scss */
+/* line 1, ../../assets/styles/_board.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 13, ../../assets/styles/_board.scss */
 .btn-red {
   background-color: #e74c3c;
 }
 
-/* line 10, ../../assets/styles/_board.scss */
+/* line 14, ../../assets/styles/_board.scss */
 .btn-green {
   background-color: #00bc8c;
 }
 
-/* line 11, ../../assets/styles/_board.scss */
+/* line 15, ../../assets/styles/_board.scss */
 .btn-blue {
   background-color: #3498db;
 }
 
-/* line 12, ../../assets/styles/_board.scss */
+/* line 16, ../../assets/styles/_board.scss */
 .btn-purple {
   background-color: #ad009f;
 }
 
-/* line 13, ../../assets/styles/_board.scss */
+/* line 17, ../../assets/styles/_board.scss */
 .btn-orange {
   background-color: #f39c12;
 }
 
-/* line 16, ../../assets/styles/_board.scss */
+/* line 20, ../../assets/styles/_board.scss */
 .badge-red {
   background-color: #e74c3c;
 }
 
-/* line 17, ../../assets/styles/_board.scss */
+/* line 21, ../../assets/styles/_board.scss */
 .badge-green {
   background-color: #00bc8c;
 }
 
-/* line 18, ../../assets/styles/_board.scss */
+/* line 22, ../../assets/styles/_board.scss */
 .badge-blue {
   background-color: #3498db;
 }
 
-/* line 19, ../../assets/styles/_board.scss */
+/* line 23, ../../assets/styles/_board.scss */
 .badge-purple {
   background-color: #ad009f;
 }
 
-/* line 20, ../../assets/styles/_board.scss */
+/* line 24, ../../assets/styles/_board.scss */
 .badge-orange {
   background-color: #f39c12;
 }
 
-/* line 23, ../../assets/styles/_board.scss */
+/* line 27, ../../assets/styles/_board.scss */
 .navbar .btn-group .active {
   background: #303030;
 }
-/* line 27, ../../assets/styles/_board.scss */
+/* line 31, ../../assets/styles/_board.scss */
 .navbar .btn-group .btn {
   border: 0;
 }
-/* line 28, ../../assets/styles/_board.scss */
+/* line 32, ../../assets/styles/_board.scss */
 .navbar .btn-group .btn, .navbar .btn-group .btn:hover {
   margin: 0;
 }
 
-/* line 33, ../../assets/styles/_board.scss */
+/* line 37, ../../assets/styles/_board.scss */
 .form-control {
   background-color: #efefef;
 }
 
-/* line 38, ../../assets/styles/_board.scss */
+/* line 42, ../../assets/styles/_board.scss */
 #board,
 #board table {
   width: 100%;
@@ -7815,13 +7820,13 @@ button.close {
   user-select: none;
 }
 
-/* line 48, ../../assets/styles/_board.scss */
+/* line 52, ../../assets/styles/_board.scss */
 #bingo tr:first-child td,
 #bingo tr:last-child td {
   display: none;
 }
 
-/* line 52, ../../assets/styles/_board.scss */
+/* line 56, ../../assets/styles/_board.scss */
 td {
   padding: 0 10px;
   cursor: pointer;
@@ -7834,19 +7839,98 @@ td {
   position: relative;
 }
 
-/* line 64, ../../assets/styles/_board.scss */
+/* line 68, ../../assets/styles/_board.scss */
 td.locked {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 68, ../../assets/styles/_board.scss */
+/* line 72, ../../assets/styles/_board.scss */
 td span.glyphicon {
   position: absolute;
   top: 0;
   left: 5px;
 }
 
-/* line 74, ../../assets/styles/_board.scss */
+/* line 78, ../../assets/styles/_board.scss */
 #bingo tr td:first-child {
   display: none;
+}
+
+/* line 1, ../../assets/styles/_chat.scss */
+#chat-widget {
+  position: absolute;
+  bottom: 0;
+}
+/* line 5, ../../assets/styles/_chat.scss */
+#chat-widget .panel {
+  margin-bottom: 0;
+}
+/* line 9, ../../assets/styles/_chat.scss */
+#chat-widget .panel-heading {
+  cursor: pointer;
+}
+/* line 13, ../../assets/styles/_chat.scss */
+#chat-widget .panel-body.collapsed {
+  height: 0;
+  padding: 0;
+}
+
+/* line 19, ../../assets/styles/_chat.scss */
+.chat {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, ../../assets/styles/_chat.scss */
+.chat li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #B3A9A9;
+}
+
+/* line 31, ../../assets/styles/_chat.scss */
+.chat li.left .chat-body {
+  margin-left: 60px;
+}
+
+/* line 32, ../../assets/styles/_chat.scss */
+.chat li.right .chat-body {
+  margin-right: 60px;
+}
+
+/* line 33, ../../assets/styles/_chat.scss */
+.chat li .chat-body p {
+  margin: 0;
+  color: #777777;
+}
+
+/* line 39, ../../assets/styles/_chat.scss */
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+  margin-right: 5px;
+}
+
+/* line 40, ../../assets/styles/_chat.scss */
+.panel-body {
+  overflow-y: scroll;
+  height: 250px;
+}
+
+/* line 45, ../../assets/styles/_chat.scss */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+/* line 50, ../../assets/styles/_chat.scss */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+/* line 55, ../../assets/styles/_chat.scss */
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
 }

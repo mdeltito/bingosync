@@ -1,6 +1,6 @@
 {
   "name": "bingosync",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "authors": [
     "Michael J. Del Tito <mdeltito@gmail.com>"
   ],
@@ -19,6 +19,6 @@
     "bootstrap-sass-official": "~3.1.1",
     "jquery.gritter": "*",
     "lodash": "~2.4.1",
-    "bootstrap-growl": "~1.1.0"
+    "moment": "~2.5.1"
   }
 }
