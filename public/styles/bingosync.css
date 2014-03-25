@@ -7864,72 +7864,75 @@ td span.glyphicon {
 /* line 5, ../../assets/styles/_chat.scss */
 #chat-widget .panel {
   margin-bottom: 0;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 0;
 }
-/* line 9, ../../assets/styles/_chat.scss */
+/* line 12, ../../assets/styles/_chat.scss */
 #chat-widget .panel-heading {
   cursor: pointer;
 }
-/* line 13, ../../assets/styles/_chat.scss */
+/* line 16, ../../assets/styles/_chat.scss */
 #chat-widget .panel-body.collapsed {
   height: 0;
   padding: 0;
 }
 
-/* line 19, ../../assets/styles/_chat.scss */
+/* line 22, ../../assets/styles/_chat.scss */
 .chat {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 25, ../../assets/styles/_chat.scss */
+/* line 28, ../../assets/styles/_chat.scss */
 .chat li {
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 1px dotted #B3A9A9;
 }
 
-/* line 31, ../../assets/styles/_chat.scss */
+/* line 34, ../../assets/styles/_chat.scss */
 .chat li.left .chat-body {
   margin-left: 60px;
 }
 
-/* line 32, ../../assets/styles/_chat.scss */
+/* line 35, ../../assets/styles/_chat.scss */
 .chat li.right .chat-body {
   margin-right: 60px;
 }
 
-/* line 33, ../../assets/styles/_chat.scss */
+/* line 36, ../../assets/styles/_chat.scss */
 .chat li .chat-body p {
   margin: 0;
   color: #777777;
 }
 
-/* line 39, ../../assets/styles/_chat.scss */
+/* line 42, ../../assets/styles/_chat.scss */
 .panel .slidedown .glyphicon,
 .chat .glyphicon {
   margin-right: 5px;
 }
 
-/* line 40, ../../assets/styles/_chat.scss */
+/* line 43, ../../assets/styles/_chat.scss */
 .panel-body {
   overflow-y: scroll;
   height: 250px;
 }
 
-/* line 45, ../../assets/styles/_chat.scss */
+/* line 48, ../../assets/styles/_chat.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #F5F5F5;
 }
 
-/* line 50, ../../assets/styles/_chat.scss */
+/* line 53, ../../assets/styles/_chat.scss */
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #F5F5F5;
 }
 
-/* line 55, ../../assets/styles/_chat.scss */
+/* line 58, ../../assets/styles/_chat.scss */
 ::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #555;
