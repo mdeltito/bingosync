@@ -18822,7 +18822,7 @@ return jQuery;
     }
 }).call(this);
 ;(function() {
-  var apply_planning, bingo, bingo_disconnect, chat_requires_highlight, error, planning_click, planning_ids, send_chat, show_form, socket, templates, toggle_chat, update_chatpane, user_color;
+  var apply_planning, bingo, bingo_disconnect, chat_requires_highlight, error, hide_chat, planning_click, planning_ids, send_chat, show_form, socket, templates, toggle_chat, update_chatpane, user_color;
 
   socket = io.connect('/');
 
@@ -19093,6 +19093,7 @@ return jQuery;
     if (socket != null) {
       socket.disconnect();
     }
+    hide_chat();
     return bingo.loaded = false;
   };
 
@@ -19140,15 +19141,21 @@ return jQuery;
   send_chat = function(e) {
     var message;
     message = $('#chat-message').val();
-    if (bingo.client && message) {
+    if (bingo.loaded && bingo.client && message) {
       socket.emit('chat message', bingo.client, message);
       return $('#chat-message').val('');
     }
   };
 
+  hide_chat = function(e) {
+    return $('#chat-widget .panel-body').addClass('collapsed');
+  };
+
   toggle_chat = function(e) {
-    $('#chat-widget .panel').removeClass('panel-warning');
-    return $(e.target).next('.panel-body').toggleClass('collapsed');
+    if (bingo.loaded && bingo.client) {
+      $('#chat-widget .panel').removeClass('panel-warning');
+      return $(e.target).next('.panel-body').toggleClass('collapsed');
+    }
   };
 
   chat_requires_highlight = function() {

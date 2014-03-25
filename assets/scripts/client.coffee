@@ -229,6 +229,7 @@ user_color = ->
 bingo_disconnect = ->
   socket.emit 'leave', bingo?.client
   socket?.disconnect()
+  hide_chat()
   bingo.loaded = false
 
 ###
@@ -264,13 +265,17 @@ update_chatpane = (item)->
 
 send_chat = (e)->
   message = $('#chat-message').val()
-  if bingo.client && message
+  if bingo.loaded && bingo.client && message
     socket.emit 'chat message', bingo.client, message
     $('#chat-message').val('')
 
+hide_chat = (e)->
+  $('#chat-widget .panel-body').addClass('collapsed')
+
 toggle_chat = (e)->
-  $('#chat-widget .panel').removeClass('panel-warning')
-  $(e.target).next('.panel-body').toggleClass 'collapsed'
+  if bingo.loaded && bingo.client
+    $('#chat-widget .panel').removeClass('panel-warning')
+    $(e.target).next('.panel-body').toggleClass 'collapsed'
 
 chat_requires_highlight = ()->
   $('#chat-widget .panel-body').hasClass('collapsed') ||
