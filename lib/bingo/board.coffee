@@ -1,7 +1,6 @@
 _            = require('lodash')
 $            = require('jquery')
 crypto       = require('crypto')
-Browser      = require('zombie')
 Phantom      = require('node-phantom')
 Promise      = require('bluebird')
 EventEmitter = require('events').EventEmitter
