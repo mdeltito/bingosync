@@ -1,6 +1,5 @@
 _        = require('lodash')
 $        = require('jquery')
-Browser  = require('zombie')
 http     = require('http')
 express  = require('express')
 app      = express()
