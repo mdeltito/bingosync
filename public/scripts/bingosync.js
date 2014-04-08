@@ -18891,6 +18891,7 @@ return jQuery;
       });
     }
     show_form('quit');
+    $('body').addClass('loaded');
     return $.growl({
       title: 'Connected',
       icon: 'glyphicon glyphicon-transfer'
@@ -19094,6 +19095,7 @@ return jQuery;
       socket.disconnect();
     }
     hide_chat();
+    $('body').removeClass('loaded');
     return bingo.loaded = false;
   };
 

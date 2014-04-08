@@ -1,6 +1,10 @@
 #chat-widget {
+  @include opacity(0.3);
   position: absolute;
   bottom: 0;
+  right: 0;
+
+  .loaded & { @include opacity(1); }
 
   .panel {
     margin-bottom: 0;

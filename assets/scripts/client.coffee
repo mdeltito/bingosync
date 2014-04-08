@@ -47,6 +47,7 @@ socket.on 'connected', (session)->
   }
 
   show_form('quit')
+  $('body').addClass 'loaded'
 
   $.growl
     title: 'Connected'
@@ -230,6 +231,7 @@ bingo_disconnect = ->
   socket.emit 'leave', bingo?.client
   socket?.disconnect()
   hide_chat()
+  $('body').removeClass 'loaded'
   bingo.loaded = false
 
 ###
