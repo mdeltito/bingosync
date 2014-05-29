@@ -1,6 +1,9 @@
 extends layout
 
 block nav
+  ul.nav.navbar-nav
+    li.active
+      a(href='#', data-toggle='modal', data-target='#about') About
   div#color.btn-group.navbar-form.pull-right(data-toggle="buttons")
     label.btn.btn-red
       input(type="radio", name='color', value="red")
@@ -51,6 +54,4 @@ block extras
   include chat/panel
 
 block footer
-  ul.hide
-    li
-      a(href='http://twitchtools.tv', target="_blank") twitchtools.tv
+  include about
