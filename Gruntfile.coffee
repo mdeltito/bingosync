@@ -18,6 +18,7 @@ module.exports = (grunt)->
           'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js'
           'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
           'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js'
+          'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js'
           'assets/lib/bootstrap-growl/bootstrap-growl.js'
           'assets/lib/moment/moment.js'
           '.tmp/scripts/**/*.js'
