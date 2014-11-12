@@ -19175,7 +19175,7 @@ return jQuery;
     item = templates.chat_message({
       user: client,
       message: message,
-      time: moment().format('h:m a')
+      time: moment().format('h:mm a')
     });
     return update_chatpane(item);
   });
