@@ -80,7 +80,7 @@ socket.on 'chat message', (client, message, timestamp)->
   item = templates.chat_message
     user: client
     message: message
-    time: moment().format('h:m a')
+    time: moment().format('h:mm a')
   update_chatpane(item)
 
 ###
