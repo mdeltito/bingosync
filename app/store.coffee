@@ -4,5 +4,7 @@ module.exports = (app)->
     redis = require("redis").createClient rtg.port, rtg.hostname
     redis.auth(rtg.auth.split(":")[1])
     return redis
-  else
-    return require('redis').createClient()
+  else if process.env.REDIS_URL
+    redis_server = require("url").parse process.env.REDIS_URL
+    redis = require("redis").createClient redis_server.port, redis_server.hostname
+    return redis
