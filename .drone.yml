@@ -1,0 +1,15 @@
+pipeline:
+  build:
+    image: dduportal/docker-compose
+    environment:
+      VIRTUAL_HOST: bingosync.mdel.io
+      DNSDOCK_NAME: bingosync
+      DNSDOCK_IMAGE: mdel
+    commands:
+      - docker-compose build
+      - docker-compose stop
+      - docker-compose up -d
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    when:
+      event: tag

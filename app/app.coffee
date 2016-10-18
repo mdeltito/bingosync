@@ -1,21 +1,19 @@
 _        = require('lodash')
-$        = require('jquery')
 http     = require('http')
 express  = require('express')
 app      = express()
 
 app.locals.package = require('../package.json')
 
-app.configure ->
-  if process.env.PORT
-    app.set 'port', process.env.PORT
-  else
-    app.set 'port', 5000
+if process.env.PORT
+  app.set 'port', process.env.PORT
+else
+  app.set 'port', 5000
 
-  app.set 'views', "#{__dirname}/../views"
-  app.set 'view engine', 'jade'
-  app.use express.logger('dev')
-  app.use express.static('public')
+app.set 'views', "#{__dirname}/../views"
+app.set 'view engine', 'jade'
+app.use express.logger('dev')
+app.use express.static('public')
 
 app.conf  = require('node-yaml-config')
 app.store = require('./store')(app)

@@ -1,0 +1,17 @@
+version: '2'
+services:
+  web:
+    build: 
+      context: ./
+      dockerfile: ./env/web/Dockerfile
+    environment:
+      VIRTUAL_HOST: ${VIRTUAL_HOST}
+      DNSDOCK_NAME: ${DNSDOCK_NAME}
+      DNSDOCK_IMAGE: ${DNSDOCK_IMAGE}
+    ports:
+     - "5000:5000"
+    command: npm start
+    links:
+     - redis
+  redis:
+    image: redis
