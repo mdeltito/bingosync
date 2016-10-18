@@ -7,6 +7,8 @@
 
 Bingosync is a real-time bingo board application used to enhance game play for team-style games. It is designed to work with the official [SRL](http://speedrunslive.com) bingo boards, as well as derivatives.
 
+[![Screenshot](https://i.imgur.com/lHDDFW3.png)](https://i.imgur.com/lHDDFW3.png)
+
 ## History
 
 This project is the "original" Bingosync, which was developed in 2013 to support team-style bingo games for the speedrunning community. The project was mostly abandoned in early 2015. 
