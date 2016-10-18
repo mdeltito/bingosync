@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "start": "coffee app/app.coffee"
+    "start": "nodemon app/app.coffee"
   },
   "dependencies": {
     "bluebird": "^1.1.1",
@@ -12,7 +12,8 @@
     "express": "3.x",
     "forever": "*",
     "jade": "0.x",
-    "jquery": "1.8.3",
+    "jquery": "1.*",
+    "jsdom": "^9.8.0",
     "less": "1.x",
     "lodash": "*",
     "node-yaml-config": "0.0.x",
@@ -22,17 +23,18 @@
   },
   "devDependencies": {
     "grunt": "^0.4.4",
-    "load-grunt-tasks": "^0.4.0",
-    "grunt-contrib-concat": "^0.3.0",
     "grunt-concurrent": "^0.5.0",
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-nodemon": "^0.2.1",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-compass": "^0.7.2",
-    "grunt-contrib-watch": "^0.6.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-cssmin": "^0.9.0",
-    "grunt-contrib-copy": "^0.5.0"
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.0",
+    "grunt-nodemon": "^0.2.1",
+    "load-grunt-tasks": "^0.4.0",
+    "nodemon": "^1.11.0"
   }
 }

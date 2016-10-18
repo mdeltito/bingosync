@@ -15,10 +15,10 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.0.3",
-    "bootstrap-sass-official": "~3.1.1",
-    "jquery.gritter": "*",
-    "lodash": "~2.4.1",
-    "moment": "~2.5.1"
+    "font-awesome": "4.0.3",
+    "bootstrap-sass-official": "3.1.1",
+    "jquery.gritter": "1.7.4",
+    "lodash": "2.4.1",
+    "moment": "2.5.1"
   }
 }

@@ -1,7 +1,9 @@
 _            = require('lodash')
-$            = require('jquery')
+url          = require('url')
+jsdom        = require('jsdom')
+jQuery       = require('jquery')
 crypto       = require('crypto')
-Phantom      = require('node-phantom')
+Phantom      = require('phantom')
 Promise      = require('bluebird')
 EventEmitter = require('events').EventEmitter
 
@@ -15,15 +17,14 @@ module.exports = (_store, _config_data)->
       @url = @get_url(session.type)
 
     get_url: (type)->
-      params = {seed: @seed}
-      config = _.findWhere(_config_data.types, {code: type})
+      config = _.find(_config_data.types, {code: type})
+      urlObj = url.parse(config.url) 
+      urlObj.query = {seed: @seed}
 
       if config.params
-        params = _.extend(config.params, params)
-
-      query = $.param(params)
-      "#{config.url}?#{query}"
-
+        urlObj.query = _.extend(config.params, urlObj.query)
+      url.format urlObj
+      
     set: Promise.promisify(_store.set, _store)
     load: Promise.promisify(_store.get, _store)
 
@@ -42,23 +43,30 @@ module.exports = (_store, _config_data)->
             return reply
 
     fetch: ()->
-      return new Promise (resolve, reject)=>
-        Phantom.create (err, ph)=>
-          return reject(err) if err
+      page = null
+      instance = null
 
-          ph.createPage (err, page)=>
-            return reject(err) if err
-
-            page.open @url, (err, status)->
-              return reject(err) if err
-
-              page.evaluate ()->
-                return document.getElementById('bingo').outerHTML
-              , (err, result)->
-                reject(err) if err
-                resolve(result)
-
+      Phantom.create()
+        .then (_instance)=>
+          instance = _instance
+          instance.createPage()
+        .then (_page)=>
+          page = _page
+          page.open @url
+        .then (status)=>
+          bingoHtml = page.evaluate =>
+            document.getElementById('bingo').outerHTML
+        .then (_html)=>
+          page.close()
+          instance.exit()
+          html = _html
+        .catch (error)=>
+          console.log error
+          instance.exit()
+          
     update: (square, color)->
+      $ = jQuery(jsdom.jsdom().defaultView)
+
       @get()
         .then (table)=>
           $table = $(table)
@@ -68,7 +76,7 @@ module.exports = (_store, _config_data)->
 
           # if the square was previously selected by the user,
           # or is not already locked
-          if _.contains(classes, color_class) or not $square.hasClass("locked")
+          if _.includes(classes, color_class) or not $square.hasClass("locked")
             $square.toggleClass color_class
             $square.toggleClass "locked"
             @table = $table[0].outerHTML
