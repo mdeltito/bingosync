@@ -1,7 +1,7 @@
 {
   "name": "bingosync",
   "description": "Synchronous board display for SRL Bingo games",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "scripts": {
     "start": "nodemon app/app.coffee"

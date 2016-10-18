@@ -5,7 +5,6 @@
     "Michael J. Del Tito <mdeltito@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "bingosync.twitchtools.tv",
   "private": true,
   "ignore": [
     "**/.*",
