@@ -13,7 +13,7 @@ Bingosync is a real-time bingo board application used to enhance game play for t
 
 This project is the "original" Bingosync, which was developed in 2013 to support team-style bingo games for the speedrunning community. The project was mostly abandoned in early 2015. 
 
-[Bingosync.com](http://bingosync.com) emerged soon after, and is a (much improved) rebuild of the original concept. This project is unaffiliated with [bingosync.com](http://bingosync.com).
+[Bingosync.com](http://bingosync.com) emerged soon after, and is a (much improved) rebuild of the original concept. This project is unaffiliated with [bingosync.com](http://bingosync.com), but be sure to check out that version!
 
 ## Requirements
 
