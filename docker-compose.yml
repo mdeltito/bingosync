@@ -5,15 +5,11 @@ services:
       context: ./
       dockerfile: ./env/web/Dockerfile
     environment:
-      VIRTUAL_HOST: ${VIRTUAL_HOST}
-      DNSDOCK_NAME: ${DNSDOCK_NAME}
-      DNSDOCK_IMAGE: ${DNSDOCK_IMAGE}
+      VIRTUAL_HOST: bingosync.mdel.io
     ports:
      - "5000:5000"
     command: npm start
-    network_mode: "bridge"
     links:
      - redis
   redis:
-    network_mode: "bridge"
     image: redis
