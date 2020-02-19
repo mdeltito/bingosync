@@ -1,3 +1,8 @@
+sass = require('node-sass')
+CssImporter = require('node-sass-css-importer')({
+  import_paths: ['assets/vendor']
+})
+
 module.exports = (grunt)->
   require('load-grunt-tasks')(grunt)
 
@@ -46,20 +51,17 @@ module.exports = (grunt)->
         dest: 'public/fonts/'
         filter: 'isFile'
 
-    compass:
+
+    sass:
       options:
-        config: 'config/compass.rb'
-        sassDir: 'assets/styles'
-        cssDir: 'public/styles'
-        imagesDir: 'assets/images'
-        javascriptsDir: 'assets/scripts'
-        fontsDir: 'assets/styles/fonts'
-        relativeAssets: false
-        debugInfo: true
-        bundleExec: true
+        implementation: sass
+        sourceMap: true
+        includePaths: ['assets/vendor']
+        importer: [CssImporter]
+        outputStyle: 'expanded'
       dist:
-        options:
-          debugInfo: false
+        files:
+          'public/styles/bingosync.css': 'assets/styles/bingosync.scss'
 
     cssmin:
       minify:
@@ -97,6 +99,6 @@ module.exports = (grunt)->
       'web-host': 'localhost'
 
   grunt.registerTask 'scripts', ['coffee:compile', 'concat:dist', 'uglify']
-  grunt.registerTask 'styles',  ['compass', 'copy', 'cssmin']
+  grunt.registerTask 'styles',  ['sass', 'copy', 'cssmin']
   grunt.registerTask 'dev',     ['concurrent:dev']
   grunt.registerTask 'default', ['clean', 'scripts', 'styles']
