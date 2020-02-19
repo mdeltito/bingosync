@@ -16,7 +16,7 @@
     "less": "1.x",
     "lodash": "*",
     "node-yaml-config": "0.0.x",
-    "phantom": "^2.1.21",
+    "puppeteer": "^2.1.1",
     "redis": "*",
     "socket.io": "0.9.x"
   },

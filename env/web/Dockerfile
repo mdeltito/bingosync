@@ -1,14 +1,20 @@
-FROM node:argon
+FROM node:8
 
-RUN wget -q https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
-    tar -xjf phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
-    mv phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin && \
-    rm -rf phantomjs-2.1.1-linux-x86_64.tar.bz2 phantomjs-2.1.1-linux-x86_64
+RUN  apt-get update \
+    # Install latest chrome dev package, which installs the necessary libs to
+    # make the bundled version of Chromium that Puppeteer installs work.
+    && apt-get install -y wget --no-install-recommends \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
+    && apt-get update \
+    && apt-get install -y google-chrome-unstable --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /code
-COPY . /code
+WORKDIR /usr/src/app
 
-RUN npm install --silent
+COPY package*.json ./
+RUN npm install
+COPY . .
 
 EXPOSE 5000
-
+CMD [ "npm", "start" ]

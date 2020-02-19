@@ -3,9 +3,9 @@ url          = require('url')
 jsdom        = require('jsdom')
 jQuery       = require('jquery')
 crypto       = require('crypto')
-Phantom      = require('phantom')
 Promise      = require('bluebird')
 EventEmitter = require('events').EventEmitter
+Puppeteer    = require('puppeteer')
 
 module.exports = (_store, _config_data)->
   class Board extends EventEmitter
@@ -46,19 +46,17 @@ module.exports = (_store, _config_data)->
       page = null
       instance = null
 
-      Phantom.create()
+      Puppeteer.launch({headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox']})
         .then (_instance)=>
           instance = _instance
-          instance.createPage()
+          instance.newPage()
         .then (_page)=>
           page = _page
-          page.open @url
-        .then (status)=>
-          bingoHtml = page.evaluate =>
-            document.getElementById('bingo').outerHTML
+          page.goto @url
+        .then ()=>
+          bingoHtml = page.$eval('#bingo', (el) => el.outerHTML)
         .then (_html)=>
-          page.close()
-          instance.exit()
+          instance.close()
           html = _html
         .catch (error)=>
           console.log error
