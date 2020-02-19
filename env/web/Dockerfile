@@ -13,7 +13,9 @@ RUN  apt-get update \
 WORKDIR /usr/src/app
 
 COPY package*.json ./
+COPY bower.json ./
 RUN npm install
+RUN npx bower --allow-root install
 COPY . .
 
 EXPOSE 5000

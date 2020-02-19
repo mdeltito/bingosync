@@ -1,21 +1,14 @@
 {
   "name": "bingosync",
   "version": "0.2.0",
-  "authors": [
-    "Michael J. Del Tito <mdeltito@gmail.com>"
-  ],
+  "authors": ["Michael J. Del Tito <mdeltito@gmail.com>"],
   "license": "MIT",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
     "font-awesome": "4.0.3",
     "bootstrap-sass-official": "3.1.1",
+    "bootstrap-growl": "1.1.0",
     "jquery.gritter": "1.7.4",
     "lodash": "2.4.1",
     "moment": "2.5.1"
