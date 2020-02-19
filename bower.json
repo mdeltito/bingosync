@@ -8,9 +8,12 @@
   "dependencies": {
     "font-awesome": "4.0.3",
     "bootstrap-sass-official": "3.1.1",
-    "bootstrap-growl": "1.1.0",
     "jquery.gritter": "1.7.4",
     "lodash": "2.4.1",
-    "moment": "2.5.1"
+    "moment": "2.5.1",
+    "remarkable-bootstrap-notify": "remarkable-bootstrap-growl#^2.0.1"
+  },
+  "resolutions": {
+    "remarkable-bootstrap-notify": "^2.0.1"
   }
 }

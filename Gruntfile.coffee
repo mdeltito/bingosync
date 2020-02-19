@@ -18,14 +18,14 @@ module.exports = (grunt)->
         separator: ';'
       dist:
         src: [
-          'assets/lib/lodash/dist/lodash.js'
-          'assets/lib/jquery/dist/jquery.js'
-          'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js'
-          'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
-          'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js'
-          'assets/lib/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js'
-          'assets/lib/bootstrap-growl/bootstrap-growl.js'
-          'assets/lib/moment/moment.js'
+          'assets/vendor/lodash/dist/lodash.js'
+          'assets/vendor/jquery/dist/jquery.js'
+          'assets/vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js'
+          'assets/vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
+          'assets/vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js'
+          'assets/vendor/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js'
+          'assets/vendor/remarkable-bootstrap-notify/bootstrap-growl.js'
+          'assets/vendor/moment/moment.js'
           '.tmp/scripts/**/*.js'
         ]
         dest: 'public/scripts/<%= pkg.name %>.js'
@@ -47,7 +47,7 @@ module.exports = (grunt)->
       fonts:
         expand: true
         flatten: true
-        src: ['assets/lib/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*']
+        src: ['assets/vendor/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*']
         dest: 'public/fonts/'
         filter: 'isFile'
 
