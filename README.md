@@ -1,6 +1,6 @@
 # Bingosync
 
-[![Build Status](http://drone.mdel.io/api/badges/mdeltito/bingosync/status.svg)](http://drone.mdel.io/mdeltito/bingosync)
+[![App](https://img.shields.io/badge/URL-https%3A%2F%2Fbingosync.mdel.io-green)](https://bingosync.mdel.io)
 [![Development Status](https://img.shields.io/badge/Development%20Status-Inactive-red.svg)](https://img.shields.io/badge/Development%20Status-Inactive-red.svg)
 
 ## About
