@@ -35,7 +35,7 @@
     "grunt-nodemon": "^0.2.1",
     "grunt-sass": "^3.1.0",
     "load-grunt-tasks": "^0.4.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "node-sass-css-importer": "0.0.3",
     "nodemon": "^1.11.0"
   }
